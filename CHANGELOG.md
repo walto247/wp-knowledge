@@ -3,6 +3,22 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-12 — WebP by default (native WordPress)
+
+Files changed: `wp-performance.md` (Images).
+
+What changed in the guidance:
+- Every site we build uses WordPress's native WebP output for JPEG uploads (filter `image_editor_output_format`, quality 82); originals kept; PNG/SVG/GIF and site icons unchanged; share images stay JPEG. Existing images are converted with `wp media regenerate`. Rolled out first on wp-anshin-com (staging): a list card went from the 356 KB original to a 13 KB WebP.
+- `sizes` must match the image slot (cards asking for `100vw` download the original).
+
+### Checklist for existing sites (run at the next session of each site project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| Images served as JPEG/PNG photos (page source `src`/`srcset`) | WebP is ~30–90 % smaller; native in WordPress since 5.8 | how many, which theme/builder, whether a plugin (EWWW, ShortPixel, WP Rocket) already converts |
+| Cards/thumbnails loading the full-size original (`sizes="100vw"` on small slots) | wasted MBs on phones | page, element, file size loaded |
+| og:image in WebP | Facebook/LINE previews may fail | page and URL |
+
 ## 2026-10-12 — Post slugs carry the title's keywords
 
 Files changed: `seo-geo/README.md` (Japanese specifics).
