@@ -35,6 +35,16 @@ Benefit line above the button, action verb on the button.
 
 Before any 「No.1」「最安」「限定」「今だけ」「効果」 appears in copy, check `../legal/japan.md`. Paid or requested content is labelled 「広告」/「PR」. Prices include tax.
 
+## How the big Japanese agencies think (what is public)
+
+The owner asked for Dentsu's and Hakuhodo's way of designing. Neither publishes a web-design guideline; what exists is philosophy and organisation, useful as a lens, not as rules (checked 2026-10-11).
+
+- **Hakuhodo, 生活者発想 (since 1981).** People are not "consumers" or data points but 生活者, whole people with contradictions, seen in their daily life; the agency's method is to imagine, plan and implement repeatedly (想像・構想・実装) around the person's happiness, with パートナー主義 toward the client. Its UX arm, HUX (Hakuhodo UX & Service Design, 2016), works from strategy through digital experience to communication; its 行動デザイン研究所 studies what makes people act. **Use:** write every site pack and persona as a 生活者 with a day, worries and habits, not as a demographic; design the first screen for what that person needs today, which is the owner's "visitor first" rule in agency words.
+- **Dentsu, Dentsu Lab (Tokyo 2014, London).** A creative R&D unit that joins technology with human behaviour to design experiences that move people. No published web principles. **Use:** prototype and test an idea before polishing it; measure whether people acted.
+- What both share with Japanese design practice: trust is built before anything is sold, detail and completeness signal respect for the reader, and campaigns follow the Japanese calendar (above). Everything beyond this is practice from our own projects, not an agency source.
+
+Sources: Hakuhodo philosophy and vision pages (hakuhodo.co.jp/about/dna/), The H Magazine 「生活者発想」 series, Hakuhodo Global "Creating UX-centered services with sei-katsu-sha insight", dentsu.com/dentsu-lab, dentsulab.com.
+
 ## To add in pass 2
 
 - Palette and type conventions by industry (school, clinic, B2B service, shop, restaurant, real estate) with Japanese examples.

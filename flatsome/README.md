@@ -1,6 +1,6 @@
 # Flatsome theme
 
-Status: **partly verified 2026-10-11.** Verified: current version **3.20.8 (2026-07-10)** and the planned v4 hybrid classic/block theme (ThemeForest listing); the full hook list (docs.uxthemes.com/article/385-hooks); custom CSS location (article 235); the responsive breakpoints 549 px / 849 px, the `custom-css` block, the `hide-for-medium` class and the `[accordion-item]` hyphen form, all read from live Flatsome sites. **Not verified:** the element attribute reference in `ux-builder.md`; the official docs have no element list, so it must be checked against the theme's own `inc/shortcodes/` files on a Flatsome server (next step). Items marked ⚠ remain doubtful.
+Status: **verified 2026-10-11.** Element names, attributes and option values read from the theme's own files (Flatsome **3.20.11** on a staging server, read-only; `ux-builder.md`); hooks from docs.uxthemes.com/article/385-hooks; custom CSS location from article 235; breakpoints 549 / 849 px, the `custom-css` block, helper classes and the `[accordion-item]` form from live sites and the theme CSS; version history from the ThemeForest listing (public release 3.20.8, 2026-07-10; Flatsome 4 planned as a hybrid classic + block theme). Sources: `SOURCES.md`.
 
 | Need | Read |
 |---|---|
@@ -46,4 +46,4 @@ Tags balanced · every column has `span__sm` · nothing wider than a phone scree
 ## What changed in pass 2 (2026-10-11)
 
 - Version, breakpoints, custom CSS location, accordion tag and hook names verified (see `css-and-child-theme.md` for the hook corrections).
-- Element attributes still unverified: official docs carry no reference; verify against `wp-content/themes/flatsome/inc/shortcodes/` on a Flatsome server.
+- Element attributes verified from the 3.20.11 theme files; the main corrections: button colour is `color=`, not `style=`; `[testimonial image= company=]`; no `.m-8` utility scale; visibility values are the four `hide/show-for-small/medium`.

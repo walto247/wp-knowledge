@@ -1,18 +1,19 @@
 # Japanese law for websites — what to watch for
 
-Status: merged 2026-10-11 from `japan-web/legal-jp`. **A checklist, not legal advice.** Not yet verified against the Consumer Affairs Agency (消費者庁) pages; laws and guidelines change, so pass 2 must check dates. When a request touches these areas: do the safe thing, name the risk, suggest the client checks with a legal expert. Never invent facts, results or reviews.
+Status: **景品表示法 sections verified 2026-10-11** (stealth-marketing designation 内閣府告示第19号 of 2023-03-28 in force 2023-10-01; the 消費者庁 No.1表示 report of 2024-09-26; the amended 景品表示法 in force 2024-10-01) through law-firm and trade-press summaries of the 消費者庁 texts; the 消費者庁 page itself refused the connection twice, so quote the primary text before relying on wording (`SOURCES.md`). 薬機法, 特定商取引法, 個人情報保護法 and the accessibility duty remain merged practice. **A checklist, not legal advice.** When a request touches these areas: do the safe thing, name the risk, suggest the client checks with a legal expert. Never invent facts, results or reviews.
 
 ## 景品表示法 (misleading representations)
 
 - **優良誤認:** no claim that quality or effect is better than it is. 「業界No.1」「最高品質」「絶対」「必ず」「100%」 need objective proof; remove or soften otherwise.
-- **No.1表示:** only with a recent, objective survey, and the source next to it (調査機関・調査期間・対象). A few people's impressions are not enough.
+- **No.1表示** (消費者庁 report 2024-09-26, treated as the de-facto guideline; no separate guideline planned): the claim needs an objective basis in four parts: a fair choice of the compared products or services, a fair choice of respondents, a fairly run survey (no fixing your own option at the top, no leading questions), and a claim that matches what the survey measured. Show 調査機関・調査期間・対象 next to the claim. An image survey of a few people is not enough; 「顧客満足度No.1」 from a bought ranking is a known enforcement target.
 - **有利誤認:** prices and terms must not look better than they are. 「今だけ」「期間限定」 only if true. Conditions (「初回のみ」「送料別」「税込/税抜」) clear and next to the price, not in small print (打消し表示).
 - **二重価格** (「通常価格 ¥10,000 → ¥5,000」): the "normal price" must be a price the item was really sold at for a meaningful recent period.
 - Consumer prices include tax (総額表示): 「¥11,000（税込）」.
+- Since the amendment in force **2024-10-01**, deliberate 優良誤認 / 有利誤認 can be punished directly (fine up to ¥1,000,000) in addition to 措置命令 and 課徴金; a confirmed-measures procedure (確約手続) was also introduced.
 
-## ステルスマーケティング規制 (since October 2023)
+## ステルスマーケティング規制 (in force 2023-10-01)
 
-Anything the business paid for or asked for (influencer posts, requested reviews, sponsored articles) must be clearly marked 「広告」「PR」「プロモーション」. Never write reviews or testimonials "as a customer". Testimonials must be real and may need a note if rewarded.
+Designated as 不当表示 under 景品表示法 5条3号 (内閣府告示第19号, 2023-03-28). Two conditions make a post a violation: it is **the business's own representation** (the business was involved in the content: payment, product supplied with expectations, instructions, an ongoing relationship) **and** ordinary consumers cannot tell that it is (要件①②). Accepted labels per the 運用基準: 「広告」「プロモーション」「PR」 or a plain sentence such as 「A社から商品の提供を受けて投稿しています」, placed where it is seen, not hidden in tags or small print. The **advertiser** is liable (措置命令), not the influencer. Applies to posts started before the date that remain visible. Never write reviews or testimonials "as a customer"; testimonials must be real and labelled when rewarded.
 
 ## 薬機法 / 健康増進法 (health, beauty, supplements, cosmetics)
 
@@ -37,3 +38,10 @@ Since April 2024 private businesses must provide reasonable accommodation to peo
 ## Copyright and portrait rights
 
 Do not copy text or images from other sites. Photos of people need consent (肖像権), above all students and children; use images the site already has or the client provides.
+
+## What changed in pass 2 (2026-10-11)
+
+- ステマ規制: legal basis, the two conditions, accepted labels, who is liable.
+- No.1表示: the 2024 report's four conditions.
+- 2024-10-01 amendment (direct fines) added.
+- Not yet verified: 薬機法, 特定商取引法 (定期購入 rules), 個人情報保護法 / 外部送信, 障害者差別解消法 wording. The 消費者庁 site could not be reached; retry for primary wording.

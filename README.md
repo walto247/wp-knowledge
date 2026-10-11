@@ -38,10 +38,10 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 | `design/accessibility.md` | WCAG 2.2 AA and JIS X 8341-3 checklist, JIS revision status | **verified 2026-10-11** (WCAG 2.2, JIS 1.4.3 checklist, DADS) |
 | `design/design-tokens.md` | DESIGN.md template and how tokens map to CSS, any theme | merged |
 | `writing/japanese.md`, `writing/english.md` | Copy, tone by audience, CTAs, lengths | merged |
-| `legal/japan.md` | 景品表示法, ステマ規制, 薬機法, 特定商取引法, 個人情報保護法, accessibility duty, copyright | merged, unverified (law changes; verify dates) |
-| `seo-geo/README.md` | On-page SEO, Japanese SEO, GEO (AI answers), structured data; points to `seo-audit-kit` | merged, unverified |
-| `marketing/japan.md` | Japanese CTAs and conversion conventions, trust, seasonal calendar, claims | merged (thin, to grow) |
-| `flatsome/` | UX Builder, CSS and child theme, WooCommerce, posts | **partly verified 2026-10-11** (version 3.20.8, hooks, custom CSS, breakpoints, accordion tag); element attributes still need the theme files |
+| `legal/japan.md` | 景品表示法, ステマ規制, 薬機法, 特定商取引法, 個人情報保護法, accessibility duty, copyright | **景表法 parts verified 2026-10-11** (ステマ, No.1, 2024 amendment); rest practice |
+| `seo-geo/README.md` | On-page SEO, Japanese SEO, GEO (AI answers), structured data; points to `seo-audit-kit` | **verified 2026-10-11** (Google Search Central, Yoast); Japanese lengths are practice |
+| `marketing/japan.md` | Japanese CTAs and conversion conventions, trust, seasonal calendar, claims, what Dentsu and Hakuhodo publish | merged; agency section checked 2026-10-11 |
+| `flatsome/` | UX Builder, CSS and child theme, WooCommerce, posts | **verified 2026-10-11** (theme 3.20.11 files, official hooks and docs, live sites) |
 | `swell/` | Block editor rules, SWELL blocks, Customizer map | **verified 2026-10-11** (swell-theme.com: 2.19, blocks, plugins; live site: CSS variables); Customizer paths not re-checked |
 | `block-themes/README.md` | theme.json-based themes (for `wp-master-theme`) | stub |
 | `wp-plugins/` | One file per plugin: Yoast, WP Rocket, WPForms, Wordfence, UpdraftPlus, WP Mail SMTP, WPML, ACF | merged, unverified (versions) |
@@ -50,10 +50,9 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 ## Pass 2 plan (one session per topic, in this order)
 
 1. ~~`design/japan.md` + `design/accessibility.md`~~ done 2026-10-11 (typography and accessibility; the Digital Agency policy page was unreachable, retry once).
-2. `flatsome/` ~~docs and changelog~~ done 2026-10-11; **remaining:** element attributes against `inc/shortcodes/` on a Flatsome server.
+2. ~~`flatsome/`~~ done 2026-10-11 (theme files read on SKYUS staging).
 3. ~~`swell/`~~ done 2026-10-11.
-4. `seo-geo/` against Google Search Central, Yoast, current GEO guidance; `legal/japan.md` against
-   the Consumer Affairs Agency pages.
+4. ~~`seo-geo/`~~ done 2026-10-11; `legal/japan.md` 景表法 parts done, the rest (薬機法, 特商法, 個人情報) still to verify; 消費者庁 site was unreachable.
 5. `wp-plugins/`, `wp-security.md`, `wp-performance.md` against each plugin's docs and the
    WordPress hardening guide.
 
