@@ -6,7 +6,7 @@ Status: merged 2026-10-11 from the WSL `flatsome-wp/posts` reference, product-ar
 
 - Global: Flatsome → Blog → Post Layout (sidebar position, featured image, meta: author, date, categories, tags).
 - Per post: the Flatsome meta box below the editor (sidebar, featured image display).
-- All posts full width via the child theme: `add_filter('flatsome_sidebar', fn($s) => is_single() ? false : $s);` ⚠ verify the filter name.
+- All posts full width: set it in Flatsome → Blog → Post Layout (sidebar: none). There is no `flatsome_sidebar` filter (checked against the official hook list 2026-10-11); the old snippet was wrong.
 
 ## Article structure
 

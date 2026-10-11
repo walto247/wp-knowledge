@@ -1,6 +1,6 @@
 # Flatsome theme
 
-Status: merged 2026-10-11 from the dashboard `flatsome-wp` skill and the WSL/account `flatsome-wp` skill (five references). Tool- and client-specific text removed. **Not yet verified against the official Flatsome documentation and current version (pass 2)**; items marked ⚠ are doubtful.
+Status: **partly verified 2026-10-11.** Verified: current version **3.20.8 (2026-07-10)** and the planned v4 hybrid classic/block theme (ThemeForest listing); the full hook list (docs.uxthemes.com/article/385-hooks); custom CSS location (article 235); the responsive breakpoints 549 px / 849 px, the `custom-css` block, the `hide-for-medium` class and the `[accordion-item]` hyphen form, all read from live Flatsome sites. **Not verified:** the element attribute reference in `ux-builder.md`; the official docs have no element list, so it must be checked against the theme's own `inc/shortcodes/` files on a Flatsome server (next step). Items marked ⚠ remain doubtful.
 
 | Need | Read |
 |---|---|
@@ -16,7 +16,7 @@ Pages are built with **UX Builder**, which stores the layout as shortcodes in th
 ## Workflow for a page change
 
 1. Read the page content first. For a shared section, find the UX Block; the same block may sit on many pages, so say so before changing it.
-2. Find the exact place. Copy the site's existing shortcodes and attributes; each site has its own habits (for example the accordion item tag name: `accordion_item` or `accordion-item` depending on site and version; **always copy the one the site uses**).
+2. Find the exact place. Copy the site's existing shortcodes and attributes; each site has its own habits. The accordion item is **`[accordion-item title="…"]`** with a hyphen (confirmed on a live 3.20 site); `accordion_item` with an underscore is not confirmed anywhere. Still copy what the page uses.
 3. Change only that part. Keep everything else byte for byte, including line breaks. Never "tidy up" the rest.
 4. Save, clear the cache (WP Rocket where present), check on desktop **and** phone.
 
@@ -31,6 +31,19 @@ Pages are built with **UX Builder**, which stores the layout as shortcodes in th
 - Never edit the parent theme. Child theme PHP is wrapped in `function_exists()` guards and linted before it goes live.
 - Japanese text minimums apply (`../design/japan.md`): body 16 px, line height ≥ 1.7, tap targets ≥ 44 px, contrast ≥ 4.5:1.
 
+## Breakpoints (verified on a live 3.20 site)
+
+Phone: `max-width: 549px` (desktop/tablet from 550 px). Tablet: `max-width: 849px` (desktop from 850 px). The three Custom CSS boxes (all / tablet / mobile) wrap tablet and mobile rules in those queries. `span__sm` = up to 549 px, `span__md` = 550–849 px.
+
+## Versions
+
+3.20.8 (2026-07-10): accessibility markup updates, `Flatsome.cookie` deprecated for `Flatsome.Cookies`, scripts moved under `assets/js/extensions/`, new `flatsome-header-unsticky` event. Flatsome 4 is planned as a hybrid classic + block theme; migration will not be mandatory. The theme is pinned per site; update on staging first.
+
 ## Before saving (checklist)
 
 Tags balanced · every column has `span__sm` · nothing wider than a phone screen · links relative · media by ID · cache cleared after · checked at 375 px.
+
+## What changed in pass 2 (2026-10-11)
+
+- Version, breakpoints, custom CSS location, accordion tag and hook names verified (see `css-and-child-theme.md` for the hook corrections).
+- Element attributes still unverified: official docs carry no reference; verify against `wp-content/themes/flatsome/inc/shortcodes/` on a Flatsome server.

@@ -1,6 +1,6 @@
 # SWELL theme (Japanese block-editor theme)
 
-Status: merged 2026-10-11 from the dashboard `swell-wp` skill and the account `swell-wp` skill. School-site specifics removed. **Not yet verified against swell-theme.com documentation (pass 2).** ⚠ **Open conflict:** the two sources name SWELL's custom blocks differently, `loos/…` (dashboard, 2026-09) versus `swell/…` (account skill). Until verified, copy block names from the site itself.
+Status: **verified 2026-10-11** against swell-theme.com (home page: current version **2.19, released 2026-08-20**; 機能一覧 `/function/75/`; 推奨・非推奨プラグイン `/basic-setting/4688/`; 更新情報 `/category/update/`) and the public front end of a live SWELL 2.19.0 site (CSS variable names, block class names, child theme in use). Block slugs are editor-only and not visible on public pages: `loos/…` is what real page content showed when read in 2026-09; the `swell/…` names from the older account skill were wrong and are dropped. Always copy a block from the site anyway.
 
 | Need | Read |
 |---|---|
@@ -16,7 +16,7 @@ SWELL uses the **WordPress block editor**. Page content is HTML with block comme
 <!-- /wp:heading -->
 ```
 
-SWELL adds its own blocks (full-width sections, buttons, FAQ, steps, balloons, caption boxes, cards, CTA). Colours, fonts, header, footer and layout are set in **外観 → カスタマイズ** (`customizer.md`). Customisations go in the child theme (`swell-child`).
+SWELL's own blocks (official list, 2026-10): キャプション付きブロック, 関連記事ブロック (blog card), ふきだしブロック, SWELLボタンブロック, FAQブロック, アコーディオンブロック, ステップブロック (timeline), バナーリンクブロック, 説明リストブロック (`dl`), ABテストブロック, 投稿リストブロック, フルワイドブロック, 広告タグブロック, ブログパーツブロック. Rendered class names start with `swell-block-` (`swell-block-full`, `swell-block-columns`, `swell-block-button`, `swell-block-banner`, `swell-block-tab` seen live). SWELL also extends core blocks (box styles on paragraph and group, list styles, table and column options, device-specific display, five bottom-margin steps) and adds toolbar shortcodes (PC/SP-only line break, icons, star rating, login-only content, in-article ad). Colours, fonts, header, footer and layout are set in **外観 → カスタマイズ** (`customizer.md`). Customisations go in the official child theme **`swell_child`** (downloaded from the SWELL purchase page; it already enqueues the parent CSS).
 
 ## The one rule that prevents broken pages
 
@@ -42,14 +42,30 @@ Read the page → change only the needed blocks, keep the rest byte for byte →
 ## Styling
 
 - Suggest the Customizer setting before CSS (`カスタマイズ → サイト全体設定 → カラー設定 → メインカラー`).
-- Use SWELL's CSS variables, not hex: `var(--color_main)`, `var(--color_accent)` ⚠, `var(--color_text)`, `var(--color_link)`, `var(--color_bg)`, `var(--color_border)` ⚠.
+- Use SWELL's CSS variables, not hex (names verified on a live 2.19 site): `--color_main`, `--color_main_thin`, `--color_main_dark`, `--color_deep`, `--color_pale`, `--color_text`, `--color_link`, `--color_bg`, `--color_border`, `--color_gray`, `--color_header_text`, `--color_gradient`, marker colours `--color_mark_yellow|orange|green|blue`, list icon colours `--color_list_check|good|bad|num|triangle`. There is **no `--color_accent`**; the Customizer's アクセントカラー maps to `--color_deep` / `--color_pale` shades of the main colour.
 - Custom CSS in the child `style.css` with the site's class prefix; do not duplicate what the Customizer controls.
 - Japanese typography: `font-feature-settings: "palt"`, `letter-spacing: 0.05em`, line height 1.8–1.9 for paragraphs, `line-break: strict`. **Not** `word-break: break-all` (one source recommended it; it breaks English words).
 
-## Plugins
+## Plugins (official list, swell-theme.com 2026-10)
 
-Works well with WPForms, Yoast SEO (or SEO SIMPLE PACK), WP Rocket, Wordfence. Known conflicts, do not recommend: Jetpack, Autoptimize, WP Fastest Cache, other page builders (one source also lists Contact Form 7 ⚠).
+- **Needed:** an SEO plugin, because SWELL prints no meta/OGP tags itself. Official: **SEO SIMPLE PACK** (same developer). Yoast SEO works too; never both.
+- **Recommended by the developer:** Highlighting Code Block, Useful Blocks, Pochipp (affiliate links), XML Sitemap & Google News (then untick SWELL's own sitemap option), WP Revisions Control, CloudSecure WP Security, WPvivid (backup), **Contact Form by WPForms**.
+- **Not recommended:** the Gutenberg plugin, WooCommerce and other EC plugins (not supported), Elementor and other page builders, Flying Scripts (duplicates SWELL's deferred JS; iOS first-tap bug), Autoptimize, Async JavaScript, Table of Contents Plus / RTOC / Lazy Load / speech-bubble plugins (built into SWELL).
+- **Unnecessary:** Classic Editor, AddQuicktag, TinyMCE Advanced (can disable SWELL features).
+- **Only with a reason:** Jetpack (heavy, overlaps), WP Super Cache / W3 Total Cache (SWELL has its own cache; stale-CSS problems). **WP Rocket is not on the official list either way**; our sites use it, so test after every SWELL update and clear both caches.
+- **Reported conflicts:** SiteGuard WP Plugin (login lockouts), EWWW Image Optimizer (upload failures; enable only while compressing). Contact Form 7 is *not* listed as incompatible (the older account skill was wrong).
+
+## Versions
+
+2.19 (2026-08-20, WordPress 7.1 UI), 2.18 (2026-08-09), 2.17 (2026-05-21, WordPress 7.0), 2.16 (2025-12-03), 2.15, 2.14 (2025-04, WordPress 6.8). Updates arrive through the dashboard with an activated licence; after an update that breaks the editor, SWELL設定 → リセット (cache clear) first.
 
 ## Deliverables for a SWELL change
 
 Two blocks: **Customizer settings** (listed as `カスタマイズ → パネル → セクション → 項目: 値`, done by a person) and **child code / block markup** (to paste or upload).
+
+## What changed in pass 2 (2026-10-11)
+
+- Block list replaced by the official 14; `swell/…` slugs dropped (wrong); `loos/…` kept with the copy-from-site rule.
+- CSS variable list verified on a live 2.19 site; `--color_accent` removed.
+- Plugin guidance replaced by the official recommended / not-recommended list; Contact Form 7 and WP Rocket claims corrected.
+- Current version and changelog added. Child theme: the official `swell_child`.

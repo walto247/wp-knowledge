@@ -1,6 +1,6 @@
 # SWELL Customizer map
 
-Status: merged 2026-10-11 from the account `swell-wp/customizer` reference. Unverified against the current SWELL version (pass 2); panel names may have moved.
+Status: merged 2026-10-11 from the account `swell-wp/customizer` reference. Panel names not re-checked in pass 2 (the manual at swell-theme.com/manual/ is the source; check there when a path does not match the current 2.19 Customizer).
 
 外観 → カスタマイズ
 
