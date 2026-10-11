@@ -44,7 +44,7 @@ Read the page → change only the needed blocks, keep the rest byte for byte →
 - Suggest the Customizer setting before CSS (`カスタマイズ → サイト全体設定 → カラー設定 → メインカラー`).
 - Use SWELL's CSS variables, not hex (names verified on a live 2.19 site): `--color_main`, `--color_main_thin`, `--color_main_dark`, `--color_deep`, `--color_pale`, `--color_text`, `--color_link`, `--color_bg`, `--color_border`, `--color_gray`, `--color_header_text`, `--color_gradient`, marker colours `--color_mark_yellow|orange|green|blue`, list icon colours `--color_list_check|good|bad|num|triangle`. There is **no `--color_accent`**; the Customizer's アクセントカラー maps to `--color_deep` / `--color_pale` shades of the main colour.
 - Custom CSS in the child `style.css` with the site's class prefix; do not duplicate what the Customizer controls.
-- Japanese typography: `font-feature-settings: "palt"`, `letter-spacing: 0.05em`, line height 1.8–1.9 for paragraphs, `line-break: strict`. **Not** `word-break: break-all` (one source recommended it; it breaks English words).
+- Japanese typography follows `../design/japan.md` (verified values): body 16 px, line height 1.7–1.75, letter spacing 0.02 em, `line-break: strict`, `palt` on headings only. SWELL's フォント設定 (ベースサイズ / 行間) sets these; CSS only for what the Customizer lacks. **Not** `word-break: break-all` (one source recommended it; it breaks English words).
 
 ## Plugins (official list, swell-theme.com 2026-10)
 
