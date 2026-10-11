@@ -1,6 +1,6 @@
 # Japanese web design and UX
 
-Status: merged 2026-10-11 from `japan-web` (ux-patterns, typography, audience) and the WSL `japanese-web` skill. Not yet verified against JIS X 8341-3, DADS and JLReq (pass 2; links in `SOURCES.md`). Builds on `general.md`; this file wins for Japanese sites. Writing rules: `../writing/japanese.md`. Law: `../legal/japan.md`.
+Status: typography and accessibility sections **verified 2026-10-11** against the Digital Agency design system (DADS) typography and colour pages, JLReq (W3C 日本語組版処理の要件) and the JIS X 8341-3:2016 contrast checklist (URLs in `SOURCES.md`). The UX, forms, audience and seasons sections are merged practice (2026-09 skills), not from a standard. Builds on `general.md`; this file wins for Japanese sites. Writing rules: `../writing/japanese.md`. Law: `../legal/japan.md`. Accessibility checklist: `accessibility.md`.
 
 ## What Japanese visitors expect
 
@@ -19,32 +19,39 @@ Status: merged 2026-10-11 from `japan-web` (ux-patterns, typography, audience) a
 
 ## Typography
 
-| Item | Value |
-|---|---|
-| Body | 16 px (15 px minimum on dense pages); nothing under 12 px anywhere; captions 14 px |
-| Line height, body | 1.7–2.0 (1.5 is too tight for Japanese) |
-| Line height, headings | 1.3–1.5 |
-| Letter spacing | 0.02–0.08 em body; headings may use more |
-| Line length | about 25–40 characters on desktop |
-| Paragraph gap | 1–1.5 em |
-| Headings | `clamp()` sizes, e.g. H1 `clamp(1.5rem, 4vw, 2.5rem)`; break at phrase boundaries, never one lone character on the last line |
+| Item | Value | Source |
+|---|---|---|
+| Body and UI text | **16 CSS px or more**. 14 px only where space forces it (footer notes); **under 14 px is not acceptable** | DADS: 「本文とUIの基準値は 16 CSS px 以上」「14 CSS px 未満は原則として許容されません」 |
+| Line height, body | **1.7–1.75** for reading text (DADS body tokens are 170 % and 175 %); 1.5 is the floor; up to 2.0 on dense pages | DADS: 「少なくとも1.5倍」; JLReq: line gap ½–1 em of the character size, 1 em for lines over about 35 characters |
+| Line height, headings | **1.4** (DADS heading and display tokens 140 %); 1.3–1.5 acceptable | DADS |
+| Letter spacing | **0.02 em** for 16–26 px text, 0.01 em for 28–36 px, **0** for 45 px and larger and for display sizes | DADS (2 % / 1 % / 0) |
+| Line length | up to about **40 characters** per line in horizontal text; use columns or a narrower measure beyond that | JLReq (print figure; applies well to screens) |
+| Paragraph gap | 1–1.5 em | practice |
+| Size scale | 16–45 px for headings and body; 48–64 px only for display elements that need visual impact | DADS |
+| Headings | `clamp()` sizes within that scale, e.g. H1 `clamp(1.75rem, 4vw, 2.8rem)`; break at phrase boundaries, never one lone character on the last line | DADS + practice |
+| Ruby (ふりがな) | **half the size** of the base text, above it in horizontal writing; browsers default to 50 % | JLReq, DADS |
 
 ```css
 .prefix-content p {
-  line-height: 1.85;
-  letter-spacing: 0.04em;
-  line-break: strict;            /* 禁則処理 */
+  line-height: 1.75;
+  letter-spacing: 0.02em;
+  line-break: strict;            /* 禁則処理, see below */
   overflow-wrap: anywhere;       /* long URLs on phones */
-  font-feature-settings: "palt"; /* proportional kana: good for headings, test for body */
 }
+.prefix-content h2 { line-height: 1.4; letter-spacing: 0.01em; font-feature-settings: "palt"; }
 ```
 
+禁則処理 (line-breaking rules, JLReq): closing brackets and 句読点 (、。) never start a line (行頭禁則); opening brackets never end a line (行末禁則). The strict rule also keeps 長音「ー」, 小書き仮名 (ゃゅょっ) and 々 off the line start; many books allow those three. `line-break: strict` applies the strict set; `line-break: normal` the relaxed one. Browsers handle brackets and punctuation in both modes. Hanging punctuation (ぶら下げ) is optional: `hanging-punctuation: allow-end`.
+
+Latin and numbers inside Japanese (JLReq): use half-width proportional Latin and digits in horizontal text, never full-width monospace Latin; keep units and symbols with their number (¥1,000, 10 %, 5 km do not break). A thin space between Japanese and Latin is a typesetting convention (about ¼ em after unit symbols); on the web leave it to the browser or use a normal space consistently; do not hand-insert full-width spaces.
+
 Fonts:
-- Prefer the theme's font setting or system fonts: `"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Noto Sans JP", Meiryo, sans-serif`; serif for premium: `"Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif`.
+- **Noto Sans JP** is the reference Japanese web font (DADS uses it; SIL Open Font License, free to self-host); weights 400 and 700 are enough. System stack when no web font: `"Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "Noto Sans JP", Meiryo, sans-serif`; serif for premium: `"Hiragino Mincho ProN", "Yu Mincho", "Noto Serif JP", serif`.
 - Japanese web fonts are several MB: subset or self-host, `font-display: swap`, at most 2 families and few weights.
-- **No italics** for Japanese (browsers fake them). **Do not use `word-break: break-all`** on body text (it splits English words); use `line-break: strict` + `overflow-wrap`.
-- Furigana with `<ruby>漢字<rt>かんじ</rt></ruby>`: all kanji for 小学生 pages, hard kanji and names on first use elsewhere.
-- Vertical text (`writing-mode: vertical-rl`) only decoratively.
+- **No italics** for Japanese: fonts have none, browsers synthesise an oblique that reads badly (DADS). **Do not use `word-break: break-all`** on body text (it splits English words); use `line-break` + `overflow-wrap`.
+- Furigana with `<ruby>漢字<rt>かんじ</rt></ruby>`: all kanji for 小学生 pages, hard kanji and names on first use elsewhere. Ruby at 50 % of the base size; keep the line height constant where ruby appears rather than opening gaps (JLReq).
+- Links underlined, not colour alone; visited links in a distinguishable purple (DADS).
+- Vertical text (`writing-mode: vertical-rl`) only decoratively; horizontal is the norm for official and business documents (JLReq).
 - Full-width and half-width used consistently: 全角 for kana and 「、。」「」（）, 半角 for digits and Latin.
 
 ## Forms
@@ -57,7 +64,7 @@ Fonts:
 
 ## Mobile
 
-- Most traffic is on phones. Tap targets at least 44 px (48 px preferred), 8 px between them.
+- Most traffic is on phones. Tap targets: WCAG 2.2 requires at least 24 × 24 CSS px (AA); our practice is 44–48 px with 8 px between them, and 24 px spacing around any smaller icon control (`accessibility.md`).
 - Full-width inputs and buttons; no hover-only interactions; LINE share or 友だち追加 where relevant.
 
 ## Colour
@@ -76,3 +83,10 @@ Blue = trust (companies, schools, finance); green = safety, health, nature; red 
 ## Seasons that move traffic
 
 1–3月 受験・進学・新生活 (3月 graduation) · 4月 new school and business year, peak for schools and B2B · 7–8月 summer campaigns, open campuses · 9月 transfers · 12月 year-end notices. Holidays: Golden Week (late April–early May), お盆 (mid-August), 年末年始. Post business-hours notices before each.
+
+## What changed in pass 2 (2026-10-11)
+
+- Typography table rebuilt on DADS values: 16 px floor (14 px exceptional, below 14 not allowed), line height 1.7–1.75 body / 1.4 headings, letter spacing 0.02 em → 0, size scale 16–45 px, display 48–64 px, ruby 50 %, no italics, underlined links. Old ranges (12 px floor, 0.08 em, line height 2.0 as normal) dropped.
+- 禁則処理 spelled out from JLReq (what may not start or end a line, strict vs normal), Latin-in-Japanese rules, line length ≈ 40 characters, line gap ½–1 em.
+- Tap target minimum tied to WCAG 2.2 (24 px) with our 44–48 px practice kept as practice.
+- Not verified by a standard (kept as practice): information density, trust blocks, navigation, forms, colour meanings, audiences, seasons. Verify against DADS components (forms, navigation) in a later pass if needed.

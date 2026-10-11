@@ -34,8 +34,8 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 | Folder / file | What | Status |
 |---|---|---|
 | `design/general.md` | Page structure, hierarchy, spacing scale, wireframe patterns, components, avoiding the generic "AI look" | merged, unverified |
-| `design/japan.md` | Japanese UX conventions, typography, forms, trust signals, mobile, colour, seasons | merged, unverified (sources for pass 2 in `design/SOURCES.md`) |
-| `design/accessibility.md` | WCAG 2.2 AA and JIS X 8341-3 checklist | merged, unverified |
+| `design/japan.md` | Japanese UX conventions, typography, forms, trust signals, mobile, colour, seasons | **typography verified 2026-10-11** (DADS, JLReq, JIS); UX/forms/audiences remain practice |
+| `design/accessibility.md` | WCAG 2.2 AA and JIS X 8341-3 checklist, JIS revision status | **verified 2026-10-11** (WCAG 2.2, JIS 1.4.3 checklist, DADS) |
 | `design/design-tokens.md` | DESIGN.md template and how tokens map to CSS, any theme | merged |
 | `writing/japanese.md`, `writing/english.md` | Copy, tone by audience, CTAs, lengths | merged |
 | `legal/japan.md` | 景品表示法, ステマ規制, 薬機法, 特定商取引法, 個人情報保護法, accessibility duty, copyright | merged, unverified (law changes; verify dates) |
@@ -49,8 +49,7 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 
 ## Pass 2 plan (one session per topic, in this order)
 
-1. `design/japan.md` + `design/accessibility.md` against JIS X 8341-3, the Digital Agency design
-   system (DADS) and JLReq (links in `design/SOURCES.md`), WCAG 2.2.
+1. ~~`design/japan.md` + `design/accessibility.md`~~ done 2026-10-11 (typography and accessibility; the Digital Agency policy page was unreachable, retry once).
 2. `flatsome/` against the official Flatsome documentation and current changelog.
 3. `swell/` against swell-theme.com documentation (Japanese).
 4. `seo-geo/` against Google Search Central, Yoast, current GEO guidance; `legal/japan.md` against
