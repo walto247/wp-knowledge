@@ -17,15 +17,16 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 2. **Client-specific facts never go here.** They belong to that client's project (its `CLAUDE.md`,
    `DESIGN.md`) or, for the site assistant, its site pack. Example: which accordion tag one site
    uses, one school's campus list, one shop's prices.
-3. **Every file says how fresh it is.** The first lines carry `Status:` with the date it was
+3. **Every change is logged in `CHANGELOG.md`** (what changed, and what existing sites should check). That file is the only notification channel: projects read it at session start; no messages between projects.
+4. **Every file says how fresh it is.** The first lines carry `Status:` with the date it was
    merged and whether it has been verified against the official documentation. Pass 2
    (one session per topic) verifies each topic and records the date and the source pages.
-4. **Account skills in `~/.claude/skills/` (flatsome-wp, swell-wp, seo-expert) are the one
+5. **Account skills in `~/.claude/skills/` (flatsome-wp, swell-wp, seo-expert) are the one
    allowed duplicate**, because Claude Code loads them automatically. They are updated *from*
    this folder, never the other way round. Edit here first.
-5. `seo-audit-kit/` stays a separate project: it is a method with tools and templates.
+6. `seo-audit-kit/` stays a separate project: it is a method with tools and templates.
    `seo-geo/` here holds the knowledge and points to the kit for the procedure.
-6. The site-assistant service runs in a container on the VPS and cannot read this PC. For it,
+7. The site-assistant service runs in a container on the VPS and cannot read this PC. For it,
    this folder is a build input: the deploy copies the topics it needs (or checks this repo out
    next to the service). Decided 2026-10-11; not built yet.
 
@@ -45,6 +46,7 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 | `swell/` | Block editor rules, SWELL blocks, Customizer map | **verified 2026-10-11** (swell-theme.com: 2.19, blocks, plugins; live site: CSS variables); Customizer paths not re-checked |
 | `block-themes/README.md` | theme.json-based themes (for `wp-master-theme`) | stub |
 | `wp-plugins/` | One file per plugin: Yoast, WP Rocket, WPForms, Wordfence, UpdraftPlus, WP Mail SMTP, WPML, ACF | **checked 2026-10-11** where vendors document it; Wordfence and ACF are practice |
+| `CHANGELOG.md` | Dated entries: what changed in the guidance + a checklist for existing sites. **Every project reads the top entry at session start.** | started 2026-10-11 |
 | `wp-maintenance.md`, `wp-security.md`, `wp-performance.md` | Health check, security review with the hardening baseline and PHP/WordPress versions, Core Web Vitals | **verified 2026-10-11** (hardening guide, php.net, web.dev); routines are practice |
 
 ## Pass 2 plan (one session per topic, in this order)
