@@ -1,6 +1,6 @@
 # Standard plugins on our WordPress sites
 
-Status: merged 2026-10-11 from the dashboard `wp-plugins` skill, tool-specific wording removed. Unverified against current plugin versions and docs (pass 2).
+Status: merged 2026-10-11; **checked 2026-10-11** where the vendor documents it (WPForms shortcode, WP Mail SMTP Do Not Send, WP Rocket exclusions, WPML slug settings, UpdraftPlus folder, Yoast meta keys via community sources). Wordfence and ACF notes are practice. Sources: `SOURCES.md`.
 
 | Plugin | File | Routine work that is safe | Needs a person (settings, secrets, data) |
 |---|---|---|---|

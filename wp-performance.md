@@ -1,24 +1,24 @@
 # Performance and Core Web Vitals
 
-Status: merged 2026-10-11 from the dashboard `wp-performance` skill and the WSL `frontend-wp/performance` reference. Unverified against current web.dev guidance (pass 2). Caching plugin: `wp-plugins/wp-rocket.md`.
+Status: **thresholds verified 2026-10-11** against web.dev/articles/vitals (last updated 2024-10-31; Core Web Vitals definitions change at most once a year). Fix guidance is practice. Caching plugin: `wp-plugins/wp-rocket.md`. Sources: `wp-plugins/SOURCES.md`.
 
 Shared hosting has had load problems: fast pages matter, and heavy fixes must not load the server. One change at a time, measured before and after.
 
 ## Targets (mobile)
 
-| Metric | Good | Usual cause when bad |
-|---|---|---|
-| LCP (largest element shown) | ≤ 2.5 s | big hero image, lazy-loaded hero, slow server response |
-| CLS (layout jumping) | ≤ 0.1 | images without width/height, late fonts, banners inserted above content |
-| INP (reaction to taps) | ≤ 200 ms | heavy JavaScript, sliders, chat widgets, tag managers |
-| Page weight | under ~1 MB ideally | originals in content, fonts, embeds |
+| Metric | Good | Poor | Usual cause when bad |
+|---|---|---|---|
+| LCP (largest element shown) | ≤ 2.5 s | > 4.0 s | big hero image, lazy-loaded hero, slow server response |
+| INP (reaction to taps; replaced FID in 2024) | ≤ 200 ms | > 500 ms | heavy JavaScript, sliders, chat widgets, tag managers |
+| CLS (layout jumping) | ≤ 0.1 | > 0.25 | images without width/height, late fonts, banners inserted above content |
+| Page weight (practice) | under ~1 MB | | originals in content, fonts, embeds |
 
-Measure with PageSpeed Insights (field data first) or Search Console's Core Web Vitals report; fix the biggest item; clear cache; measure again.
+A page passes when all three are "good" at the **75th percentile** of real visits, mobile and desktop measured separately. Measure with PageSpeed Insights (field data first) or Search Console's Core Web Vitals report; fix the biggest item; clear cache; measure again.
 
 ## Images
 
 - Right size for the slot (not a 4000 px original in a 600 px column); WebP (AVIF where supported); descriptive `alt`; explicit `width` and `height` or `aspect-ratio`.
-- Hero: `fetchpriority="high"`, never lazy (`skip-lazy` class with WP Rocket), optionally `<link rel="preload" as="image">`. Below the fold: `loading="lazy"`.
+- Hero: `fetchpriority="high"`, never lazy. With WP Rocket, exclude it in Media → LazyLoad → **Excluded images or iframes** (a filename, class or attribute, one per line) or give the `<img>` the `skip-lazy` class / `data-skip-lazy` attribute; Flatsome's own lazy load honours `skip-lazy` too. Optionally `<link rel="preload" as="image">`. Below the fold: `loading="lazy"`.
 - Responsive: `srcset` + `sizes`; in Flatsome use `image_size="large"` / `"medium"`, not `original`.
 
 ## CSS, fonts, scripts
@@ -36,3 +36,8 @@ Long pages with many sliders, videos or embedded maps are slow: static image lin
 ## A person decides
 
 WP Rocket settings (delay JS, remove unused CSS, preload), image optimisation plugins, server, PHP and database changes, CDN. Name the setting and why.
+
+## What changed in pass 2 (2026-10-11)
+
+- Thresholds confirmed (good values from web.dev; poor boundaries from the Chromium definitions); 75th-percentile rule and FID retirement added.
+- WP Rocket exclusion field named exactly; `skip-lazy` kept (WP Rocket support wording, Flatsome code).

@@ -1,6 +1,6 @@
 # Yoast SEO
 
-Status: merged 2026-10-11. Unverified against the current Yoast version (pass 2).
+Status: checked 2026-10-11. Meta keys and the "save the post afterwards" rule come from WordPress.org support threads and the Yoast REST/API ecosystem (the Yoast developer page on indexables returned 404); Yoast's official page documents the `wpseo_title` output filter.
 
 ## Per-page fields (safe to edit)
 
@@ -11,7 +11,7 @@ Status: merged 2026-10-11. Unverified against the current Yoast version (pass 2)
 | Focus keyphrase | `_yoast_wpseo_focuskw` | Only for Yoast's own analysis; no effect on Google. |
 
 - Variables work in titles: `%%title%%`, `%%sep%%`, `%%sitename%%`, `%%page%%`, `%%primary_category%%`.
-- An empty value removes the custom field. After changing meta by code, re-save the post so Yoast refreshes its indexable.
+- An empty value removes the custom field. **After writing `_yoast_wpseo_*` meta by code, call `wp_update_post()` (or save in the editor)**: Yoast rebuilds its indexable on post save, not on a meta write. The SEO-score dots in the post list may still lag. The `wpseo_title` filter changes output only, not stored values.
 - Lengths and wording: `../seo-geo/README.md`.
 
 ## Read before writing

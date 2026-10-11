@@ -44,8 +44,8 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 | `flatsome/` | UX Builder, CSS and child theme, WooCommerce, posts | **verified 2026-10-11** (theme 3.20.11 files, official hooks and docs, live sites) |
 | `swell/` | Block editor rules, SWELL blocks, Customizer map | **verified 2026-10-11** (swell-theme.com: 2.19, blocks, plugins; live site: CSS variables); Customizer paths not re-checked |
 | `block-themes/README.md` | theme.json-based themes (for `wp-master-theme`) | stub |
-| `wp-plugins/` | One file per plugin: Yoast, WP Rocket, WPForms, Wordfence, UpdraftPlus, WP Mail SMTP, WPML, ACF | merged, unverified (versions) |
-| `wp-maintenance.md`, `wp-security.md`, `wp-performance.md` | Health check, security review, Core Web Vitals | merged, unverified |
+| `wp-plugins/` | One file per plugin: Yoast, WP Rocket, WPForms, Wordfence, UpdraftPlus, WP Mail SMTP, WPML, ACF | **checked 2026-10-11** where vendors document it; Wordfence and ACF are practice |
+| `wp-maintenance.md`, `wp-security.md`, `wp-performance.md` | Health check, security review with the hardening baseline and PHP/WordPress versions, Core Web Vitals | **verified 2026-10-11** (hardening guide, php.net, web.dev); routines are practice |
 
 ## Pass 2 plan (one session per topic, in this order)
 
@@ -53,8 +53,9 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 2. ~~`flatsome/`~~ done 2026-10-11 (theme files read on SKYUS staging).
 3. ~~`swell/`~~ done 2026-10-11.
 4. ~~`seo-geo/`~~ done 2026-10-11; `legal/japan.md` 景表法 parts done, the rest (薬機法, 特商法, 個人情報) still to verify; 消費者庁 site was unreachable.
-5. `wp-plugins/`, `wp-security.md`, `wp-performance.md` against each plugin's docs and the
-   WordPress hardening guide.
+5. ~~`wp-plugins/`, `wp-security.md`, `wp-performance.md`~~ done 2026-10-11.
+
+Pass 2 is complete except: `legal/japan.md` 薬機法 / 特商法 / 個人情報 sections, `block-themes/` (stub), `swell/customizer.md` panel paths, and one retry of the two unreachable pages (digital.go.jp policy page, caa.go.jp stealth-marketing page). Next: pass 3 when a topic changes (new theme version, new law, new Google guidance); re-check version tables every quarter.
 
 Each verified file gets `Status: verified YYYY-MM-DD against <pages>` and keeps a short
 "what changed" note at the bottom.

@@ -1,6 +1,6 @@
 # Site maintenance: health check and upkeep
 
-Status: merged 2026-10-11 from the dashboard `wp-maintenance` skill, tool names removed. Unverified against current WordPress guidance (pass 2). Plugins: `wp-plugins/`. Security: `wp-security.md`.
+Status: merged 2026-10-11 from the dashboard `wp-maintenance` skill; version facts verified 2026-10-11 (php.net, WordPress hosting handbook); the routine is practice. Plugins: `wp-plugins/`. Security: `wp-security.md`.
 
 ## Health check routine (read-only)
 
@@ -15,7 +15,7 @@ Status: merged 2026-10-11 from the dashboard `wp-maintenance` skill, tool names 
 |---|---|---|
 | Plugin or theme update available | security fixes | update on staging, check key pages and forms, then production after a backup |
 | WordPress core update | security | same; minor versions (x.y.**z**) are low risk |
-| PHP older than 8.1 | no security fixes | plan an upgrade with the host, tested on staging |
+| PHP 8.1 or older (end of life); 8.2 after 2026-12-31 | no security fixes | plan the move to 8.3+ with the host, tested on staging (table in `wp-security.md`) |
 | Inactive plugins | attack surface, clutter | delete if not needed (a person decides) |
 | Inactive themes beyond one default | same | keep one default theme as a fallback |
 | Fatal errors in the log | something is broken | name the file, plugin and page |

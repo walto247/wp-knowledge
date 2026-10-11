@@ -1,6 +1,6 @@
 # Security review (read-only)
 
-Status: merged 2026-10-11 from the dashboard `wp-security` skill. Unverified against the WordPress hardening guide (pass 2). Firewall plugin: `wp-plugins/wordfence.md`.
+Status: **verified 2026-10-11** against the WordPress hardening guide (developer.wordpress.org/advanced-administration/security/hardening/), php.net supported versions and the WordPress 7.1 hosting handbook. The review routine itself is our practice. Firewall plugin: `wp-plugins/wordfence.md`. Sources: `wp-plugins/SOURCES.md`.
 
 Security **settings** are never part of a content task: Wordfence, users and roles, `wp-config.php`, `.htaccess`, passwords, keys. Look, report, a person acts.
 
@@ -14,6 +14,32 @@ Security **settings** are never part of a content task: Wordfence, users and rol
 6. **Accounts:** admin users that nobody recognises, generic usernames (`admin`), accounts without 2FA where the site supports it.
 7. **Plugin integrity (later, owner toolkit):** compare installed plugin files with the official checksums per version; flag plugins not from the official source or differing from it, and known-vulnerable versions.
 
+## Baseline a site should meet (WordPress hardening guide)
+
+| Item | Value |
+|---|---|
+| Core, plugins, themes | current; automatic minor updates on; only from wordpress.org or known vendors; delete what is unused |
+| PHP | a supported version (table below) |
+| Accounts | long unpredictable passwords, **two-step authentication**, no account named `admin`, least privilege |
+| File permissions | directories **755**, files **644**; `wp-config.php` **400 or 440**; only `wp-content` writable by the web server |
+| `wp-config.php` | `define( 'DISALLOW_FILE_EDIT', true );` (no editor in the dashboard); optionally one level above the web root; denied in `.htaccess` |
+| Database | non-default table prefix; DB user with only SELECT, INSERT, UPDATE, DELETE for daily use (do not revoke DROP/ALTER without a tested backup plan, updates need them) |
+| Transport | SFTP, never FTP; HTTPS for admin; optional HTTP Basic Auth on `/wp-admin/` |
+| Firewall | a plugin firewall (Wordfence on our sites) or a server WAF; Cloudflare in front where used |
+| Logs and integrity | review access and error logs; file-integrity monitoring (changed or added files); external malware scan |
+| Backups | regular, dated, **stored off the server**, encrypted, restore tested |
+
+## Versions to know (2026-10-11)
+
+| What | State |
+|---|---|
+| WordPress | 7.1.2 (2026-09-22) is current; 7.2 due about 2026-12-09. Minimum PHP 7.4; **recommended PHP 8.4 or 8.5** (hosting handbook) |
+| PHP 8.5 | active support to 2027-12-31, security fixes to 2029-12-31 |
+| PHP 8.4 | active support to 2026-12-31, security fixes to 2028-12-31 |
+| PHP 8.3 | security fixes only, to 2027-12-31 |
+| PHP 8.2 | security fixes only, **to 2026-12-31**: plan the move to 8.3+ now |
+| PHP 8.1 and older | end of life, no fixes |
+
 ## If the site looks hacked
 
 Stop and say clearly what was found and where. The admin runs a Wordfence scan and contacts the host. No repairs: a wrong fix destroys evidence or the site.
@@ -22,3 +48,8 @@ Stop and say clearly what was found and where. The admin runs a Wordfence scan a
 
 - Suggest weakening security to make something work (disabling the firewall, 777 permissions, turning off updates).
 - Read or repeat passwords, keys or tokens, even if visible in a file. Say that a secret is exposed and where, not what it is.
+
+## What changed in pass 2 (2026-10-11)
+
+- Baseline table from the WordPress hardening guide (permissions, wp-config, prefix, DB privileges, 2FA, SFTP, logs, backups).
+- PHP and WordPress version table; PHP 8.2 reaches end of security support on 2026-12-31.

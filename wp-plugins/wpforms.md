@@ -1,6 +1,6 @@
 # WPForms
 
-Status: merged 2026-10-11. Unverified against the current version (pass 2). Japanese form conventions: `../design/japan.md`.
+Status: shortcode checked 2026-10-11 against WPForms documentation (`[wpforms id="123" title="true" description="true"]`; `false` hides them). Japanese form conventions: `../design/japan.md`.
 
 ## Safe
 

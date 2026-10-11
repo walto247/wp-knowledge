@@ -1,6 +1,6 @@
 # WP Mail SMTP
 
-Status: merged 2026-10-11. Unverified (pass 2).
+Status: checked 2026-10-11 against wpmailsmtp.com docs: **WP Mail SMTP → Settings → Misc → Do Not Send** blocks everything sent through `wp_mail()`; mail sent by other means (PHP `mail()`) is not blocked.
 
 Sends the site's email (form notifications, password resets) through a real mail account. Its settings contain passwords or OAuth tokens: never read, copy or change them.
 
