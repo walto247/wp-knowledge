@@ -42,6 +42,7 @@ Google rewrites titles that are half empty, outdated, inaccurate, boilerplate ac
 - Strong local intent: 「地域名 + サービス」 in title and headings for local businesses. Keep Google Business Profile and Yahoo!プレイス current.
 - Google is the main engine; Yahoo! JAPAN uses Google's index, so Google covers both except local listings.
 - Slugs in English/romaji (`/tsushinsei/`, `/campus/tokyo/`); Japanese slugs become long encoded URLs.
+- A post slug says what the post is about: short English/romaji keywords taken from its title (`/security/news/yakiniku-king-app-unauthorized-access-2026-10-08/`), never only a series name + a date (`/security-news-2026-10-08/`). A date may be added at the end for repeating posts (weekly reports) to keep slugs unique. Automated posts: build the slug from the same facts as the title. Changing a published slug: WordPress keeps the old one for posts (`_wp_old_slug`) and redirects; pages and categories need a 301.
 
 ## Links and images
 

@@ -3,6 +3,20 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-12 — Post slugs carry the title's keywords
+
+Files changed: `seo-geo/README.md` (Japanese specifics).
+
+What changed in the guidance:
+- A post slug must describe the post with keywords from its title (English/romaji), not just a series name + date; a date may be appended for repeating posts. Automated posts build the slug from the same facts as the title. Found on wp-anshin-com, whose automated security posts used `security-news-YYYY-MM-DD`.
+
+### Checklist for existing sites (run at the next session of each site project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| Post slugs that are only a series name, a number or a date (`news-2026-10-01`, `?p=123`, `post-5`) | the slug is a small relevance and click signal and tells readers what the page is | count, examples, whether old slugs would redirect |
+| Automated or imported posts (n8n, RSS, AI drafts) | slugs are often generated from dates or IDs | which workflow, how the slug is built |
+
 ## 2026-10-11 — Folder created; pass 1 (merge) and pass 2 (verification) done
 
 Files changed: all. Sources and dates in each topic's `SOURCES.md`; status line at the top of every file.
