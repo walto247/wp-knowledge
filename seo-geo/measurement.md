@@ -3,6 +3,8 @@
 Status: **researched 2026-10-14** from Google Search Central and Search Console / Analytics / Looker Studio help (read
 2026-10-14; most help pages show no update date). Points marked "inference" are our reading where no page says it outright.
 Sources: `SOURCES.md` (section "Measurement"). How to write the report: `reporting.md`.
+To re-check against the full help pages (the fetched pages were truncated): the "few dozen users" anonymisation wording,
+the 1,000 / 50,000 row limits, the 30 key-event limit, the Insights branded classification.
 
 ## Search Console numbers
 
