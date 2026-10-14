@@ -3,6 +3,32 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-14 — SEO / analytics reporting and measurement (two new topics)
+
+Files changed: new `seo-geo/reporting.md`, new `seo-geo/measurement.md`, `seo-geo/SOURCES.md`, `README.md`, `writing/japanese.md` (pointer).
+Researched from an SEO project session; Google and government points read 2026-10-14; agency points marked as practice.
+
+What changed in the guidance:
+- Reports say **what is wrong → how to fix → how to check**; summary first (written last), 3–5 key numbers compared with the
+  previous month **and the same month last year**, ○△× status with a legend, problem cards, task table by team, 30/60/90 days,
+  a fixed "definitions and how to check" page; a talk page and expected questions when someone presents for us.
+- Bad news: confirmed fact / possible cause / still to check, with the fix; no ranking promises (Google: no one can guarantee #1).
+- Japanese writing for reports follows 公用文作成の考え方 (2022) and the やさしい日本語 guideline, step 1.
+- Measurement: never `utm_` on links between your own domains (it overwrites the real source); use cross-domain measurement
+  and a plain parameter + hidden form field; hostname filter when a property gets another domain's hits.
+- Moving part of a site: one-to-one 301s, keep at least 1 year, Change of Address is for whole domains only; a 301 to a
+  thinner page still loses the ranking.
+
+### Checklist for existing sites (run at the next session of each site project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| Links between our own domains carry `utm_` parameters | they overwrite the visitor's real source in GA4 | which links, which domains |
+| A GA4 property receives hits from another hostname | totals are mixed | hostnames and their share of sessions |
+| Sessions that start on thank-you pages | the form flow breaks the session (other domain, booking system) | share of key events |
+| A section moved to another domain with 302s or to thinner pages | rankings are lost | URLs, redirect type, target page |
+| Client reports without "how to fix" and "how to check" | data alone does not lead to action | which reports |
+
 ## 2026-10-12 — WebP by default (native WordPress)
 
 Files changed: `wp-performance.md` (Images).

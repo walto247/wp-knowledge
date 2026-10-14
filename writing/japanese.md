@@ -60,3 +60,7 @@ Button text says the action (資料請求する); the line above says the benefi
 - [ ] No claim that breaks `../legal/japan.md` (No.1, 最高, 絶対, 治る, hidden conditions)
 - [ ] Full-width / half-width consistent; no mixed punctuation (、。 vs , .)
 - [ ] Headings say what the section answers; the CTA says what happens next
+
+## Reports
+
+Client and internal reports (SEO, analytics): `../seo-geo/reporting.md` (structure, 公用文作成の考え方 and やさしい日本語 rules, talk script).
