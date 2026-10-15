@@ -69,3 +69,33 @@
 | Soft 404 | Google Search Central, HTTP and network errors | https://developers.google.com/search/docs/crawling-indexing/http-network-errors |
 
 Rejected from a pasted article (2026-10-15): "AI reads the first 40 words after an H2"; "JSON-LD/FAQPage critical for GEO" (FAQ rich results ended 2026-05-07); "法人番号 in Organization boosts E-E-A-T significantly"; a hidden Japanese span inside an English heading; "Japanese Google truncates after ~32 characters" as a fixed rule (pixel width); SVG favicon alone; og:image in WebP.
+
+## Read 2026-10-15 (spam policies, ranking systems, crawling and indexing)
+
+| Topic | Source | URL |
+|---|---|---|
+| Search Essentials | Google Search Central | https://developers.google.com/search/docs/essentials |
+| Spam policies (scaled content, doorway, expired domain, site reputation, link spam, hidden text incl. accordions) | Google Search Central | https://developers.google.com/search/docs/essentials/spam-policies |
+| Site reputation abuse: first-party oversight no excuse (2024-11-19); EEA enforcement change (2026-08-28) | Google Search Central blog | https://developers.google.com/search/blog/2024/11/site-reputation-abuse · https://developers.google.com/search/blog/2026/08/update-site-reputation-policy |
+| AI content | Google Search Central blog 2023-02 | https://developers.google.com/search/blog/2023/02/google-search-and-ai-content |
+| Ranking systems (helpful content retired 2024-03; no NavBoost) | Google ranking systems guide | https://developers.google.com/search/docs/appearance/ranking-systems-guide |
+| Topic authority (news only) | Google Search Central blog 2023-05 | https://developers.google.com/search/blog/2023/05/understanding-news-topic-authority |
+| Raters do not affect ranking; date changes as a warning sign | Creating helpful content | https://developers.google.com/search/docs/fundamentals/creating-helpful-content |
+| YMYL categories | Search Quality Rater Guidelines, 2025-09-11 | https://static.googleusercontent.com/media/guidelines.raterhub.com/en//searchqualityevaluatorguidelines.pdf |
+| Intrusive interstitials | Google Search Central | https://developers.google.com/search/docs/appearance/avoid-intrusive-interstitials |
+| Mobile-first indexing, content needing interaction | Google Search Central | https://developers.google.com/search/docs/crawling-indexing/mobile/mobile-sites-mobile-first-indexing |
+| HTTPS signal | Google Search Central blog 2014-08 | https://developers.google.com/search/blog/2014/08/https-as-ranking-signal |
+| Self-serving reviews | Review snippet docs | https://developers.google.com/search/docs/appearance/structured-data/review-snippet |
+| robots.txt, noindex | Google Search Central | https://developers.google.com/search/docs/crawling-indexing/robots/intro · https://developers.google.com/search/docs/crawling-indexing/block-indexing |
+| Sitemaps (lastmod, priority ignored) | Google Search Central | https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap |
+| Canonicals, tracking parameters, hreflang + canonical | Google Search Central | https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls |
+| Outbound link attributes | Google Search Central | https://developers.google.com/search/docs/crawling-indexing/qualify-outbound-links |
+| URL structure (hyphens, audience language, UTF-8) | Google Search Central | https://developers.google.com/search/docs/crawling-indexing/url-structure |
+| Google crawlers incl. Google-Extended | Google Search Central | https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers |
+| OpenAI crawlers | OpenAI | https://developers.openai.com/api/docs/bots |
+| Perplexity crawlers | Perplexity | https://docs.perplexity.ai/guides/bots |
+| WordPress robots.txt and the search-engine visibility setting | WordPress developer reference `do_robots`; 5.5 sitemaps note | https://developer.wordpress.org/reference/functions/do_robots/ · https://make.wordpress.org/core/2020/07/22/new-xml-sitemaps-functionality-in-wordpress-5-5/ |
+| Information gain patent | Google Patents US12013887B2 | https://patents.google.com/patent/US12013887 |
+| Yahoo! JAPAN uses Google (2010) | LY Corporation IR release | https://www.lycorp.co.jp/en/ir/news/news-5052777038611857712/main/0/link/en20100727_2.pdf |
+
+Rejected from a pasted article (2026-10-15): FAQ snippets "restricted to authoritative sites" (gone since 2026-05-07); helpful content system and NavBoost as current documented systems; information gain "explicitly measured"; dwell-time / 5-second pogo-sticking demotion; "search intent is the #1 signal"; E-E-A-T scored on every site; 監修 as a "massive ranking boost"; "a YMYL site cannot rank without .go.jp citations"; "update every 6–12 months"; pop-ups "penalised on mobile"; rel=sponsored "must" (nofollow also accepted); "avoid Japanese characters in URLs" as Google's rule (our house rule); "Bing/AI follow identical standards, 95 % of traffic" (unsourced).

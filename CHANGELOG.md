@@ -3,6 +3,31 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-15 — Google rules: spam policies, ranking myths, crawling and indexing
+
+Files changed: `seo-geo/README.md` (E-E-A-T and raters, Yahoo! JAPAN status, URL rule as house rule, new sections "Spam policies by name", "Ranking systems", "Crawling and indexing for WordPress"), `seo-geo/SOURCES.md`.
+Checked a pasted article on Google's guidelines against Google Search Central, the ranking-systems guide, the Quality Rater Guidelines (2025-09-11), OpenAI and Perplexity crawler docs and WordPress core; rejected claims listed in `seo-geo/SOURCES.md`.
+
+What changed in the guidance:
+- Spam policies named one by one for reports (scaled content, doorway pages per city, expired domains, site reputation abuse, link spam incl. keyword anchors in press releases). Separately, a structured-data guideline: no self-serving review stars.
+- Ranking: helpful content system retired into core (2024-03); NavBoost, information gain, dwell-time thresholds and "#1 signal" are not Google-documented; date changes without real updates are a warning sign.
+- Crawling and indexing: robots.txt is not for hiding pages; never block `/wp-content/`; AI crawler names and what each does; sitemap and `lastmod` rules; self canonicals; the WordPress "discourage search engines" box must be off on live sites; `sponsored` / `ugc`, never `nofollow` on internal links.
+- Slugs in romaji stay our house rule; Google allows Japanese URLs.
+
+### Checklist for existing sites (run at the next session of each site project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| 設定 → 表示設定 「検索エンジンがサイトをインデックスしないようにする」 ticked on a live site | every page is `noindex` | site, setting |
+| robots.txt blocks `/wp-content/`, `/wp-includes/`, CSS or JS, or blocks pages that carry `noindex` | Google cannot render, or cannot see the noindex | robots.txt lines |
+| AI crawlers blocked (`OAI-SearchBot`, `PerplexityBot`) or allowed without the owner knowing | visibility in AI search is the owner's choice | robots.txt lines, CDN/WAF bot rules |
+| Sitemap lists redirects, 404s or noindex pages; `lastmod` on posts changes daily without edits (missing `lastmod` on term or author entries is normal) | Google stops trusting the sitemap | sitemap URL, examples |
+| Pages without a self canonical, or a language version canonical to another language | duplicates, lost language versions | page, canonical printed |
+| Paid, sponsored or affiliate links without `rel="sponsored"`/`nofollow`; `nofollow` on internal links | link spam policy; wasted internal links | page, link |
+| Star ratings (AggregateRating) for the business's own reviews or widgets | self-serving reviews are not eligible (review-snippet guideline) | page, markup source |
+| City or station landing pages with near-identical text | doorway abuse | URLs, how similar |
+| Full-screen pop-up on load (other than a small, legally required notice) | may hurt search performance | page, trigger |
+
 ## 2026-10-15 — Page structure, SEO/GEO extras, social previews and icons, 特商法 and 外部送信
 
 Files changed: `design/general.md` (new section "Content blocks and page order"), `design/japan.md` (top page order, English display headings), `seo-geo/README.md` (headings, images of text, Organization properties, new sections "GEO beyond Google", "Multilingual sites", "Social previews, icons, 404 and thank-you pages"), `wp-performance.md` (Japanese font slices, image size targets), `legal/japan.md` (特商法 表記 details, 最終確認画面, 外部送信, cookie consent), the three `SOURCES.md`, `README.md`.
