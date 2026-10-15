@@ -3,6 +3,13 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-15 (evening) — sideways rows are allowed (owner)
+
+Files changed: `design/general.md` (phone-first line). "No sideways scrolling" means the page itself; a deliberate sideways row of cards inside a section (works, news, programs) is fine and expected on phones: scroll-snap, swipe, mouse drag or arrows on PC, the next card peeking in. Automated checks flag only the page width, not inner scrollers.
+
+### Checklist for existing sites
+None (a clarification; nothing to check).
+
 ## 2026-10-15 — Google rules: spam policies, ranking myths, crawling and indexing
 
 Files changed: `seo-geo/README.md` (E-E-A-T and raters, Yahoo! JAPAN status, URL rule as house rule, new sections "Spam policies by name", "Ranking systems", "Crawling and indexing for WordPress"), `seo-geo/SOURCES.md`.

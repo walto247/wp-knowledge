@@ -14,7 +14,7 @@ Status: merged 2026-10-11 from `global-web`, `ux-ui` and `wireframes` (dashboard
 - Visual order = importance: headline → key benefit → proof → action. Never start with history or greetings.
 - Scannable: clear H2/H3, short paragraphs, lists, white space. People skim.
 - **Consistency:** reuse the site's colours, fonts, spacing, buttons and section styles. A new colour or font size needs a reason; a page must look like the rest of the site.
-- Phone first: check every change at 360 and 390 px (all test widths: "Screen sizes" below). No sideways scrolling; buttons reachable with a thumb; text readable without zoom.
+- Phone first: check every change at 360 and 390 px (all test widths: "Screen sizes" below). The **page** never scrolls sideways; a deliberate sideways row inside a section is fine and expected on phones (card carousel / works or news row: scroll-snap, swipe on phones, mouse drag or arrow buttons on PC, the next card peeking in so people see there is more; owner, 2026-10-15). Buttons reachable with a thumb; text readable without zoom. Test tools: flag `document.documentElement.scrollWidth > innerWidth` only, not inner scrollers with `overflow-x: auto`.
 
 Typical page goals: home = trust and the next step; service page = explain value, convert to an inquiry; blog post = teach, build authority, link inward; contact = remove friction; landing page = one CTA, nothing else.
 
