@@ -3,6 +3,29 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-16 — Client reports: GA4 and Search Console terms, diagnosis table, page-by-page report
+
+Files changed: `seo-geo/measurement.md` (average position, new sections "GA4 numbers and their names", "Search Console inside GA4, and Looker Studio", "AI Overviews and clicks"), `seo-geo/reporting.md` (target vs actual, status marks, cadence, dashboards, new sections "Diagnose before writing", "Client report, page by page", seasonality, words for numbers, cover message templates, frameworks), `seo-geo/SOURCES.md`.
+Checked three pasted articles on GA4 + Search Console reporting against Analytics, Search Console and Looker Studio help, Search Central, Pew Research, WCAG and the original framework sources; corrected claims listed in `seo-geo/SOURCES.md`.
+
+What changed in the guidance:
+- Search queries cannot be joined with GA4 key events; report search → key events per landing page.
+- Users are devices, not people (ユーザー数（概算）); no "time on page" (average engagement time); 精読率 is not engagement rate; average position is topmost and impression-weighted.
+- Looker Studio is not real time (Search Console 12 h; GA4 12 h by default) and stays our working tool; the client gets a 4–6 page written report with a "what we did" before/after page and a next-month table that names who acts (us or the client).
+- Diagnosis patterns with "check before concluding" (e.g. mobile visits but PC enquiries is not automatically broken mobile; AI Overviews is a hypothesis).
+- Status marks ○△× with words, colour never alone, no emoji; Japanese holidays: business-day-aware comparisons.
+
+### Checklist for existing reports (run at the next report of each project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| A "conversion rate per keyword" or similar query-level GA4 figure | Google's data cannot produce it | report, figure, where it came from |
+| "Users" presented as people; "time on page"; 精読率 used for engagement rate | wrong terms | report, wording |
+| Status shown by colour or emoji only | WCAG 1.4.1; lost in print | report pages |
+| Monthly client report without a page showing the work done (before/after) or who acts next month | the client cannot see the value or their own tasks | report |
+| GA4 Search Console reports not published, or Search Console not linked | the landing-page view is missing | property |
+| Engaged-session timer not 10 s and no method note in the report | months stop being comparable | property setting, date changed |
+
 ## 2026-10-15 (evening) — sideways rows are allowed (owner)
 
 Files changed: `design/general.md` (phone-first line). "No sideways scrolling" means the page itself; a deliberate sideways row of cards inside a section (works, news, programs) is fine and expected on phones: scroll-snap, swipe, mouse drag or arrows on PC, the next card peeking in. Automated checks flag only the page width, not inner scrollers.

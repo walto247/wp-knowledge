@@ -99,3 +99,28 @@ Rejected from a pasted article (2026-10-15): "AI reads the first 40 words after 
 | Yahoo! JAPAN uses Google (2010) | LY Corporation IR release | https://www.lycorp.co.jp/en/ir/news/news-5052777038611857712/main/0/link/en20100727_2.pdf |
 
 Rejected from a pasted article (2026-10-15): FAQ snippets "restricted to authoritative sites" (gone since 2026-05-07); helpful content system and NavBoost as current documented systems; information gain "explicitly measured"; dwell-time / 5-second pogo-sticking demotion; "search intent is the #1 signal"; E-E-A-T scored on every site; 監修 as a "massive ranking boost"; "a YMYL site cannot rank without .go.jp citations"; "update every 6–12 months"; pop-ups "penalised on mobile"; rel=sponsored "must" (nofollow also accepted); "avoid Japanese characters in URLs" as Google's rule (our house rule); "Bing/AI follow identical standards, 95 % of traffic" (unsourced).
+
+## Read 2026-10-16 (GA4 metrics, Search Console in GA4, Looker Studio, AI Overviews, reporting frameworks)
+
+| Topic | Source | URL |
+|---|---|---|
+| Engaged session, engagement rate, bounce rate | Google Analytics Help | https://support.google.com/analytics/answer/12195621 · https://support.google.com/analytics/answer/9191807 |
+| Users, identity spaces, active users | Google Analytics Help | https://support.google.com/analytics/answer/10976610 · https://support.google.com/analytics/answer/12253918 |
+| Benchmarking report | Google Analytics Help | https://support.google.com/analytics/answer/11109416 |
+| Search Console links and reports in GA4 (no query join) | Google Analytics Help | https://support.google.com/analytics/answer/10737381 |
+| Average position (topmost, impression-weighted) | Search Console Help | https://support.google.com/webmasters/answer/7042828 |
+| Data freshness 12 h, scheduled delivery | Looker Studio Help | https://docs.cloud.google.com/looker/docs/studio/manage-data-freshness · https://support.google.com/datastudio/answer/9263641 |
+| AI features in Search Console; Google's "higher quality clicks" | Google Search Central; Google blog 2025-08-06 | https://developers.google.com/search/docs/appearance/ai-features · https://blog.google/products/search/ai-search-driving-more-queries-higher-quality-clicks/ |
+| Clicks with AI summaries (8 % vs 15 %) | Pew Research Center 2025-07-22 | https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/ |
+| AI Overview CTR (secondary) | Ahrefs; Seer Interactive | https://ahrefs.com/blog/ai-overviews-reduce-clicks/ · https://www.seerinteractive.com/blog/aio-impact-on-google-ctr-september-2025-update |
+| CTR curves (secondary) | Backlinko; Advanced Web Ranking | https://backlinko.com/google-ctr-stats · https://www.advancedwebranking.com/ctrstudy/ |
+| Dates in titles | Google title links; SEJ on Mueller | https://developers.google.com/search/docs/appearance/title-link · https://www.searchenginejournal.com/google-on-the-seo-impact-of-dates-in-title-tags/437397/ |
+| Colour alone | WCAG 2.1 Understanding 1.4.1 | https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html |
+| 精読率 | WACA ウェブ解析士協会 glossary | https://www.waca.or.jp/glossary/85260/ |
+| 10/90 rule | Avinash Kaushik, 2006 | https://www.kaushik.net/avinash/the-10-90-rule-for-magnificient-web-analytics-success/ |
+| SCQ / Pyramid Principle | Barbara Minto | https://barbaraminto.com/ |
+| Analytics Academy on Skillshop | Google Analytics Help | https://support.google.com/analytics/answer/15440208 |
+| Changes take hours to months | Google SEO Starter Guide | https://developers.google.com/search/docs/fundamentals/seo-starter-guide |
+| Looker Studio refresh (GA4 1/4/12 h, Search Console 12 h fixed) | Looker Studio Help | https://docs.cloud.google.com/looker/docs/studio/manage-data-freshness |
+
+Rejected or corrected from pasted articles (2026-10-16): "organic conversion rate per query" from linking GA4 and Search Console (only landing-page level); "users = distinct humans"; "time on page" in GA4; average position "across all tracked keywords"; Looker Studio "real time" (12 h); 精読率 as the label for engagement rate; fixed thresholds (CTR < 2 %, engagement < 40 % / > 65 %) as rules; "AI Overviews filter window-shoppers, normal" as a fact; "mobile 75 % / PC 90 % of conversions = broken mobile" as a conclusion; emoji traffic lights; Kaushik's rule as "data vs insight" (it is tools vs people).
