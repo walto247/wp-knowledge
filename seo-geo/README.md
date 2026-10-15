@@ -1,6 +1,6 @@
 # SEO and GEO (AI answers) for WordPress pages
 
-Status: **verified 2026-10-11** against Google Search Central (AI features and your website; title links; snippets and meta descriptions; creating helpful, reliable, people-first content; structured data general policies; FAQ structured data change log; the June 2025 "simplifying search results" post) and Yoast (meta description and title articles). Japanese-specific lengths are practice, not a Google rule, and are marked as such. URLs and read dates: `SOURCES.md`.
+Status: **verified 2026-10-11** against Google Search Central (AI features and your website; title links; snippets and meta descriptions; creating helpful, reliable, people-first content; structured data general policies; FAQ structured data change log; the June 2025 "simplifying search results" post) and Yoast (meta description and title articles). Sections "GEO beyond Google", "Multilingual sites" and "Social previews, icons, 404 and thank-you pages" checked 2026-10-15 (Google Search Central, Facebook, X, Apple, WordPress core, KDD 2024 paper). Japanese-specific lengths are practice, not a Google rule, and are marked as such. URLs and read dates: `SOURCES.md`.
 
 **Procedure and tools live in `../../seo-audit-kit/`** (playbook, checklist, templates, Search Console and PageSpeed tools, the `/seo-audit` skill). This file is the knowledge the kit and every project share.
 
@@ -30,7 +30,7 @@ Google rewrites titles that are half empty, outdated, inaccurate, boilerplate ac
 
 ## Headings and content
 
-- One H1, visibly the most prominent heading. H2 for sections, H3 inside. Question headings match searches and AI answers (「〜とは？」「〜の費用は？」 / "How much does it cost?").
+- One H1, visibly the most prominent heading. H2 for sections, H3 inside, no skipped levels. This is accessibility and clarity, not a Google rule (Google: heading order does not affect Search; it uses the main heading and other headings as sources for the title link). Question headings match searches and AI answers (「〜とは？」「〜の費用は？」 / "How much does it cost?").
 - **Definition block:** answer the main question in the first 150 characters/words. ✅「通信制高校とは、毎日通学せずに自分のペースで学べる高校です。」 ❌「このページでは〜について説明します。」
 - Cover what a searcher needs to decide, not a word count. Thin pages are a problem; padding is a worse one.
 - Author box and a real last-updated date on time-sensitive pages. FAQ sections with real customer questions, visible on the page.
@@ -49,6 +49,7 @@ Google rewrites titles that are half empty, outdated, inaccurate, boilerplate ac
 - Internal links from related pages to important ones with descriptive anchors; every important page reachable in a few clicks.
 - External links to trustworthy sources for facts; `rel="sponsored"` for paid links, `rel="ugc"` for user-added.
 - Images: descriptive file names and alt text, right size, WebP, width and height set, hero not lazy-loaded (`../wp-performance.md`).
+- Text belongs in HTML, not in images (WCAG 1.4.5). When a banner has text baked in, its `alt` repeats that text (WCAG 1.1.1); the page is still indexed without it, but that text is lost to search and screen readers.
 
 ## Structured data (JSON-LD)
 
@@ -56,7 +57,7 @@ Google's policies: mark up only **content visible on the page**; markup must be 
 
 What still earns a rich result and what does not (2026-10):
 - **Gone: FAQ rich results** (stopped 2026-05-07; documentation removed 2026-06-15). **HowTo** gone since 2023. Removed in June 2025: Book actions, Course info, Claim review, Estimated salary, Learning video, Special announcement, Vehicle listing. Existing markup does no harm and needs no removal, but it earns nothing in Google's results.
-- Worth keeping, when real: Organization / LocalBusiness / EducationalOrganization (name, address, phone matching the page and Business Profile), Article (author, dates), BreadcrumbList, Product / Review / Offer for shops (real prices and reviews only), Event (real dates; update or remove after), VideoObject, JobPosting.
+- Worth keeping, when real: Organization / LocalBusiness / EducationalOrganization (name, address, phone matching the page and Business Profile; Google's Organization properties include `legalName`, `address`, `foundingDate`, `numberOfEmployees`, `logo`, `sameAs` and `taxID`, where a Japanese company puts its 13-digit 法人番号; `founder` is not in Google's list. Google says this helps it understand the organisation's details; it claims no ranking or E-E-A-T boost), Article (author, dates), BreadcrumbList, Product / Review / Offer for shops (real prices and reviews only), Event (real dates; update or remove after), VideoObject, JobPosting.
 - **Yoast already prints** Organization/WebSite, WebPage, Article, BreadcrumbList and more. Never add duplicate JSON-LD by hand; prefer Yoast's settings. Check what is there first.
 - Rules of the house: ISO dates, absolute production URLs, `JSON_UNESCAPED_UNICODE` when printed from PHP, validate with the Rich Results Test (a person runs it). Adding schema to a theme is a code change: draft, explain, approve.
 
@@ -75,3 +76,21 @@ Keyphrase and intent defined · title and description written to the table above
 - FAQ rich results removed (May 2026) and the June 2025 removals listed; HowTo confirmed gone.
 - Helpful-content self-assessment, E-E-A-T with "trust is most important", Who/How/Why and the AI-content rule added.
 - Structured data policies quoted from Google.
+
+## GEO beyond Google (checked 2026-10-15)
+
+- Google: no special markup or optimisation for AI features. Claims such as "AI engines read the first 40 words after an H2" or "JSON-LD / FAQPage is critical for GEO" have no source.
+- Research on other answer engines (Aggarwal et al., KDD 2024, tested on Perplexity and a benchmark): adding **statistics, quotations and cited sources** raised visibility by up to about 40 %, with results varying by topic. Tables and lists were not tested; they help readers, which is reason enough.
+
+## Multilingual sites (checked 2026-10-15)
+
+- One URL per language (`/ja/`, `/en/`), each page linking its versions with `hreflang` (`ja`, `en`, plus `x-default` for the fallback, usually the language picker or main version). Language codes ISO 639-1, regions ISO 3166-1 (`en-US`).
+- **Never redirect automatically by IP address or browser language**: Googlebot usually crawls from the USA and would only see the English version. Show a visible language switcher (EN / JP) in the header instead.
+- WPML or Polylang print `hreflang` themselves; check, do not add by hand (`../wp-plugins/wpml.md`).
+
+## Social previews, icons, 404 and thank-you pages (checked 2026-10-15)
+
+- **og:image** 1200 × 630 (Facebook's recommendation, ratio 1.91:1; X crops to 2:1, LINE and Slack use the same tag). **JPEG or PNG, not WebP** (some apps fail on WebP), under 5 MB (X's limit; Facebook allows 8 MB), with `og:image:width`, `og:image:height`, `og:image:alt` and `twitter:card` = `summary_large_image`. Keep important text away from the edges. The Open Graph protocol itself sets no size. Yoast / SEO SIMPLE PACK print these tags; set a default image site-wide.
+- **Icons:** WordPress **Site Icon** (upload at least 512 × 512; WordPress 6.5+: 設定 → 一般 → サイトアイコン, classic themes also Customizer → サイト基本情報) creates 32, 64, 180 (Apple touch icon), 192 and 270 px versions; that covers phones and tabs. Google's search favicon: square, larger than 48 × 48 recommended, PNG/ICO/GIF/JPEG (**SVG is not in Google's list**). An extra SVG favicon for sharp tabs and dark mode is optional (Safari only from 26).
+- **404 page:** on-brand, with search and links home and to the main sections, and it **must return HTTP 404** (WordPress's `404.php` does). A normal-looking page with status 200 for missing URLs is a "soft 404".
+- **Thank-you page** after a form: what happens next and when (「2営業日以内にご連絡します」), a link back; `noindex` (practice; Google does not require it). The GA4 key event is the form's `form_submit`, not this page view (`measurement.md`); count thank-you page views only when the form sends no event.

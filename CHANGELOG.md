@@ -3,6 +3,31 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-15 — Page structure, SEO/GEO extras, social previews and icons, 特商法 and 外部送信
+
+Files changed: `design/general.md` (new section "Content blocks and page order"), `design/japan.md` (top page order, English display headings), `seo-geo/README.md` (headings, images of text, Organization properties, new sections "GEO beyond Google", "Multilingual sites", "Social previews, icons, 404 and thank-you pages"), `wp-performance.md` (Japanese font slices, image size targets), `legal/japan.md` (特商法 表記 details, 最終確認画面, 外部送信, cookie consent), the three `SOURCES.md`, `README.md`.
+Checked a pasted article against Google Search Central, WCAG 2.2, NN/g, Facebook/X/Apple docs, WordPress core, the KDD 2024 GEO paper, 消費者庁 and 総務省; rejected claims listed in the `SOURCES.md` files.
+
+What changed in the guidance:
+- Pages: section intro (eyebrow → H2 → lead), cards for three or more points, descriptive link text instead of "Learn more", zigzag only for 2–3 informational rows, HTML in reading order, no auto-advancing hero sliders, a home-page order (Japanese version with お知らせ under the hero, 実績 with industry tags, ご利用の流れ).
+- SEO/GEO: one H1 is clarity, not a Google rule; no special AI markup; statistics, quotations and sources help on answer engines (research); Organization with `taxID` = 法人番号; text in images repeated in `alt`.
+- Multilingual: one URL per language, `hreflang` + `x-default`, never redirect by IP or browser language.
+- Polish: og:image 1200 × 630 JPEG/PNG with alt; WordPress Site Icon 512 (gives the 180 Apple icon); PNG favicon for Google; 404 returns status 404; thank-you page with next steps.
+- Law: 特商法 表記 for goods and paid services, 返品特約 never omitted, omission rule 「請求があれば遅滞なく」; 外部送信 is a notice duty for media, malls and services (not company sites); cookie consent when a site targets EU/UK visitors.
+
+### Checklist for existing sites (run at the next session of each site project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| Rows of "詳しくはこちら" / "Learn more" links | WCAG 2.4.4; unclear for everyone | page, how many |
+| Auto-advancing hero slider without a pause button | WCAG 2.2.2; later slides go unseen | page |
+| Missing `og:image`, or none set site-wide (WebP share images: see the WebP entry below) | blank previews in LINE, X, Slack | page, current image |
+| Site Icon not set, or no 180 px Apple touch icon | blank icons in tabs, search results, home screens | what is printed in `<head>` |
+| Missing URLs that return status 200 instead of 404 | soft 404 | test URL, status |
+| Language versions that redirect automatically, or no `hreflang` | Google may only see one language | which versions |
+| Shops and paid services: 特商法 表記 without 返品特約, or 最終確認画面 incomplete | 特商法 11条, 12条の6 | page, missing items |
+| Tracking or chat scripts not listed in the privacy policy (外部送信 table) | duty for sites in scope of 外部送信規律 (media, malls, apps, services); good practice for company and own-goods sites | scripts found, policy section, whether the site is in scope |
+
 ## 2026-10-15 — Navigation, colour and surfaces, motion, Japanese forms
 
 Files changed: `design/general.md` (new section "Navigation, surfaces and motion", card spec), `design/japan.md` (navigation, forms, new subsection "Surfaces, photos and trust pages"), `design/SOURCES.md`, `README.md`.

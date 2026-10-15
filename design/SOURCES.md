@@ -79,3 +79,16 @@ Rejected from a pasted article (2026-10-15): Japanese body letter spacing 0.04�
 | 白銀比 / 大和比 | CGWORLD 2019 | https://cgworld.jp/regular/201901-colobito04-ratio-2.html | 2026-10-15 |
 
 Rejected or softened from a pasted article (2026-10-15): muted captions #86868B / #888 (fail 4.5:1); "never pure black" and kanji "halation" (DADS uses #000; no source); shadows "never above 6 %" (DADS and Material use stronger); hover menus with a 150 ms delay (DADS: no hover-only; NN/g 0.3–0.5 s); breadcrumbs above the footer as the main place (DADS and NN/g: below the header); scroll fades of 800–1000 ms (NN/g 100–400 ms); "never linear" (fine for fades); email confirmation fields (WCAG 3.3.7); "bottom bar boosts conversion dramatically" and "Japanese users spot foreign stock photos" (no data).
+
+## Page structure (read 2026-10-15, for `general.md` "Content blocks and page order" and `japan.md` "Top page order")
+
+| Topic | Source | Link | Read |
+|---|---|---|---|
+| "Learn more" links | NN/g | https://www.nngroup.com/articles/learn-more-links/ | 2026-10-15 |
+| Link purpose | WCAG 2.2 Understanding 2.4.4 | https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context.html | 2026-10-15 |
+| Zigzag layouts | NN/g eye-tracking | https://www.nngroup.com/articles/zigzag-page-layout/ | 2026-10-15 |
+| Reading and focus order vs CSS order | WCAG 2.2 Understanding 1.3.2, 2.4.3 | https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence.html · https://www.w3.org/WAI/WCAG22/Understanding/focus-order.html | 2026-10-15 |
+| Carousels | NN/g auto-forwarding; Baymard | https://www.nngroup.com/articles/auto-forwarding/ · https://baymard.com/blog/homepage-carousel | 2026-10-15 |
+| Scroll indicators | Viget eye-tracking study | https://www.viget.com/articles/should-you-use-a-custom-scroll-indicator-a-study-with-eye-tracking/ | 2026-10-15 |
+
+Rejected from a pasted article (2026-10-15): "Learn more →" as the card link (NN/g, WCAG 2.4.4); zigzag as a general rule (NN/g: 2–3 rows, informational images only); scroll indicators as a proven cue (no effect measured).

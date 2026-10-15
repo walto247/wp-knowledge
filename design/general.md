@@ -1,6 +1,6 @@
 # Design fundamentals (any site)
 
-Status: merged 2026-10-11 from `global-web`, `ux-ui` and `wireframes` (dashboard skills). Not yet verified against WCAG 2.2 / current references (pass 2), except "Screen sizes, breakpoints and widths", the spacing rhythm, "English typography" and "Navigation, surfaces and motion", researched 2026-10-15. For Japanese sites read `japan.md` as well; where they differ, `japan.md` wins.
+Status: merged 2026-10-11 from `global-web`, `ux-ui` and `wireframes` (dashboard skills). Not yet verified against WCAG 2.2 / current references (pass 2), except "Screen sizes, breakpoints and widths", the spacing rhythm, "English typography", "Navigation, surfaces and motion" and "Content blocks and page order", researched 2026-10-15. For Japanese sites read `japan.md` as well; where they differ, `japan.md` wins.
 
 ## Owner's rules (stand above everything else)
 
@@ -108,6 +108,18 @@ Checked against WCAG 2.2, DADS components and foundations, Material 3 tokens, NN
 
 **Consistency:** one radius scale, one shadow or border style, one accent colour, one grid (DADS: 12 columns, gutter twice the body text size). Edges of headings, text and cards line up on the same columns.
 
+## Content blocks and page order (checked 2026-10-15)
+
+Checked against NN/g, WCAG 2.2 and Baymard (`SOURCES.md`, section "Page structure"). The patterns are house style; the rules marked WCAG or NN/g are not.
+
+- **Section intro:** eyebrow label (optional, not a heading tag, `japan.md`) → H2 (one benefit or topic, 1–2 lines) → a lead of 2–3 lines (about 40–60 English words, 80–120 Japanese characters) → the content. Put a line of text between an H2 and the first H3 cards so the section says what follows (house style).
+- **Three or more parallel points** read better as cards than as consecutive paragraphs. Card order: image or icon/number → H3 → 2–3 lines → link.
+- **Link text says where it goes** ("See pricing", 「料金を見る」), or the card heading is the link. Not a row of "Learn more →" links: NN/g finds them ambiguous and screen-reader users hear the same label many times (WCAG 2.4.4).
+- **Alternating image/text rows (zigzag):** only with images that carry information, and 2–3 rows at most; NN/g eye-tracking found zigzag less predictable than aligned rows. On a 12-column grid: text 5 columns, 1 empty, image 6. On phones every row stacks the same way (image → heading → text). **Source order = visual order:** write the HTML in the reading order and mirror the desktop rows with CSS only where the meaning does not change (WCAG 1.3.2, 2.4.3).
+- **Carousels:** no auto-advancing hero sliders (NN/g: later slides are rarely seen; Baymard: 46 % of homepage carousels have usability problems). One strong hero instead; if a slider stays, it must have a pause button (WCAG 2.2.2).
+- **Signalling more content below the hero:** let the next section show at the bottom of the first screen. A "SCROLL ↓" cue has no measured effect (Viget eye-tracking); it is decoration.
+- **Home page order (practice):** hero → proof (client logos, numbers; Japanese sites: お知らせ, `japan.md`) → what we do → services or features → works/cases → process or key numbers → FAQ (5–7 questions, answers in the HTML) → conversion band before the footer.
+
 ## Links, buttons, images
 
 - Link text says where it goes ("See pricing", 「学費を見る」), not "Click here" / 「こちら」 repeated.
@@ -116,7 +128,7 @@ Checked against WCAG 2.2, DADS components and foundations, Material 3 tokens, NN
 
 ## Wireframe patterns
 
-Home: sticky header (logo, 5–7 items, one CTA) → hero (H1 + one line + CTA + visual) → trust bar (logos, numbers, certifications) → three benefits → feature sections alternating image/text → voices → full-width CTA → footer (nav, contact, legal).
+Home (full order and the zigzag limit: "Content blocks and page order" above): sticky header (logo, 5–7 items, one CTA) → hero (H1 + one line + CTA + visual) → trust bar (logos, numbers, certifications) → three benefits → feature sections alternating image/text → voices → full-width CTA → footer (nav, contact, legal).
 
 Service page: short hero with H1 and breadcrumb → definition block in the first 150 characters/words → benefits → detail sections → proof → FAQ (5+) → CTA.
 
@@ -136,5 +148,5 @@ Design values (colours, fonts, radii) always come from the project's design toke
 
 ## International visitors
 
-- EU/UK visitors: tracking scripts and non-essential cookies need consent. Never add tracking, chat widgets or embeds on your own; a person decides and updates the privacy policy.
+- Sites aimed at EU/UK visitors (pages, prices or shipping for them) or tracking them: tracking scripts and non-essential cookies need consent (GDPR; `../legal/japan.md`). Never add tracking, chat widgets or embeds on your own; a person decides and updates the privacy policy.
 - Dates, prices and phone numbers in international format for a foreign audience: "September 26, 2026", "¥11,000 (tax incl.)", "+81-3-1234-5678".

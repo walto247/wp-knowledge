@@ -59,7 +59,7 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 4. ~~`seo-geo/`~~ done 2026-10-11; `legal/japan.md` 景表法 parts done, the rest (薬機法, 特商法, 個人情報) still to verify; 消費者庁 site was unreachable.
 5. ~~`wp-plugins/`, `wp-security.md`, `wp-performance.md`~~ done 2026-10-11.
 
-Pass 2 is complete except: `legal/japan.md` 薬機法 / 特商法 / 個人情報 sections, `block-themes/` (stub), `swell/customizer.md` panel paths, and one retry of the two unreachable pages (digital.go.jp policy page, caa.go.jp stealth-marketing page). Next: pass 3 when a topic changes (new theme version, new law, new Google guidance); re-check version tables every quarter.
+Pass 2 is complete except: `legal/japan.md` 薬機法 / 定期購入 details / 個人情報 sections (特商法 表記 and 外部送信 checked 2026-10-15), `block-themes/` (stub), `swell/customizer.md` panel paths, and one retry of the two unreachable pages (digital.go.jp policy page, caa.go.jp stealth-marketing page). Next: pass 3 when a topic changes (new theme version, new law, new Google guidance); re-check version tables every quarter.
 
 Each verified file gets `Status: verified YYYY-MM-DD against <pages>` and keeps a short
 "what changed" note at the bottom.

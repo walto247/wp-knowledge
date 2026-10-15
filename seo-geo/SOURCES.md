@@ -52,3 +52,20 @@
 | Forms (enhanced measurement, funnel) | Analytics Help | https://support.google.com/analytics/answer/9216061 · https://support.google.com/analytics/answer/12944921 |
 | Traffic source from UTM parameters | Analytics Help | https://support.google.com/analytics/answer/11242870 |
 | Core Web Vitals report | Search Console Help | https://support.google.com/webmasters/answer/9205520 |
+
+## Read 2026-10-15 (GEO beyond Google, multilingual, social previews, icons, 404, headings, Organization)
+
+| Topic | Source | URL |
+|---|---|---|
+| Headings and H1 | Google SEO Starter Guide; title links | https://developers.google.com/search/docs/fundamentals/seo-starter-guide · https://developers.google.com/search/docs/appearance/title-link |
+| Organization properties (`taxID`, `foundingDate`, …) | Google Search Central | https://developers.google.com/search/docs/appearance/structured-data/organization |
+| GEO research (statistics, quotations, citations) | Aggarwal et al., GEO, KDD 2024 | https://arxiv.org/abs/2311.09735 |
+| Multilingual sites, no automatic redirects, Googlebot location, hreflang | Google Search Central | https://developers.google.com/search/docs/specialty/international/managing-multi-regional-sites · https://developers.google.com/search/docs/specialty/international/locale-adaptive-pages · https://developers.google.com/search/docs/specialty/international/localized-versions |
+| Images of text, text alternatives | WCAG 2.2 1.4.5, 1.1.1; Google Images | https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html · https://developers.google.com/search/docs/appearance/google-images |
+| og:image | ogp.me (no size); Facebook sharing images; X summary_large_image (archived docs) | https://ogp.me/ · https://developers.facebook.com/docs/sharing/webmasters/images/ · https://dev.twitter.com/cards/types/summary-large-image.html |
+| Favicon in search | Google Search Central; caniuse SVG favicons | https://developers.google.com/search/docs/appearance/favicon-in-search · https://caniuse.com/link-icon-svg |
+| Apple touch icon | Apple Safari Web Content Guide | https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html |
+| Site Icon sizes (512 → 270/192/180/64/32) | WordPress core `class-wp-site-icon.php` | https://github.com/WordPress/WordPress/blob/master/wp-admin/includes/class-wp-site-icon.php |
+| Soft 404 | Google Search Central, HTTP and network errors | https://developers.google.com/search/docs/crawling-indexing/http-network-errors |
+
+Rejected from a pasted article (2026-10-15): "AI reads the first 40 words after an H2"; "JSON-LD/FAQPage critical for GEO" (FAQ rich results ended 2026-05-07); "法人番号 in Organization boosts E-E-A-T significantly"; a hidden Japanese span inside an English heading; "Japanese Google truncates after ~32 characters" as a fixed rule (pixel width); SVG favicon alone; og:image in WebP.
