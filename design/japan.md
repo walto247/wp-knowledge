@@ -1,6 +1,6 @@
 # Japanese web design and UX
 
-Status: typography and accessibility sections **verified 2026-10-11** against the Digital Agency design system (DADS) typography and colour pages, JLReq (W3C 日本語組版処理の要件) and the JIS X 8341-3:2016 contrast checklist (URLs in `SOURCES.md`). "Screen sizes in Japan" researched 2026-10-15 (StatCounter Japan, DADS レイアウト, agency articles). The UX, forms, audience and seasons sections are merged practice (2026-09 skills), not from a standard. Builds on `general.md`; this file wins for Japanese sites. Writing rules: `../writing/japanese.md`. Law: `../legal/japan.md`. Accessibility checklist: `accessibility.md`.
+Status: typography and accessibility sections **verified 2026-10-11** against the Digital Agency design system (DADS) typography and colour pages, JLReq (W3C 日本語組版処理の要件) and the JIS X 8341-3:2016 contrast checklist (URLs in `SOURCES.md`). "Screen sizes in Japan" researched 2026-10-15 (StatCounter Japan, DADS レイアウト, agency articles); "Brand and premium typography" checked 2026-10-15 (DADS typography and 余白, JLReq, WCAG 2.2, MDN/caniuse). The UX, forms, audience and seasons sections are merged practice (2026-09 skills), not from a standard. Builds on `general.md`; this file wins for Japanese sites. Writing rules: `../writing/japanese.md`. Law: `../legal/japan.md`. Accessibility checklist: `accessibility.md`.
 
 ## What Japanese visitors expect
 
@@ -53,6 +53,22 @@ Fonts:
 - Links underlined, not colour alone; visited links in a distinguishable purple (DADS).
 - Vertical text (`writing-mode: vertical-rl`) only decoratively; horizontal is the norm for official and business documents (JLReq).
 - Full-width and half-width used consistently: 全角 for kana and 「、。」「」（）, 半角 for digits and Latin.
+
+### Brand and "premium" typography (checked 2026-10-15)
+
+Checked against DADS, JLReq, WCAG 2.2, MDN and caniuse (`SOURCES.md`, section "Typography 2"). The table above still sets the values; this adds what a brand or editorial site may do on top.
+
+- **Japanese and English need opposite treatment.** Japanese characters each sit in a square frame (仮想ボディ, JLReq) with no ascenders or descenders, so they look larger and denser than Latin at the same px (practice: no source gives a number). English display type can be tracked tighter; Japanese headings are not (DADS: less spacing as size grows, 0 from 45 px).
+- **Letter spacing beyond DADS** is a brand choice, not a rule: up to **0.05 em** for short display lines and eyebrow labels. Not on body text. Articles that prescribe 0.04–0.08 em body or 0.1 em+ "luxury" spacing have no standard behind them; Japanese practice articles put body text at about 0.05 em at most.
+- **Line height:** 1.7–1.75 as the default, up to 2.0 on dense or long-line pages (table above). "1.8–1.9 is the sweet spot" and "kanji lines collide below 1.7" are not supported: DADS allows 1.5–1.75, and JLReq's usual range ends at a 1 em gap (line height 2.0), used for long lines.
+- **Weights:** 400 and 700 (DADS). Noto Sans JP is variable (100–900), so **500** for sub-headings is a fine brand option, but Meiryo has only 400/700 (the browser fakes 500/600) and Yu Gothic has Medium (500) but no 600. Avoid 800–900 on kanji text.
+- **Captions and notes stay at 14 px or more.** 12–13 px captions break the DADS floor.
+- **Gothic or Mincho (practice).** Gothic (ゴシック) reads best on screens and is the default for body text. Mincho (明朝) reads as refined, traditional, editorial; Mincho headings with Gothic body is a valid brand pattern. Never mix both inside one heading.
+- **Latin inside Japanese (欧文・和文混植):** put a Latin web font **first** in `font-family` (browsers pick a font per character), the Japanese font after it. Limit the Latin `@font-face` with `unicode-range`, and match size and baseline with `size-adjust` and `ascent-override` / `descent-override`; Latin often needs about 105–110 % to sit well next to Japanese (test). Spacing between Japanese and Latin: Chrome 140+ and Safari 18.4+ insert it automatically (`text-autospace: normal` is their default; `no-autospace` turns it off); do not type spaces, other browsers simply show none.
+- **Punctuation tightening (約物詰め):** `font-feature-settings: "palt"` on headings only; body text stays ベタ組み (JLReq base setting). Meiryo has no `palt` table. Chrome/Edge 123+ already trim full-width bracket space by default (`text-spacing-trim: normal`); set `space-all` to keep the full-width spacing. Other browsers ignore the property.
+- **Phrase wrapping for headings:** `word-break: auto-phrase` on `lang="ja"` breaks between phrases (Chrome/Edge 119+ only); add `text-wrap: balance` (all current browsers) so short headings still split evenly elsewhere. Use the BudouX script only where a clean break on Safari/Firefox really matters. A manual `<br>` breaks on other widths.
+- **Alignment:** body text **left-aligned** on the web. Justified (両端揃え) is the print default (JLReq), but WCAG 1.4.8 (AAA) says not justified, lines with Latin words justify unevenly in browsers, and `text-justify: inter-character` is missing in Safari. Justify only short blocks of pure Japanese, never on phones or headings.
+- **English eyebrow + Japanese heading** (`ABOUT US` over 私たちについて): the Japanese text is the heading (`<h2>`); the eyebrow is a `<span lang="en">` or `<p>`, never its own heading tag. If it only repeats the heading, hide it from screen readers (`aria-hidden="true"`). Keep it 8 px from the heading so they read as one unit (DADS spacing: closer = related).
 
 ## Forms
 

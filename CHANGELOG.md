@@ -3,6 +3,27 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-15 — Typography: Japanese brand options, English rules, spacing rhythm
+
+Files changed: `design/japan.md` (new subsection "Brand and premium typography"), `design/general.md` (spacing rhythm table, new section "English typography"), `design/design-tokens.md` (body line height 1.75), `design/SOURCES.md`, `README.md`.
+Checked a pasted "premium typography" article against DADS, JLReq, WCAG 2.2, MDN/caniuse; its Japanese spacing, line-height and caption numbers were rejected (list in `design/SOURCES.md`). The verified Japanese values from 2026-10-11 are unchanged.
+
+What changed in the guidance:
+- Japanese: letter spacing above DADS only for short display lines and eyebrows (≤ 0.05 em); weight 500 allowed as a brand option (Meiryo has none); captions never under 14 px; body left-aligned, not justified; `palt` on headings only; automatic Japanese–Latin spacing and bracket trimming in Chrome/Safari (no typed spaces); `word-break: auto-phrase` + `text-wrap: balance` for headings; Latin font first in `font-family` with `unicode-range` / `size-adjust`; English eyebrow is never a heading tag.
+- English: body line height 1.5–1.6, headings 1.1–1.25, slight negative tracking only on large display text, +0.05 em on all-caps labels, 45–75 characters per line, left-aligned.
+- Spacing rhythm table: a heading is closer to its own text than to the block above (3 × on desktop, 2–2.5 × on phones); spacing scale extended with 40 / 80 / 128.
+
+### Checklist for existing sites (run at the next session of each site project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| Japanese text under 14 px (captions, notes, footers) | DADS floor | where, size |
+| Japanese body letter spacing above 0.05 em | no standard supports it; DADS uses 0.02 em | CSS rule, value |
+| Japanese body line height above 2.0 | beyond JLReq's usual range; harder to read | CSS rule, value |
+| Justified body text (`text-align: justify`) | WCAG 1.4.8; uneven gaps with Latin words | pages |
+| English eyebrow labels (`ABOUT US`) coded as `<h2>`/`<h3>` | breaks the heading outline for screen readers | template, tag used |
+| `palt` on body text | body should stay ベタ組み | CSS rule |
+
 ## 2026-10-15 — Screen sizes, breakpoints and content widths
 
 Files changed: `design/general.md` (new section "Screen sizes, breakpoints and widths"), `design/japan.md` (new section "Screen sizes in Japan", line-length row), `flatsome/posts.md` (article width), `design/SOURCES.md`, `README.md`.

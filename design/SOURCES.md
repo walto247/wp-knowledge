@@ -37,3 +37,25 @@ choices (write our own for Japanese business niches).
 | Image density | web.dev Learn Images · Jake Archibald 2021 (above 2× rarely worth it) | https://web.dev/learn/images/descriptive · https://jakearchibald.com/2021/serving-sharp-images-to-high-density-screens/ | 2026-10-15 |
 
 Checked and corrected from a pasted article (2026-10-15): Tailwind does not share Bootstrap's six tiers; 1366 × 768 is about 5 % in Japan, not "massive"; JLReq gives a 40-character maximum, not a 35–45 range, so 720–840 px article columns are too wide; web.dev does not set a 2× cap (expert advice does); newest iPhones are 402 wide, not 393.
+
+## Typography 2 (read 2026-10-15, for `japan.md` "Brand and premium typography" and `general.md` "English typography" and spacing rhythm)
+
+| Topic | Source | Link | Read |
+|---|---|---|---|
+| Japanese sizes, line height, spacing, weights, italics | DADS タイポグラフィ | https://design.digital.go.jp/dads/foundations/typography/ | 2026-10-15 |
+| Spacing base and example steps (8 / 24 / 64) | DADS 余白 | https://design.digital.go.jp/dads/foundations/spacing/ | 2026-10-15 |
+| Character frame, line gap, 40-character maximum, 禁則, 両端揃え, Japanese–Latin spacing | W3C JLReq §2.1, §2.4, §3.1.7, §3.2, §3.8 | https://www.w3.org/TR/jlreq/ | 2026-10-15 |
+| Line length 80 / 40 CJK, not justified (AAA); text spacing must survive 1.5 (AA) | WCAG 2.2 1.4.8, 1.4.12 | https://www.w3.org/WAI/WCAG22/Understanding/visual-presentation.html · https://www.w3.org/TR/WCAG22/ | 2026-10-15 |
+| English tracking and measure | Google Fonts Knowledge (tracking, measure) | https://fonts.google.com/knowledge | 2026-10-15 |
+| English type scale numbers | Material 3 type scale tokens | https://github.com/material-components/material-web (tokens `_md-sys-typescale.scss`) | 2026-10-15 |
+| `text-spacing-trim`, `text-autospace`, `word-break: auto-phrase`, `text-wrap`, `text-justify` | MDN, caniuse, Chrome i18n blog | https://developer.mozilla.org/en-US/docs/Web/CSS/text-spacing-trim · https://caniuse.com/mdn-css_properties_word-break_auto-phrase · https://developer.chrome.com/blog/css-i18n-features | 2026-10-15 |
+| Phrase wrapping script | Google BudouX | https://github.com/google/budoux | 2026-10-15 |
+| `palt` and Meiryo | ICS MEDIA | https://ics.media/en/entry/14087/ | 2026-10-15 |
+| Body ベタ組み, palt on headings only (practice) | kiso.css (tak-dcxi) | https://gist.github.com/tak-dcxi/0f8b924d6dd81aaeb58dc2e287f2ab3a | 2026-10-15 |
+| Noto Sans JP weights (variable 100–900, no italic) | google/fonts METADATA | https://github.com/google/fonts/tree/main/ofl/notosansjp | 2026-10-15 |
+| Latin font matching | MDN `size-adjust`; W3C inline spacing | https://developer.mozilla.org/docs/Web/CSS/@font-face/size-adjust · https://www.w3.org/International/articles/styling/inline-space | 2026-10-15 |
+| Eyebrow is not a heading | Primer heading accessibility; Deque | https://primer.style/product/components/heading/accessibility · https://docs.deque.com/issue-help/1.0.0/en/semantic-heading/ | 2026-10-15 |
+| Proximity | NN/g | https://www.nngroup.com/articles/gestalt-proximity/ | 2026-10-15 |
+| Mincho vs Gothic (practice) | Fujifilm design seminar | https://www.fujifilm.com/fb/ja/support/colorprint/howto/design/seminar-05 | 2026-10-15 |
+
+Rejected from a pasted article (2026-10-15): Japanese body letter spacing 0.04–0.08 em and headings +3–8 % (DADS: 2 % / 1 % / 0, less as size grows); body line height "1.8–1.9 sweet spot" and "collides below 1.7" (DADS 1.5–1.75; JLReq's usual range ends at line height 2.0 for long lines); 12–13 px captions (DADS floor 14); 42-character lines (JLReq / WCAG 40); Japanese body justified on the web (WCAG 1.4.8, uneven mixed-script lines). No source for "kanji fill 90 %", "looks 10–15 % larger" or "titles 1–4 px smaller".

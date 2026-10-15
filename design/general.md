@@ -1,6 +1,6 @@
 # Design fundamentals (any site)
 
-Status: merged 2026-10-11 from `global-web`, `ux-ui` and `wireframes` (dashboard skills). Not yet verified against WCAG 2.2 / current references (pass 2), except "Screen sizes, breakpoints and widths", researched 2026-10-15. For Japanese sites read `japan.md` as well; where they differ, `japan.md` wins.
+Status: merged 2026-10-11 from `global-web`, `ux-ui` and `wireframes` (dashboard skills). Not yet verified against WCAG 2.2 / current references (pass 2), except "Screen sizes, breakpoints and widths", the spacing rhythm and "English typography", researched 2026-10-15. For Japanese sites read `japan.md` as well; where they differ, `japan.md` wins.
 
 ## Owner's rules (stand above everything else)
 
@@ -25,8 +25,31 @@ Typical page goals: home = trust and the next step; service page = explain value
 3. Supporting: smaller, muted.
 4. Every element has one role; nothing competes.
 
-Spacing scale (use the scale, never arbitrary values): 4 / 8 / 16 / 24 / 32 / 48 / 64 / 96 px.
-Sections: 48 px apart on phones, 64–96 px on desktop. Content width and side padding: "Screen sizes" below. 8 px grid.
+Spacing scale (use the scale, never arbitrary values): 4 / 8 / 16 / 24 / 32 / 40 / 48 / 64 / 80 / 96 / 128 px.
+Sections: 48 px apart on phones, 64–96 px on desktop (premium or editorial sites up to 128 desktop / 64–80 phone, practice). Content width and side padding: "Screen sizes" below. 8 px grid.
+
+**Spacing rhythm** (practice, built on proximity: a heading sits closer to its own text than to what came before it; DADS 余白 uses an 8 px base and shows 8 / 24 / 64 as label→title / title→body / above a block):
+
+| Gap | Desktop | Phone |
+|---|---|---|
+| Eyebrow label → heading | 8 | 8 |
+| H2 → content below | 40–48 | 24–32 |
+| H3 → its paragraph | 16 | 16 |
+| Paragraph → paragraph | 1–1.5 em (24) | 1–1.5 em (16–24) |
+| Paragraph → next H3 | 48 (3 × the H3 → paragraph gap) | 32–40 (2–2.5 ×) |
+| Image → text block | 32–48 | 24–32 |
+| Image → its caption | 8 | 8 |
+
+## English typography (checked 2026-10-15)
+
+Japanese rules are in `japan.md` (Japanese and English need opposite treatment). Sources: WCAG 2.2, Google Fonts Knowledge, Material 3 type scale (`SOURCES.md`, section "Typography 2").
+
+- **Body:** 16 px or more, line height **1.5–1.6** (WCAG 1.4.12: the layout must survive 1.5 set by the user). Left-aligned, never justified (WCAG 1.4.8, AAA: justified text makes uneven gaps).
+- **Headings:** line height **1.1–1.25** (Material: display 57/64, headline 32/40). Large display sizes may take slight negative tracking: Material uses −0.25 px at 57 px (≈ −0.005 em); up to about −0.02 em on very large lines is common practice. Headings at normal sizes and body text stay at 0. Google Fonts: negative tracking only at very large sizes.
+- **All-caps labels** (eyebrows, tags, small buttons): add positive tracking, about +0.05 em; never set running text in capitals.
+- **Line length:** about 45–75 characters (typographic convention); WCAG 1.4.8 (AAA) caps it at 80. On the web ≈ `max-width: 36em` at 16 px.
+- **Italics** are fine in English for emphasis and titles; never on Japanese text.
+- Weights: 400 body, 600–700 headings; 800–900 only for large display lines.
 
 Columns: one below 768, two from 768, three or four only from the optional 1024 breakpoint. CTA buttons full width on phones.
 

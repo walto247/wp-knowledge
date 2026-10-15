@@ -15,8 +15,8 @@ Status: merged 2026-10-11 from the Flatsome `design-system` reference, made them
 - Surface #… (cards, alternate sections) · Border #… · White #FFFFFF
 
 ## Typography
-- Family: <e.g. Noto Sans JP> (weights …) · Body 16 px / 1.8 · Small 14 px / 1.6 muted
-- H1 … px / 700 / 1.2 · H2 … / 700 / 1.3 · H3 … / 600 / 1.4 · phone sizes …
+- Family: <e.g. Noto Sans JP> (weights …) · Body 16 px / 1.75 (English 1.5–1.6) · Small 14 px / 1.6 muted (never below 14)
+- H1 … px / 700 · H2 … / 700 · H3 … / 600 · heading line height 1.4 Japanese, 1.1–1.25 English (`japan.md`, `general.md`) · phone sizes …
 
 ## Spacing (8 px grid)
 - Section padding … px (phone … px) · element gap … · card padding 24 · button 12 × 32
