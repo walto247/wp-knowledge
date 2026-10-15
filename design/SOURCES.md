@@ -19,3 +19,21 @@ Ideas noted from third-party skills (read as material, nothing installed): Anthr
 front-end design skill (commit to one deliberate design direction, avoid the generic AI look);
 "Claude SEO" (split SEO work into named tasks, GEO as its own task); niche-based palette and type
 choices (write our own for Japanese business niches).
+
+## Screen sizes (read 2026-10-15, for `general.md` and `japan.md` "Screen sizes")
+
+| Topic | Source | Link | Read |
+|---|---|---|---|
+| Bootstrap breakpoints and containers | Bootstrap 5.3 docs | https://getbootstrap.com/docs/5.3/layout/breakpoints/ · https://getbootstrap.com/docs/5.3/layout/containers/ | 2026-10-15 |
+| Tailwind breakpoints and container | Tailwind CSS v4 docs | https://tailwindcss.com/docs/responsive-design · https://tailwindcss.com/docs/container | 2026-10-15 |
+| iPhone and Android viewport widths | Use Your Loaf (transcribes Apple's point sizes; Apple HIG page did not load) · yesviz device table | https://useyourloaf.com/blog/iphone-17-screen-sizes/ · https://yesviz.com/mobiles.php | 2026-10-15 |
+| Figma frame presets | Figma Help (categories only, no sizes; 1440 × 1024 Desktop from tutorials) | https://help.figma.com/hc/en-us/articles/360041539473-Frames-in-Figma-Design | 2026-10-15 |
+| Japan phone OS and resolutions | StatCounter Japan, September 2026 | https://gs.statcounter.com/os-market-share/mobile/japan · https://gs.statcounter.com/screen-resolution-stats/mobile/japan | 2026-10-15 |
+| Japan desktop resolutions | StatCounter Japan, September 2026 | https://gs.statcounter.com/screen-resolution-stats/desktop/japan | 2026-10-15 |
+| Breakpoint, grid, gutter | DADS レイアウト (v2.18.1): one breakpoint at 768, 12 columns, gutter = 2 × body text; no max width, no margin value | https://design.digital.go.jp/dads/foundations/layout/ | 2026-10-15 |
+| Line length | JLReq §2.4.2 note (horizontal: at most about 40 characters) | https://www.w3.org/TR/jlreq/ | 2026-10-15 |
+| Japanese agency practice (PC/SP, 375/1366/1440, 768, container) | LIG 2022 · KKI DESIGN 2025 · issoh 2026 · zenn tak_dcxi 2020 | https://liginc.co.jp/582225 · https://note.com/kki_design_/n/n3a2c00bd3cba · https://www.issoh.co.jp/tech/details/15329/ · https://zenn.dev/tak_dcxi/articles/88762df24ef2eb3013c2 | 2026-10-15 (practice, not a standard) |
+| Japanese article column survey | LIG 2016 (ten media sites, 670 px most common) | https://liginc.co.jp/299824 | 2026-10-15 |
+| Image density | web.dev Learn Images · Jake Archibald 2021 (above 2× rarely worth it) | https://web.dev/learn/images/descriptive · https://jakearchibald.com/2021/serving-sharp-images-to-high-density-screens/ | 2026-10-15 |
+
+Checked and corrected from a pasted article (2026-10-15): Tailwind does not share Bootstrap's six tiers; 1366 × 768 is about 5 % in Japan, not "massive"; JLReq gives a 40-character maximum, not a 35–45 range, so 720–840 px article columns are too wide; web.dev does not set a 2× cap (expert advice does); newest iPhones are 402 wide, not 393.

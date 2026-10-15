@@ -85,4 +85,4 @@ Hero (headline + one CTA) → trust (logos, numbers, awards) → problem → sol
 
 ## Before saving
 
-Count opening and closing tags of `section`, `row`, `col`, `ux_banner`, `text_box`, `accordion`, `tabgroup`. Every column has `span__sm`. Nothing wider than the screen on phones. Links relative (`/contact/`). Media by ID. Check at 375 px.
+Count opening and closing tags of `section`, `row`, `col`, `ux_banner`, `text_box`, `accordion`, `tabgroup`. Every column has `span__sm`. Nothing wider than the screen on phones. Links relative (`/contact/`). Media by ID. Check at 360 and 390 px (Japan: also 375 and 414).

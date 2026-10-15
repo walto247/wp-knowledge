@@ -3,6 +3,27 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-15 — Screen sizes, breakpoints and content widths
+
+Files changed: `design/general.md` (new section "Screen sizes, breakpoints and widths"), `design/japan.md` (new section "Screen sizes in Japan", line-length row), `flatsome/posts.md` (article width), `design/SOURCES.md`, `README.md`.
+Checked a pasted agency article against Bootstrap/Tailwind docs, StatCounter Japan (Sept 2026), DADS レイアウト, JLReq; several claims corrected (see `design/SOURCES.md`).
+
+What changed in the guidance:
+- Design at 390 (phone) and 1440 (desktop); no separate tablet design. Test phones at 360 / 390 / 430 (Japan also 375 / 414), desktops at 1280 / 1366 / 1536 / 1920.
+- One breakpoint at 768 (DADS and Japanese practice); add 1024 only for 3–4 column grids. Theme breakpoints (Flatsome 549 / 849) stay as they are.
+- Content container 1120 + side padding, never over 1200; side padding 16 on phones, 32 from 768.
+- Japanese article body `max-width: 41em` (≈ 40 characters, ≈ 656 px at 16 px); was 780 px in the Flatsome post CSS (≈ 48 characters); that rule is now scoped to single posts.
+- Raster images at 2× the slot; 3× not needed.
+
+### Checklist for existing sites (run at the next session of each site project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| Content container wider than 1200 px | edges touch on 1280–1536 laptops (native 1366, or 1920 screens at 125–150 %) | container width, pages |
+| Japanese article body wider than 45 characters per line (> ~730 px at 16 px) | JLReq: at most about 40 characters (40 is the target, 45 the tolerance) | measured width and characters per line |
+| Layout at 360 px and 1280 px; Flatsome `.entry-content` width rules that also hit pages or tab panels | smallest common phone, scaled Windows laptop | sideways scroll, overlap, cut-off menus |
+| Banners with text baked in, or images narrower than 2× their slot | blurry on phones; text not readable by search or screen readers | page, image, file width vs slot |
+
 ## 2026-10-14 — SEO / analytics reporting and measurement (two new topics)
 
 Files changed: new `seo-geo/reporting.md`, new `seo-geo/measurement.md`, `seo-geo/SOURCES.md`, `README.md`, `writing/japanese.md` (pointer).

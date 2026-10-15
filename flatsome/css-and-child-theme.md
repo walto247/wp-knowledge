@@ -15,7 +15,7 @@ Never inline CSS in page content except a one-off that cannot be done otherwise.
 - Target class names that really exist: read the page content and use its `class="…"` values, or add a class to the element in UX Builder (Advanced → CSS Class). No fragile selectors like `.row > .col:nth-child(3) .img`.
 - Prefix new class names with the site prefix from the project (`.wpa-`, `.skyus-` …).
 - Low specificity; `!important` only to beat an inline style Flatsome prints.
-- Phone first: everything you add works at 375 px. Write phone styles, then `@media (min-width: 768px)` upward.
+- Phone first: everything you add works at 360 and 390 px (Japan: also 375 and 414). Write phone styles, then `@media (min-width: 768px)` upward for your own layouts; when overriding Flatsome's own rules, use its 549 / 849 breakpoints.
 - Variables, never raw hex: `:root { --color-primary: … }` from `DESIGN.md`; rules use `var(--color-primary)`.
 - Japanese text: body 16 px, line height 1.7–2.0, `line-break: strict`, no italics (`../design/japan.md`).
 

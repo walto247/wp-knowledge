@@ -41,7 +41,7 @@ Phone: `max-width: 549px` (desktop/tablet from 550 px). Tablet: `max-width: 849p
 
 ## Before saving (checklist)
 
-Tags balanced · every column has `span__sm` · nothing wider than a phone screen · links relative · media by ID · cache cleared after · checked at 375 px.
+Tags balanced · every column has `span__sm` · nothing wider than a phone screen · links relative · media by ID · cache cleared after · checked at 360 and 390 px (Japan: also 375 and 414; `../design/general.md`).
 
 ## What changed in pass 2 (2026-10-11)
 

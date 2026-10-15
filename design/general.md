@@ -1,6 +1,6 @@
 # Design fundamentals (any site)
 
-Status: merged 2026-10-11 from `global-web`, `ux-ui` and `wireframes` (dashboard skills). Not yet verified against WCAG 2.2 / current references (pass 2). For Japanese sites read `japan.md` as well; where they differ, `japan.md` wins.
+Status: merged 2026-10-11 from `global-web`, `ux-ui` and `wireframes` (dashboard skills). Not yet verified against WCAG 2.2 / current references (pass 2), except "Screen sizes, breakpoints and widths", researched 2026-10-15. For Japanese sites read `japan.md` as well; where they differ, `japan.md` wins.
 
 ## Owner's rules (stand above everything else)
 
@@ -14,7 +14,7 @@ Status: merged 2026-10-11 from `global-web`, `ux-ui` and `wireframes` (dashboard
 - Visual order = importance: headline → key benefit → proof → action. Never start with history or greetings.
 - Scannable: clear H2/H3, short paragraphs, lists, white space. People skim.
 - **Consistency:** reuse the site's colours, fonts, spacing, buttons and section styles. A new colour or font size needs a reason; a page must look like the rest of the site.
-- Phone first: check every change at 375 px. No sideways scrolling; buttons reachable with a thumb; text readable without zoom.
+- Phone first: check every change at 360 and 390 px (all test widths: "Screen sizes" below). No sideways scrolling; buttons reachable with a thumb; text readable without zoom.
 
 Typical page goals: home = trust and the next step; service page = explain value, convert to an inquiry; blog post = teach, build authority, link inward; contact = remove friction; landing page = one CTA, nothing else.
 
@@ -26,9 +26,33 @@ Typical page goals: home = trust and the next step; service page = explain value
 4. Every element has one role; nothing competes.
 
 Spacing scale (use the scale, never arbitrary values): 4 / 8 / 16 / 24 / 32 / 48 / 64 / 96 px.
-Sections: 48 px apart on phones, 64–96 px on desktop. Max content width about 1120–1200 px, side padding 16–24 px. 8 px grid.
+Sections: 48 px apart on phones, 64–96 px on desktop. Content width and side padding: "Screen sizes" below. 8 px grid.
 
-Columns: one on phones, at most two on tablets, up to four on desktop. CTA buttons full width on phones.
+Columns: one below 768, two from 768, three or four only from the optional 1024 breakpoint. CTA buttons full width on phones.
+
+## Screen sizes, breakpoints and widths
+
+Researched 2026-10-15 (sources in `SOURCES.md`, section "Screen sizes"). All sizes in CSS px. Japanese data and practice: `japan.md`.
+
+Two different widths: the **design width** (the artboard in Figma) and the **content width** (the `max-width` of text and grid; backgrounds still run edge to edge).
+
+| What | Our default | Why |
+|---|---|---|
+| Phone design width | **390** (375 is fine when the designer delivers it) | 390 = iPhone 12/13/14 and 16e; 393 = 14 Pro, 15, 16; 375 = SE and mini. Newest iPhones are 402 (16 Pro, 17, 17 Pro), 420 (Air), 430–440 (Plus, Pro Max) |
+| Phone test widths | **360, 390, 430** | 360 = smallest common Android (Galaxy S and A series); 412 = Pixel and larger Galaxy models; 430/440 = large iPhones |
+| Tablet | no separate design; the layout stretches between phone and desktop | DADS uses one breakpoint; most Japanese agencies design PC + SP only |
+| Desktop design width | **1440** (1366 is fine) | Figma's Desktop preset is 1440 × 1024 (check your panel; Figma updates presets) |
+| Desktop test widths | **1280, 1366, 1536, 1920** | 1280 = a 1920 screen at 150 % Windows scaling, 1536 = at 125 %; both are common |
+| Breakpoint | **one, at 768**: phone below, desktop from `@media (min-width: 768px)`. Add 1024 only where a 3–4 column grid needs it | DADS: one breakpoint at 768 by default, more when needed |
+| Content container | **1120** content + side padding; never more than 1200 | leaves 80 px each side on a 1280 screen (Bootstrap's comparable container is its 1140 xl; its 1320 applies only from 1400) |
+| Side padding | **16** on phones (20 also fine), **32** from 768 | our choice, taken from the DADS gutter (twice the body text = 32 at 16 px); DADS sets no margin value |
+| Reading column (articles) | Japanese: `max-width: 41em` (≈ 40 characters, ≈ 656 at 16 px); see `japan.md`. English: about 65–75 characters (practice) | JLReq: horizontal lines at most about 40 characters |
+| Photos and banners | file width = **2 × the slot** (a 390 slot → 780 file, a 1120 slot → 2240); 3× is not worth the bytes | most iPhones are 3× (XR, 11 and SE are 2×), Android 2.6–3.5×; above 2× the visible gain is small (Jake Archibald 2021); web.dev examples use 1×/2×. WordPress `srcset` does this when the image sizes exist (`../wp-performance.md`) |
+
+Theme and framework breakpoints (use the theme's own, do not fight it):
+- **Flatsome:** 549 / 849 (`../flatsome/README.md`).
+- **Bootstrap 5.3:** 576 / 768 / 992 / 1200 / 1400; containers 540 / 720 / 960 / 1140 / 1320.
+- **Tailwind v4:** 640 / 768 / 1024 / 1280 / 1536 (five tiers, not Bootstrap's six); `container` = 100 % width capped at the current breakpoint, no centring or padding by default.
 
 ## Links, buttons, images
 

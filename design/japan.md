@@ -1,6 +1,6 @@
 # Japanese web design and UX
 
-Status: typography and accessibility sections **verified 2026-10-11** against the Digital Agency design system (DADS) typography and colour pages, JLReq (W3C 日本語組版処理の要件) and the JIS X 8341-3:2016 contrast checklist (URLs in `SOURCES.md`). The UX, forms, audience and seasons sections are merged practice (2026-09 skills), not from a standard. Builds on `general.md`; this file wins for Japanese sites. Writing rules: `../writing/japanese.md`. Law: `../legal/japan.md`. Accessibility checklist: `accessibility.md`.
+Status: typography and accessibility sections **verified 2026-10-11** against the Digital Agency design system (DADS) typography and colour pages, JLReq (W3C 日本語組版処理の要件) and the JIS X 8341-3:2016 contrast checklist (URLs in `SOURCES.md`). "Screen sizes in Japan" researched 2026-10-15 (StatCounter Japan, DADS レイアウト, agency articles). The UX, forms, audience and seasons sections are merged practice (2026-09 skills), not from a standard. Builds on `general.md`; this file wins for Japanese sites. Writing rules: `../writing/japanese.md`. Law: `../legal/japan.md`. Accessibility checklist: `accessibility.md`.
 
 ## What Japanese visitors expect
 
@@ -25,7 +25,7 @@ Status: typography and accessibility sections **verified 2026-10-11** against th
 | Line height, body | **1.7–1.75** for reading text (DADS body tokens are 170 % and 175 %); 1.5 is the floor; up to 2.0 on dense pages | DADS: 「少なくとも1.5倍」; JLReq: line gap ½–1 em of the character size, 1 em for lines over about 35 characters |
 | Line height, headings | **1.4** (DADS heading and display tokens 140 %); 1.3–1.5 acceptable | DADS |
 | Letter spacing | **0.02 em** for 16–26 px text, 0.01 em for 28–36 px, **0** for 45 px and larger and for display sizes | DADS (2 % / 1 % / 0) |
-| Line length | up to about **40 characters** per line in horizontal text; use columns or a narrower measure beyond that | JLReq (print figure; applies well to screens) |
+| Line length | up to about **40 characters** per line in horizontal text; use columns or a narrower measure beyond that. Article body: `max-width: 41em` (40 characters + 0.02 em spacing ≈ 656 px at 16 px); 45 characters (≈ 734 px) is the outer limit | JLReq §2.4.2 (a maximum, not a range; print figure that applies well to screens) |
 | Paragraph gap | 1–1.5 em | practice |
 | Size scale | 16–45 px for headings and body; 48–64 px only for display elements that need visual impact | DADS |
 | Headings | `clamp()` sizes within that scale, e.g. H1 `clamp(1.75rem, 4vw, 2.8rem)`; break at phrase boundaries, never one lone character on the last line | DADS + practice |
@@ -66,6 +66,16 @@ Fonts:
 
 - Most traffic is on phones. Tap targets: WCAG 2.2 requires at least 24 × 24 CSS px (AA); our practice is 44–48 px with 8 px between them, and 24 px spacing around any smaller icon control (`accessibility.md`).
 - Full-width inputs and buttons; no hover-only interactions; LINE share or 友だち追加 where relevant.
+
+## Screen sizes in Japan
+
+Researched 2026-10-15 (StatCounter Japan, September 2026; DADS レイアウト; agency articles listed in `SOURCES.md`). Our defaults are in `general.md` ("Screen sizes"); this section adds what is different in Japan.
+
+- **iPhone country.** iOS 60.5 %, Android about 39 % of phone traffic. Top phone widths: **414** (23 %, iPhone XR/11 class), **390** (14 %), **375** (9 %, SE and older), 393 (5 %), 412 (4 %). Add **375 and 414** to the phone test widths for Japanese sites.
+- **Office PCs.** Desktop: 1920 × 1080 28 %, **1536 × 864 9 %** (a 1920 screen at 125 %), 2560 × 1440 7 %, 1366 × 768 5 %, 1280 × 720 4 %. 1366 is a small group now; the 1280–1536 range of scaled Windows laptops is what the content width must survive. A 1120 container leaves 80 px each side at 1280.
+- **Agency practice** (not a standard; LIG, KKI DESIGN, issoh): artboards labelled **PC** and **SP**; SP at 375 (often drawn at 750 = 2×) or 390; PC at 1366, 1440 or 1920; tablet not designed; switch at **767 / 768**; inner container 1000–1200 (real sites 1032–1280). DADS uses the same single 768 breakpoint.
+- **Reading column.** Body text at most about 40 characters per line (JLReq): `max-width: 41em` at 16 px ≈ 656 px. Columns of 720–840 px give 44–52 characters at 16 px: too wide. A 2016 LIG survey of ten Japanese media sites found 670 px the most common column.
+- **Text baked into banners** is still common in Japan. Avoid it (`general.md`); when a client insists, export at 2× the slot and repeat the text in the page or the `alt`.
 
 ## Colour
 
