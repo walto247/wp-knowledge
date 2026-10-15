@@ -1,6 +1,6 @@
 # Japanese web design and UX
 
-Status: typography and accessibility sections **verified 2026-10-11** against the Digital Agency design system (DADS) typography and colour pages, JLReq (W3C 日本語組版処理の要件) and the JIS X 8341-3:2016 contrast checklist (URLs in `SOURCES.md`). "Screen sizes in Japan" researched 2026-10-15 (StatCounter Japan, DADS レイアウト, agency articles); "Brand and premium typography" checked 2026-10-15 (DADS typography and 余白, JLReq, WCAG 2.2, MDN/caniuse). The UX, forms, audience and seasons sections are merged practice (2026-09 skills), not from a standard. Builds on `general.md`; this file wins for Japanese sites. Writing rules: `../writing/japanese.md`. Law: `../legal/japan.md`. Accessibility checklist: `accessibility.md`.
+Status: typography and accessibility sections **verified 2026-10-11** against the Digital Agency design system (DADS) typography and colour pages, JLReq (W3C 日本語組版処理の要件) and the JIS X 8341-3:2016 contrast checklist (URLs in `SOURCES.md`). "Screen sizes in Japan" researched 2026-10-15 (StatCounter Japan, DADS レイアウト, agency articles); "Brand and premium typography" checked 2026-10-15 (DADS typography and 余白, JLReq, WCAG 2.2, MDN/caniuse); navigation additions, forms and "Surfaces, photos and trust pages" checked 2026-10-15 (DADS components, WCAG 2.2, 消費者庁 guideline). The UX, forms, audience and seasons sections are merged practice (2026-09 skills), not from a standard. Builds on `general.md`; this file wins for Japanese sites. Writing rules: `../writing/japanese.md`. Law: `../legal/japan.md`. Accessibility checklist: `accessibility.md`.
 
 ## What Japanese visitors expect
 
@@ -14,7 +14,12 @@ Status: typography and accessibility sections **verified 2026-10-11** against th
 
 - Japanese labels (English only for brand words). 5–7 main items; drop-downs are expected on large sites.
 - Phones: hamburger menu plus a **fixed bottom bar** with the 1–3 key actions (電話・資料請求・LINE).
-- Hover-only menus fail on touch; sub-menus must open on tap.
+- Hover-only menus fail on touch and keyboard; sub-menus open on tap, click and focus (DADS mega menu).
+- Menu button with a visible 「メニュー」 or MENU label under or beside the icon (DADS requires a label; it helps older visitors).
+- Large corporate sites often use a full-width mega menu with small thumbnails for 事業紹介 / 企業情報 (practice); all links of the section must fit in the panel (DADS).
+- Header: logo left, menu, and on the right one or two CTAs (資料請求 + お問い合わせ) or the phone number with 受付時間 (practice). Fixed bottom bar on phones: about 56–64 px, safe-area padding on iPhones (`general.md`). No public data proves how much it lifts conversions; it is the convention.
+- Breadcrumbs between the header and the page title (DADS); an extra copy above the footer is optional.
+- **Before the footer, on every page**: a full-width conversion band (お問い合わせ / 資料請求, and 採用情報 for companies that recruit) so the next step is there when the reader finishes (practice).
 - School sites usually need: トップ, 学校について, コース, キャンパス, 入学案内, よくある質問, お知らせ, お問い合わせ, アクセス.
 
 ## Typography
@@ -72,10 +77,11 @@ Checked against DADS, JLReq, WCAG 2.2, MDN and caniuse (`SOURCES.md`, section "T
 
 ## Forms
 
-- Fields: お名前（姓・名）, フリガナ, メールアドレス（確認）, 電話番号, 郵便番号 → 住所 auto-fill, お問い合わせ内容.
-- Mark **必須 / 任意** on every field in text, not colour alone. Show examples (「例：山田 太郎」).
+- Fields: お名前（姓・名）, フリガナ, メールアドレス, 電話番号, 郵便番号 → 住所 auto-fill (still editable), お問い合わせ内容. **No second "メールアドレス（確認）" field** (our default): WCAG 3.3.7 (Redundant Entry) argues against typing the same thing twice, and DADS has no confirm field; show the address on the 確認 screen instead.
+- `autocomplete` on every personal field (WCAG 1.3.5): `name` / `family-name` / `given-name`, `email`, `tel`, `postal-code`, `address-level1` (都道府県), `address-level2`, `address-line1`, `organization`. 郵便番号: hint 「半角数字7桁」, accept full-width and convert on submit (DADS).
+- Mark **※必須 / ※任意** on every field in text (DADS), not colour alone. Show examples (「例：山田 太郎」).
 - Accept full-width digits (「０９０」) and normalise; never reject them.
-- Privacy policy link and consent checkbox before submit (legally expected). Confirmation screen is common; a clear thank-you with what happens next (「2営業日以内にご連絡します」).
+- Privacy policy link and consent checkbox before submit (legally expected). Steps 入力 → 確認 → 完了 with a step indicator are the convention for inquiry forms, not a legal duty. The law requires a 最終確認画面 only for online sales contracts (特定商取引法 第12条の6, since 2022-06-01, for every online sales contract, not only subscriptions: quantity, price and shipping, payment timing and method, delivery timing, application deadline if any, cancellation terms; the full 特商法 check is still open in `../legal/japan.md`). A clear thank-you with what happens next (「2営業日以内にご連絡します」).
 - Error text in Japanese, next to the field. Short forms convert; every extra field loses people.
 
 ## Mobile
@@ -97,6 +103,16 @@ Researched 2026-10-15 (StatCounter Japan, September 2026; DADS レイアウト; 
 
 Blue = trust (companies, schools, finance); green = safety, health, nature; red = energy and urgency (one CTA, never body text); pink/pastel = friendly, family, care; gold = awards and premium; white space = clean. Always check contrast (`accessibility.md`).
 
+### Surfaces, photos and trust pages (checked 2026-10-15)
+
+- **Text colour:** DADS uses #000 for text and #1A1A1A as its darkest grey; both are fine. The claim that pure black "glares" on dense kanji has no source. Grey captions not lighter than #767676 (`general.md`).
+- **Style registers (practice):** luxury, hospitality and architecture sites often use square corners (0–2 px), fine 1 px rules and few shadows; friendly corporate and tech sites 12–16 px radii. Warm paper-like off-whites (生成り, e.g. #FAF9F6) suit traditional and luxury brands.
+- **Photos:** real people and real places in Japan. A 2025 survey of 300 people (デザポケ, Web担当者Forum) found unnatural Japanese (41 %) and missing company information (15 %) the top reasons to distrust a site; foreign stock photos were not measured, but they look out of place (practice). Light, airy photos (透明感) for corporate and lifestyle; close-ups with mood for luxury.
+- **Text on photos:** Japanese sites often put a solid box over a corner of the photo rather than darkening the whole image; either way 4.5:1.
+- **白銀比 (1 : √2 ≈ 1 : 1.414, also called 大和比)** is a popular Japanese proportion for portrait images and blocks (same ratio as A4 paper; claims about old temples are not proven). `aspect-ratio: 1 / 1.414`.
+- **お知らせ list on the top page:** 3–5 rows of date + category tag + title, linking to the archive; shows the business is active (practice). Dots in dates (2026.10.15) are a style convention; mark up `<time datetime="2026-10-15">`.
+- **会社概要 as a table:** 会社名, 設立, 代表者, 資本金, 所在地 (with map), 事業内容, 従業員数; B2B companies often add 取引銀行 and 主要取引先 (practice, no law prescribes it). 1 px rules and 16–24 px cell padding.
+
 ## Audiences
 
 - **保護者 (parents):** safety and credibility, clear costs (学費・入学金・その他費用, no hidden costs), results with the year (進路実績), support (相談体制, response speed), other parents' voices. Tone polite and specific; acknowledge worries before explaining. Trust block: real staff with names and titles, 校長メッセージ, accreditation, dated statistics, easy contact.
@@ -115,4 +131,4 @@ Blue = trust (companies, schools, finance); green = safety, health, nature; red 
 - Typography table rebuilt on DADS values: 16 px floor (14 px exceptional, below 14 not allowed), line height 1.7–1.75 body / 1.4 headings, letter spacing 0.02 em → 0, size scale 16–45 px, display 48–64 px, ruby 50 %, no italics, underlined links. Old ranges (12 px floor, 0.08 em, line height 2.0 as normal) dropped.
 - 禁則処理 spelled out from JLReq (what may not start or end a line, strict vs normal), Latin-in-Japanese rules, line length ≈ 40 characters, line gap ½–1 em.
 - Tap target minimum tied to WCAG 2.2 (24 px) with our 44–48 px practice kept as practice.
-- Not verified by a standard (kept as practice): information density, trust blocks, navigation, forms, colour meanings, audiences, seasons. Verify against DADS components (forms, navigation) in a later pass if needed.
+- Not verified by a standard (kept as practice): information density, trust blocks, colour meanings, audiences, seasons. Navigation and forms were checked against DADS components and WCAG 2.2 on 2026-10-15.

@@ -34,8 +34,8 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 
 | Folder / file | What | Status |
 |---|---|---|
-| `design/general.md` | Page structure, hierarchy, spacing scale, wireframe patterns, components, avoiding the generic "AI look", screen sizes and breakpoints, spacing rhythm, English typography | merged, unverified; **screen sizes, spacing rhythm and English typography researched 2026-10-15** (Bootstrap, Tailwind, StatCounter, DADS, WCAG, Material) |
-| `design/japan.md` | Japanese UX conventions, typography, forms, trust signals, mobile, colour, seasons | **typography verified 2026-10-11** (DADS, JLReq, JIS); UX/forms/audiences remain practice |
+| `design/general.md` | Page structure, hierarchy, spacing scale, wireframe patterns, components, avoiding the generic "AI look", screen sizes and breakpoints, spacing rhythm, English typography, navigation, surfaces, motion | merged, unverified; **screen sizes, spacing, typography, navigation, surfaces and motion researched 2026-10-15** (Bootstrap, Tailwind, StatCounter, DADS, WCAG, Material, NN/g) |
+| `design/japan.md` | Japanese UX conventions, typography, forms, trust signals, mobile, colour, seasons | **typography verified 2026-10-11** (DADS, JLReq, JIS); navigation and forms checked 2026-10-15 (DADS components, WCAG 2.2); UX conventions and audiences remain practice |
 | `design/accessibility.md` | WCAG 2.2 AA and JIS X 8341-3 checklist, JIS revision status | **verified 2026-10-11** (WCAG 2.2, JIS 1.4.3 checklist, DADS) |
 | `design/design-tokens.md` | DESIGN.md template and how tokens map to CSS, any theme | merged |
 | `writing/japanese.md`, `writing/english.md` | Copy, tone by audience, CTAs, lengths | merged |

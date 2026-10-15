@@ -1,6 +1,6 @@
 # Design fundamentals (any site)
 
-Status: merged 2026-10-11 from `global-web`, `ux-ui` and `wireframes` (dashboard skills). Not yet verified against WCAG 2.2 / current references (pass 2), except "Screen sizes, breakpoints and widths", the spacing rhythm and "English typography", researched 2026-10-15. For Japanese sites read `japan.md` as well; where they differ, `japan.md` wins.
+Status: merged 2026-10-11 from `global-web`, `ux-ui` and `wireframes` (dashboard skills). Not yet verified against WCAG 2.2 / current references (pass 2), except "Screen sizes, breakpoints and widths", the spacing rhythm, "English typography" and "Navigation, surfaces and motion", researched 2026-10-15. For Japanese sites read `japan.md` as well; where they differ, `japan.md` wins.
 
 ## Owner's rules (stand above everything else)
 
@@ -77,6 +77,37 @@ Theme and framework breakpoints (use the theme's own, do not fight it):
 - **Bootstrap 5.3:** 576 / 768 / 992 / 1200 / 1400; containers 540 / 720 / 960 / 1140 / 1320.
 - **Tailwind v4:** 640 / 768 / 1024 / 1280 / 1536 (five tiers, not Bootstrap's six); `container` = 100 % width capped at the current breakpoint, no centring or padding by default.
 
+## Navigation, surfaces and motion (checked 2026-10-15)
+
+Checked against WCAG 2.2, DADS components and foundations, Material 3 tokens, NN/g, MDN and web.dev (`SOURCES.md`, section "UX and surfaces"). Values marked practice have no standard behind them. Japanese conventions: `japan.md`.
+
+**Header and navigation**
+- Header height is free (practice: about 64–72 desktop, 56–64 phone; Material's top bar is 64). A sticky header is fine: set `scroll-padding-top` (and `scroll-padding-bottom` for a fixed bottom bar) to their heights so a focused field or anchor target is never entirely hidden under them (WCAG 2.4.11, AA; partly covered still passes AA). A blurred header (`backdrop-filter`) works in all current browsers.
+- Menu button: a visible label next to or under the icon (「メニュー」/ MENU; DADS requires it); tap area 44 × 44 (WCAG AAA and Apple), never under 24 × 24 (AA).
+- Mega menus and drop-downs open on **click or tap and on keyboard focus**, never on hover alone (DADS). If hover is added, wait 0.3–0.5 s before opening and keep it open 0.5 s after the pointer leaves (NN/g). Show levels 1–2 in one panel; avoid menus that fly out sideways from other menus.
+- Breadcrumbs go **between the header and the page title** (NN/g, DADS), current page not linked, `BreadcrumbList` structured data (Google sets no position). A second copy above the footer is optional (DADS uses it when the phone trail scrolls sideways).
+- Sticky header and sticky bottom bar together take a lot of a zoomed or small screen (WCAG 1.4.10 reflow): keep both short and let one of them scroll away on small screens (Japan keeps both by convention: keep the header short or hide it on scroll-down). A bottom bar needs `padding-bottom: env(safe-area-inset-bottom)` (and `viewport-fit=cover`) on iPhones. Thumb reach (Hoober 2013): the top of the screen is the hardest to reach; bottom corners are easy to reach but less accurate, so make bottom buttons large.
+
+**Colour and surfaces**
+- Text colours (contrast on white): near-black #1A1A1A (17.4:1, DADS Solid Gray 900) or #000 (DADS uses pure black; "never pure black" is taste, not a rule); secondary #595959–#666 (7.0–5.7:1); **muted captions no lighter than #767676** (4.5:1). #888 and #86868B fail (3.5:1). On off-white backgrounds re-check: #6E6E73 drops to about 4.7:1.
+- Off-white section backgrounds alternated with white separate sections without lines (practice; e.g. #F8F8FB, #F5F5F7, warm #FAF9F6).
+- Borders: decorative dividers and card edges may be faint (#E5E5E5, `rgba(0,0,0,.08)`, 1.3:1). **Input fields and icon-only buttons need a 3:1 boundary** (#949494 or darker; WCAG 1.4.11).
+- Shadows: pick **one elevation scale** and use only its steps (DADS `--elevation-1…8`, or Material levels 1–5). The "never above 6 % opacity" rule some articles give is a style preference; DADS and Material use stronger two-layer shadows. Flat cards separated by background colour are a valid alternative.
+- Corner radius: one scale, e.g. DADS 0 / 8 / 16 / 32 / full; smaller elements get smaller radii. Nested corners: inner radius = outer radius − padding (24 − 16 = 8) keeps curves parallel (practice).
+- Accent colour used sparingly (practice: about 10 % of the screen, the "60-30-10" rule from interior design).
+
+**Images**
+- Card thumbnails in a row share one ratio: `aspect-ratio: 16 / 9` (or 4 / 3, 3 / 2, 1 / 1, 4 / 5) with `object-fit: cover`.
+- Text over a photo needs 4.5:1 against the busiest part of the image (WCAG 1.4.3, failure F83): add a scrim or put the text in a solid box.
+
+**Motion**
+- Ease-out for things that enter: Material standard `cubic-bezier(0.2, 0, 0, 1)` or emphasized-decelerate `cubic-bezier(0.05, 0.7, 0.1, 1)`; `cubic-bezier(0.22, 1, 0.36, 1)` (easeOutQuint) is also fine. Linear only for short fades and continuous loops.
+- Durations: hover and small UI changes **150–250 ms**; panels and transitions up to **400 ms** (NN/g 100–400 ms; Material medium 250–400); a slow image zoom on hover may take 500–700 ms (practice). Scroll reveals at most about **600 ms**, opacity first, a short 16–24 px move at most; 800–1000 ms reveals feel slow (NN/g: users do not want to wait for animation).
+- `@media (prefers-reduced-motion: reduce)` turns off movement triggered by scrolling or clicks (WCAG 2.3.3, AAA; opacity-only fades are not motion under it and may stay). The AA duty is 2.2.2: anything that moves for more than 5 s (sliders, tickers) can be paused.
+- **Never hide the hero or main heading in a scroll reveal**: elements at opacity 0 do not count as the LCP element and stay invisible if the script fails. Start reveals only when a `js` class is present.
+
+**Consistency:** one radius scale, one shadow or border style, one accent colour, one grid (DADS: 12 columns, gutter twice the body text size). Edges of headings, text and cards line up on the same columns.
+
 ## Links, buttons, images
 
 - Link text says where it goes ("See pricing", 「学費を見る」), not "Click here" / 「こちら」 repeated.
@@ -96,7 +127,7 @@ Landing page: logo-only header → hero with one CTA → benefits → how it wor
 ## Components (spec level)
 
 - **Button:** height 44–48 px, 16 px text, weight 600, padding 12 × 32, radius from the design tokens, hover = slight opacity or lift, visible focus ring.
-- **Card:** image 16:9 or 4:3, optional tag, H3, 2–3 lines, link; 1 px border, subtle shadow, hover lifts the shadow.
+- **Card:** image 16:9 or 4:3 (`aspect-ratio` + `object-fit: cover`), optional tag, H3, 2–3 lines, link; 1 px border or one elevation step, hover goes one step up.
 - **Testimonial:** quote 2–4 lines, 48 px avatar, name and role, surface background.
 - **FAQ accordion:** question as H3, toggle icon on the right, border between items; answers present in the HTML (not loaded on click) so search engines see them.
 - **Stat block:** 48 px icon, big number, one line; centred on phones.

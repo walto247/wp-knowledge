@@ -3,6 +3,32 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-15 — Navigation, colour and surfaces, motion, Japanese forms
+
+Files changed: `design/general.md` (new section "Navigation, surfaces and motion", card spec), `design/japan.md` (navigation, forms, new subsection "Surfaces, photos and trust pages"), `design/SOURCES.md`, `README.md`.
+Checked a pasted "premium website" article against WCAG 2.2, DADS, Material 3, NN/g, MDN, web.dev and the 消費者庁 guideline; rejected and softened claims listed in `design/SOURCES.md`.
+
+What changed in the guidance:
+- Navigation: menus open on click/tap/focus, never hover alone; menu button with a visible メニュー label; breadcrumbs between header and title; sticky header with `scroll-padding-top`; bottom bar with safe-area padding; a conversion band before the footer (Japan, practice).
+- Colour and surfaces: captions no lighter than #767676 (#888 fails); input borders 3:1; one elevation scale, one radius scale, one accent; pure black text is acceptable (DADS).
+- Images: one `aspect-ratio` per row with `object-fit: cover`; text over photos 4.5:1.
+- Motion: ease-out curves, 150–250 ms for small changes, up to 400 ms for transitions, scroll reveals at most about 600 ms, `prefers-reduced-motion`, never hide the hero or LCP element at opacity 0.
+- Japanese forms: no second email field (our default; WCAG 3.3.7 argues against it); `autocomplete` on personal fields; ※必須 / ※任意; 最終確認画面 is a legal duty only for online sales contracts.
+
+### Checklist for existing sites (run at the next session of each site project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| Normal-size grey text lighter than #767676 on white (captions, dates, notes, placeholders used as labels) | fails WCAG 1.4.3 (4.5:1; large text needs 3:1) | colour, where |
+| Input borders lighter than about #949494, unless the field background itself contrasts 3:1 with the page | fails WCAG 1.4.11 (3:1) | form, colour |
+| Menus or sub-menus that open only on hover | keyboard and touch users cannot open them reliably (DADS; WCAG 2.1.1 / 2.4.7 / 1.4.13 depending on the build) | menu, page |
+| A focused field or anchor entirely hidden under the sticky header or bottom bar | WCAG 2.4.11 (fix: `scroll-padding-top` / `-bottom`) | page, element |
+| A "メールアドレス（確認）" second field | WCAG 3.3.7 argues against re-typing; our default is to drop it and show the address on the 確認 screen | form |
+| Personal fields without `autocomplete` | WCAG 1.3.5 | form, fields |
+| Hero, H1 or main image hidden by a scroll-reveal animation (opacity 0 at load) | delays or breaks LCP; invisible if JS fails | page, element, library |
+| Scroll or click animations without a `prefers-reduced-motion` rule; sliders or tickers that cannot be paused | WCAG 2.3.3 (AAA) for the first; 2.2.2 (AA) for the second | where |
+| Shops: a 最終確認画面 that does not show quantity, price and shipping, payment, delivery, application deadline (if any) and cancellation terms | 特定商取引法 第12条の6 | page, what is missing |
+
 ## 2026-10-15 — Typography: Japanese brand options, English rules, spacing rhythm
 
 Files changed: `design/japan.md` (new subsection "Brand and premium typography"), `design/general.md` (spacing rhythm table, new section "English typography"), `design/design-tokens.md` (body line height 1.75), `design/SOURCES.md`, `README.md`.

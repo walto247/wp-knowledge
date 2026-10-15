@@ -59,3 +59,23 @@ Checked and corrected from a pasted article (2026-10-15): Tailwind does not shar
 | Mincho vs Gothic (practice) | Fujifilm design seminar | https://www.fujifilm.com/fb/ja/support/colorprint/howto/design/seminar-05 | 2026-10-15 |
 
 Rejected from a pasted article (2026-10-15): Japanese body letter spacing 0.04–0.08 em and headings +3–8 % (DADS: 2 % / 1 % / 0, less as size grows); body line height "1.8–1.9 sweet spot" and "collides below 1.7" (DADS 1.5–1.75; JLReq's usual range ends at line height 2.0 for long lines); 12–13 px captions (DADS floor 14); 42-character lines (JLReq / WCAG 40); Japanese body justified on the web (WCAG 1.4.8, uneven mixed-script lines). No source for "kanji fill 90 %", "looks 10–15 % larger" or "titles 1–4 px smaller".
+
+## UX and surfaces (read 2026-10-15, for `general.md` "Navigation, surfaces and motion" and the `japan.md` navigation, forms and surfaces additions)
+
+| Topic | Source | Link | Read |
+|---|---|---|---|
+| Focus not obscured, reflow, target size, non-text contrast, text over images, animation, redundant entry, input purpose | WCAG 2.2 Understanding 2.4.11, 1.4.10, 2.5.8, 1.4.11, 1.4.3, 2.3.3, 3.3.7, 1.3.5 | https://www.w3.org/WAI/WCAG22/Understanding/ | 2026-10-15 |
+| Menu button label, mega menu (no hover-only), breadcrumb placement, input text (※必須/※任意, 郵便番号) | DADS components | https://design.digital.go.jp/dads/components/hamburger-menu-button/ · https://design.digital.go.jp/dads/components/mega-menu/ · https://design.digital.go.jp/dads/components/breadcrumb/ · https://design.digital.go.jp/dads/components/input-text/usage/ | 2026-10-15 |
+| Elevation, corner radius, layout grid | DADS foundations; DADS design tokens (#000 text, Solid Gray 900 #1A1A1A, elevation 1–8) | https://design.digital.go.jp/dads/foundations/elevation/ · https://design.digital.go.jp/dads/foundations/corner-shapes/ · https://unpkg.com/@digital-go-jp/design-tokens/dist/tokens.css | 2026-10-15 |
+| Motion easing and duration, elevation, top bar | Material 3 tokens (material-web source) | https://github.com/material-components/material-web | 2026-10-15 |
+| Mega menus, hover timing, hidden navigation, breadcrumbs, animation duration | NN/g | https://www.nngroup.com/articles/mega-menus-work-well/ · https://www.nngroup.com/articles/timing-exposing-content/ · https://www.nngroup.com/articles/hamburger-menus/ · https://www.nngroup.com/articles/breadcrumbs/ · https://www.nngroup.com/articles/animation-duration/ | 2026-10-15 |
+| Breadcrumb structured data | Google Search Central | https://developers.google.com/search/docs/appearance/structured-data/breadcrumb | 2026-10-15 |
+| Safe area, backdrop-filter, aspect-ratio | MDN | https://developer.mozilla.org/en-US/docs/Web/CSS/env · https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter · https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio | 2026-10-15 |
+| Opacity 0 and LCP | web.dev | https://web.dev/articles/lcp | 2026-10-15 |
+| How people hold phones | Steven Hoober (A List Apart, UXmatters 2013) | https://alistapart.com/article/how-we-hold-our-gadgets/ | 2026-10-15 |
+| Easing default (ease-out; linear for fades) | ICS MEDIA | https://ics.media/entry/18730/ | 2026-10-15 |
+| What makes Japanese visitors distrust a site | デザポケ survey, Web担当者Forum 2025-11-20 | https://webtan.impress.co.jp/n/2025/11/20/50449 | 2026-10-15 |
+| 最終確認画面 (sales contracts only) | 消費者庁 通信販売の申込み段階における表示についてのガイドライン | https://www.caa.go.jp/ (PDF consumer_transaction_cms101_2401119_03.pdf) | 2026-10-15 (via the PDF; to re-check in the 特商法 pass) |
+| 白銀比 / 大和比 | CGWORLD 2019 | https://cgworld.jp/regular/201901-colobito04-ratio-2.html | 2026-10-15 |
+
+Rejected or softened from a pasted article (2026-10-15): muted captions #86868B / #888 (fail 4.5:1); "never pure black" and kanji "halation" (DADS uses #000; no source); shadows "never above 6 %" (DADS and Material use stronger); hover menus with a 150 ms delay (DADS: no hover-only; NN/g 0.3–0.5 s); breadcrumbs above the footer as the main place (DADS and NN/g: below the header); scroll fades of 800–1000 ms (NN/g 100–400 ms); "never linear" (fine for fades); email confirmation fields (WCAG 3.3.7); "bottom bar boosts conversion dramatically" and "Japanese users spot foreign stock photos" (no data).
