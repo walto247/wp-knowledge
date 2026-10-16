@@ -4,6 +4,9 @@ Status: checked 2026-10-11. Meta keys and the "save the post afterwards" rule co
 
 ## Per-page fields (safe to edit)
 
+**Owner rule (2026-10-16): every page gets its SEO title, meta description and focus keyphrase written right after its content is in. No page goes to production with any of them empty.** Site packs keep them in their SEO data file in the same change that adds the page; audit `_yoast_wpseo_title`, `_yoast_wpseo_metadesc` and `_yoast_wpseo_focuskw` on every page before a release. (The "empty = template / Google picks" behaviour below is a fallback, not a choice.)
+
+
 | Field | Stored as | Guidance |
 |---|---|---|
 | SEO title | `_yoast_wpseo_title` | Empty = Yoast uses the site template. Set only when the template result is weak. |

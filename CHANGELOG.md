@@ -3,6 +3,18 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-16 — Yoast: title, meta description and keyphrase on every page (owner rule)
+
+Files changed: `wp-plugins/yoast.md` (owner rule at the top of "Per-page fields").
+Found on SKYUS staging: pages added later had no Yoast title, and no page had a meta description or focus keyphrase.
+
+### Checklist for existing sites (check and report; change only with the owner's OK)
+
+| Check | Why | Report |
+|---|---|---|
+| Every published page and post has `_yoast_wpseo_title`, `_yoast_wpseo_metadesc` and `_yoast_wpseo_focuskw` | owner rule: nothing empty on production | count per field, list of pages missing any |
+| The site pack (if any) holds them in its SEO data for every page | pages added later must not lose them | pages in the pack without SEO data |
+
 ## 2026-10-16 — Client reports: GA4 and Search Console terms, diagnosis table, page-by-page report
 
 Files changed: `seo-geo/measurement.md` (average position, new sections "GA4 numbers and their names", "Search Console inside GA4, and Looker Studio", "AI Overviews and clicks"), `seo-geo/reporting.md` (target vs actual, status marks, cadence, dashboards, new sections "Diagnose before writing", "Client report, page by page", seasonality, words for numbers, cover message templates, frameworks), `seo-geo/SOURCES.md`.
