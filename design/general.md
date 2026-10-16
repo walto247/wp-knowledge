@@ -134,7 +134,7 @@ Service page: short hero with H1 and breadcrumb → definition block in the firs
 
 Article: H1, author, date → hero image (not lazy) → intro with the answer → H2/H3 → author box (E-E-A-T) → related posts.
 
-Landing page: logo-only header → hero with one CTA → benefits → how it works (3 steps) → proof → final CTA → minimal footer (legal only).
+Landing page: logo-only header → hero with one CTA → benefits → how it works (3 steps) → proof → final CTA → minimal footer (legal only). Full LP guidance, Japanese and global: `../marketing/landing-pages.md`.
 
 ## Components (spec level)
 

@@ -5,9 +5,13 @@ Status: **景品表示法 sections verified 2026-10-11** (stealth-marketing desi
 ## 景品表示法 (misleading representations)
 
 - **優良誤認:** no claim that quality or effect is better than it is. 「業界No.1」「最高品質」「絶対」「必ず」「100%」 need objective proof; remove or soften otherwise.
-- **No.1表示** (消費者庁 report 2024-09-26, treated as the de-facto guideline; no separate guideline planned): the claim needs an objective basis in four parts: a fair choice of the compared products or services, a fair choice of respondents, a fairly run survey (no fixing your own option at the top, no leading questions), and a claim that matches what the survey measured. Show 調査機関・調査期間・対象 next to the claim. An image survey of a few people is not enough; 「顧客満足度No.1」 from a bought ranking is a known enforcement target.
+- **No.1表示** (消費者庁 report 2024-09-26, treated as the de-facto guideline; no separate guideline planned): the claim needs an objective basis in four parts: a fair choice of the compared products or services, a fair choice of respondents, a fairly run survey (no fixing your own option at the top, no leading questions), and a claim that matches what the survey measured. Show 調査機関・調査期間・対象 next to the claim. An image survey of a few people is not enough; 「顧客満足度No.1」 from a bought ranking is a known enforcement target. **A note does not repair a bad survey:** the report names notes such as 「検索上位○社」 or 「サイトイメージ調査」 as insufficient, and a note that is hard to see (position, size, colour) is itself a problem (checked 2026-10-16). The same applies to 満足度○% and 導入○社 badges.
 - **有利誤認:** prices and terms must not look better than they are. 「今だけ」「期間限定」 only if true. Conditions (「初回のみ」「送料別」「税込/税抜」) clear and next to the price, not in small print (打消し表示).
-- **二重価格** (「通常価格 ¥10,000 → ¥5,000」): the "normal price" must be a price the item was really sold at for a meaningful recent period.
+- **二重価格** (「通常価格 ¥10,000 → ¥5,000」): the "normal price" must be a price the item was really sold at for a meaningful recent period (価格表示ガイドライン rule of thumb: sold at it for more than half of the last 8 weeks (or of the shorter time the item has been on sale), for at least 2 weeks in total, and last sold at it within 2 weeks).
+- **Limited offers:** a deadline or quantity limit that is extended or repeated with the same deal is 有利誤認; 消費者庁 issued 措置命令 in 2025 (パソコン工房, March; 創建, September). Keep a record that each limit was real (checked 2026-10-16).
+- **打消し表示** (disclaimers): a condition only counts if people notice and understand it and it does not contradict the headline claim (消費者庁 2017/2018 reports). 「個人の感想です」 under a testimonial does not neutralise an effect claim (in 消費者庁's 2017 mock-ad survey, 90 % of 1,000 people did not notice it; via a secondary summary); state the number of people and how typical the result is.
+- **比較広告** (消費者庁 guideline): comparing with competitors is allowed when the claim is objectively proven, the figures are quoted accurately and the comparison is fair (no minor feature presented as overall superiority, no unequal products, no hidden downside, survey source given).
+- **不実証広告規制** (法7条2項): for quality, effect or performance claims (優良誤認 side only) 消費者庁 can demand the basis; without proof submitted within 15 days the claim is treated as misleading for a 措置命令 (and presumed so for 課徴金). Prices are judged as 有利誤認 without this rule. Keep the basis for every effect or performance claim, and the source of every number.
 - Consumer prices include tax (総額表示): 「¥11,000（税込）」.
 - Since the amendment in force **2024-10-01**, deliberate 優良誤認 / 有利誤認 can be punished directly (fine up to ¥1,000,000) in addition to 措置命令 and 課徴金; a confirmed-measures procedure (確約手続) was also introduced.
 
@@ -18,8 +22,8 @@ Designated as 不当表示 under 景品表示法 5条3号 (内閣府告示第19�
 ## 薬機法 / 健康増進法 (health, beauty, supplements, cosmetics)
 
 - Cosmetics and health foods must not claim to treat, cure or prevent illness: 「治る」「改善」「アトピーに効く」「痩せる」「免疫力アップ」 → flag.
-- Only approved claims for the product category; no before/after promises.
-- Clinics have their own strict rules (医療広告ガイドライン): no patient testimonials about results, no before/after photos without the required details. Flag all clinic content for a human check.
+- Only approved claims for the product category; no before/after promises. Plain cosmetics have 56 approved 効能 (薬食発0721第1号, 2011); 「治す」「修復」 and similar are 医薬品的効能. 「永久」 claims are guarantees and not allowed.
+- Clinics have their own strict rules (医療広告ガイドライン): no patient testimonials about treatment or results, no before/after photos without the treatment content, cost, risks and side effects next to them (事例解説書, 6th edition 2026-03-30). Flag all clinic content for a human check.
 
 ## 特定商取引法 (online sales)
 
@@ -52,4 +56,4 @@ Do not copy text or images from other sites. Photos of people need consent (肖�
 - ステマ規制: legal basis, the two conditions, accepted labels, who is liable.
 - No.1表示: the 2024 report's four conditions.
 - 2024-10-01 amendment (direct fines) added.
-- Not yet verified: 薬機法, 定期購入 details, 個人情報保護法 (利用目的, 第三者提供), 障害者差別解消法 wording. 2026-10-15: 特商法 表記 items, omissions and the 最終確認画面 checked on the 消費者庁 特商法ガイド; 外部送信規律 checked on the 総務省 page.
+- Not yet verified: 薬機法, 定期購入 details, 個人情報保護法 (利用目的, 第三者提供), 障害者差別解消法 wording. 2026-10-15: 特商法 表記 items, omissions and the 最終確認画面 checked on the 消費者庁 特商法ガイド; 外部送信規律 checked on the 総務省 page. 2026-10-16: No.1 notes, 打消し表示, 比較広告, 二重価格, limited-offer orders, 不実証広告規制 and the clinic before/after rule checked (消費者庁 pages and law-firm summaries; the report PDFs themselves could not be opened).

@@ -3,6 +3,28 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-16 — Landing pages (new topic) and advertising-claim rules
+
+Files changed: new `marketing/landing-pages.md` and `marketing/SOURCES.md`; `legal/japan.md` (No.1 notes, limited offers, 打消し表示, 比較広告, 不実証広告規制, cosmetics and clinic rules), `legal/SOURCES.md`, `design/general.md` and `marketing/japan.md` (pointers), `README.md`.
+Checked a pasted LP article against NN/g, Unbounce, HubSpot, Baymard, Google/Meta/LINE ad policies, 総務省, 消費者庁 and 厚労省; rejected claims listed in `marketing/SOURCES.md`.
+
+What changed in the guidance:
+- LPs: one goal, no menu, footer only with 会社概要 / プライバシーポリシー / 特商法 (when selling); first view = who, benefit, proof, CTA; phone-first (centred column for B2C is fine); 新PASONA or AIDA; ten-block wireframe; one CTA colour, CTA repeated, form on the page with 4–6 fields.
+- Law: a ※ note does not make a bad No.1 or 満足度 survey legal; 「個人の感想です」 does not neutralise effect claims; comparison tables need objective proof; limited offers must be real and not rolled over; keep the source of every number (for effect claims, proof on demand within 15 days); clinics: no treatment testimonials.
+- Ad platforms: no rule of "automatic disapproval" for missing footer links; Google and Meta native lead forms need a privacy-policy URL; LINE広告 rejects LPs that collect personal data without a privacy policy and checks the advertiser name.
+
+### Checklist for existing sites (run at the next session of each site project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| No.1 / 満足度○% / 導入○社 badges: is there a survey that meets the 2024 conditions, and a legible note beside the badge? | a note does not cure a bad survey | page, badge, survey source or "none found" |
+| Testimonials or case results with only 「個人の感想です」 | does not neutralise effect claims; ステマ labels for rewarded reviews | page, wording |
+| Competitor comparison tables (◎○△×) | must be objectively proven and fair | page, criteria, source |
+| 「期間限定」「先着」「月○社限定」 offers still running past their date, or repeated | 有利誤認; 2025 orders | page, dates |
+| Clinic pages with patient testimonials or before/after photos without treatment, cost, risks | 医療広告ガイドライン | page |
+| Ad LPs with a full menu, many exit links, or the form on another page | one goal per LP | LP URL |
+| LP forms without a privacy-policy link and consent | 個人情報保護法 (利用目的); LINE広告 rejects such LPs; Google/Meta require it for their native lead forms | form |
+
 ## 2026-10-16 — Yoast: title, meta description and keyphrase on every page (owner rule)
 
 Files changed: `wp-plugins/yoast.md` (owner rule at the top of "Per-page fields").

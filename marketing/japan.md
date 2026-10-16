@@ -1,6 +1,6 @@
 # Marketing conventions for Japanese websites
 
-Status: created 2026-10-11 from the CTA, trust and seasonal notes in the dashboard skills. Thin on purpose; grows in pass 2 (Consumer Affairs Agency rules, niche palettes and type by industry). Claims and ads law: `../legal/japan.md`. Copy: `../writing/japanese.md`. Design: `../design/japan.md`.
+Status: created 2026-10-11 from the CTA, trust and seasonal notes in the dashboard skills. Thin on purpose; grows in pass 2 (Consumer Affairs Agency rules, niche palettes and type by industry). Claims and ads law: `../legal/japan.md`. Landing pages: `landing-pages.md`. Copy: `../writing/japanese.md`. Design: `../design/japan.md`.
 
 ## Conversion path Japanese visitors accept
 
