@@ -1,6 +1,6 @@
 # UX Builder shortcodes (Flatsome 3.20.11)
 
-Status: **verified 2026-10-11** against the theme's own files (`inc/shortcodes/*.php` and `inc/builder/shortcodes/*.php` of Flatsome 3.20.11, read from a staging server, read-only). Attribute names and defaults below are the real ones; values shown as `''` mean "empty unless set". Flatsome 3.20.8 is the public release at the time; 3.20.11 is the build on our sites. **Always prefer what the page already uses.** Breakpoints: `__sm` = up to 549 px, `__md` = 550–849 px.
+Status: **verified 2026-10-11** against the theme's own files (`inc/shortcodes/*.php` and `inc/builder/shortcodes/*.php` of Flatsome 3.20.11, read from a staging server, read-only). Attribute names and defaults below are the real ones; values shown as `''` mean "empty unless set". 3.20.11 is the public release (2026-09-22) and the build on our sites. **Always prefer what the page already uses.** Breakpoints: `__sm` = up to 549 px, `__md` = 550–849 px.
 
 ## Element names (all registered shortcodes)
 

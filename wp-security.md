@@ -29,16 +29,17 @@ Security **settings** are never part of a content task: Wordfence, users and rol
 | Logs and integrity | review access and error logs; file-integrity monitoring (changed or added files); external malware scan |
 | Backups | regular, dated, **stored off the server**, encrypted, restore tested |
 
-## Versions to know (2026-10-11)
+## Versions to know (2026-10-17)
 
 | What | State |
 |---|---|
-| WordPress | 7.1.2 (2026-09-22) is current; 7.2 due about 2026-12-09. Minimum PHP 7.4; **recommended PHP 8.4 or 8.5** (hosting handbook) |
+| WordPress | **7.1.3 (2026-10-06)** is current; three security releases in Sep–Oct 2026 (7.1.1, 7.1.2 critical, 7.1.3): keep automatic minor updates on. 7.2 due 2026-12-08 (beta 2026-10-20) with a new default theme (proposal: Ipsum). Minimum PHP 7.4; **recommended PHP 8.4 or 8.5**, MySQL 8.4 or MariaDB 10.11 / 11.4 / 11.8 (hosting handbook 7.1) |
 | PHP 8.5 | active support to 2027-12-31, security fixes to 2029-12-31 |
 | PHP 8.4 | active support to 2026-12-31, security fixes to 2028-12-31 |
 | PHP 8.3 | security fixes only, to 2027-12-31 |
 | PHP 8.2 | security fixes only, **to 2026-12-31**: plan the move to 8.3+ now |
 | PHP 8.1 and older | end of life, no fixes |
+| PHP 8.6 | release planned 2026-11-19 |
 
 ## If the site looks hacked
 

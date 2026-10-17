@@ -16,7 +16,8 @@ the 1,000 / 50,000 row limits, the 30 key-event limit, the Insights branded clas
 - Search Console and GA4 never match exactly (time zone, canonical URLs, click counting): compare trends, use the same
   country and device filters (fact).
 - AI features: an AI Overview counts as one position shared by its links; clicks on its links count; AI Mode follow-ups are
-  new queries; both are inside search type "Web", with no own filter (fact).
+  new queries; both are inside search type "Web" (fact). Since 2026-08-31 a separate **Search Generative AI** report shows how often the site's URLs appeared in AI Overviews / AI Mode (and AI in Discover): **impressions only**, by page, country, device and date; no clicks, CTR, position or queries. Those impressions are already inside the Performance totals: never add them up (fact).
+- Since 2026-09-24 search type "Web" can be filtered to **multimodal** (image-based searches: Lens, Circle to Search, image uploads); these rows have no query text (fact).
 
 ## GA4
 
@@ -29,7 +30,7 @@ the 1,000 / 50,000 row limits, the 30 key-event limit, the Insights branded clas
   navigates instead of a click (fact).
 - **Unwanted referrals:** up to 50 domains per stream (payment pages, email flows); domains in the cross-domain list are not
   referrals; do not set ignore_referrer on every page (fact).
-- **Hostname data filter:** include or exclude hostnames when a property receives hits from another domain; Testing state
+- **Hostname data filter:** include or exclude hostnames when a property receives hits from another domain (Include filters, since 2026-09-21, also drop events with no hostname; Measurement Protocol hits are not filtered); Testing state
   first, 24–36 h, permanent for new data. Internal-traffic filter: IP rule + Exclude filter, Testing first, max 10 filters (fact).
 - Data retention (2 or 14 months) limits explorations and funnels only, not standard reports (fact).
 - Forms: enhanced measurement sends form_start / form_submit with form_name; one specific form = a custom event from

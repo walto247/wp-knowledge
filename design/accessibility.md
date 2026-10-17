@@ -5,7 +5,7 @@ Status: **verified 2026-10-11** against WCAG 2.2 "What's new" (W3C), the JIS X 8
 ## Which standard
 
 - **JIS X 8341-3:2016** has the same content as **WCAG 2.0** (DADS states this; ISO/IEC 40500:2012). It is still the standard government sites test against (declarations dated September 2026 still cite it).
-- A revision to match **ISO/IEC 40500:2025, i.e. WCAG 2.2**, has been in committee since October 2025 and was expected during 2026; as of 2026-10-11 no new JIS is published. **Build new work to WCAG 2.2 AA** so nothing has to be redone.
+- A revision to match **ISO/IEC 40500:2025, i.e. WCAG 2.2**, has been in committee since 2025-10-30; WAIC expects publication in 2027, at the latest 2028 (WAIC, 2026-09-28; 61 → 87 success criteria); no new JIS as of 2026-10-17. WCAG 3.0 is still a working draft (2026-09-10) with years to go. **Build new work to WCAG 2.2 AA** so nothing has to be redone.
 - A public "JIS準拠" claim follows WAIC's 対応度表記ガイドライン (test method and wording); do not write 「準拠」 casually, say 「WCAG 2.2 AA を目標に設計」 instead.
 - WCAG 2.2 was published 2023-10-05. It removed 4.1.1 Parsing.
 

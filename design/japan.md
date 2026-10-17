@@ -81,7 +81,7 @@ Checked against DADS, JLReq, WCAG 2.2, MDN and caniuse (`SOURCES.md`, section "T
 - `autocomplete` on every personal field (WCAG 1.3.5): `name` / `family-name` / `given-name`, `email`, `tel`, `postal-code`, `address-level1` (都道府県), `address-level2`, `address-line1`, `organization`. 郵便番号: hint 「半角数字7桁」, accept full-width and convert on submit (DADS).
 - Mark **※必須 / ※任意** on every field in text (DADS), not colour alone. Show examples (「例：山田 太郎」).
 - Accept full-width digits (「０９０」) and normalise; never reject them.
-- Privacy policy link and consent checkbox before submit (legally expected). Steps 入力 → 確認 → 完了 with a step indicator are the convention for inquiry forms, not a legal duty. The law requires a 最終確認画面 only for online sales contracts (特定商取引法 第12条の6, since 2022-06-01, for every online sales contract, not only subscriptions: quantity, price and shipping, payment timing and method, delivery timing, application deadline if any, cancellation terms; the full 特商法 check is still open in `../legal/japan.md`). A clear thank-you with what happens next (「2営業日以内にご連絡します」).
+- Privacy policy link and consent checkbox before submit (legally expected). Steps 入力 → 確認 → 完了 with a step indicator are the convention for inquiry forms, not a legal duty. The law requires a 最終確認画面 only for online sales contracts (特定商取引法 第12条の6, since 2022-06-01, for every online sales contract, not only subscriptions: quantity, price and shipping, payment timing and method, delivery timing, application deadline if any, cancellation terms; details in `../legal/japan.md`). A clear thank-you with what happens next (「2営業日以内にご連絡します」).
 - Error text in Japanese, next to the field. Short forms convert; every extra field loses people.
 
 ## Mobile

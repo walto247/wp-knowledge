@@ -92,3 +92,11 @@ Rejected or softened from a pasted article (2026-10-15): muted captions #86868B 
 | Scroll indicators | Viget eye-tracking study | https://www.viget.com/articles/should-you-use-a-custom-scroll-indicator-a-study-with-eye-tracking/ | 2026-10-15 |
 
 Rejected from a pasted article (2026-10-15): "Learn more →" as the card link (NN/g, WCAG 2.4.4); zigzag as a general rule (NN/g: 2–3 rows, informational images only); scroll indicators as a proven cue (no effect measured).
+
+## Monthly check 2026-10-17
+
+| Topic | Source | Link |
+|---|---|---|
+| JIS X 8341-3 revision timing (2027, at the latest 2028) | WAIC news 2026-09-28 | https://waic.jp/news/news-7938/ |
+| WCAG 3.0 working draft | W3C, 2026-09-10 | https://www.w3.org/TR/wcag3/ |
+| DADS still v2.18.1 (design data re-issued 2026-10-14; React v1 components removed 2026-09-09) | デジタル庁デザインシステム update history | https://design.digital.go.jp/dads/ |

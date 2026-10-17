@@ -1,6 +1,6 @@
 # UpdraftPlus
 
-Status: checked 2026-10-11 (hosting guides on UpdraftPlus; vendor docs not fetched): local backups live in `wp-content/updraft/`, a restore writes the backup's files and database over the current site, and remote storage (Drive, S3, Dropbox…) is the recommended setup because local copies die with the site.
+Status: checked 2026-10-11 (hosting guides); versions checked 2026-10-17: **keep 1.26.11 or later** (2026-10-16; three security releases 2026-10-14 to 10-16 after a restore-related SQL issue, and an earlier credential-disclosure fix). Basics: local backups live in `wp-content/updraft/`, a restore writes the backup's files and database over the current site, and remote storage (Drive, S3, Dropbox…) is the recommended setup because local copies die with the site.
 
 UpdraftPlus makes the site's regular backups (database, plugins, themes, uploads). Backup files live in `wp-content/updraft/` and contain the whole database: never expose, copy into a repository or paste from them.
 

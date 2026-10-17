@@ -124,3 +124,38 @@ Rejected from a pasted article (2026-10-15): FAQ snippets "restricted to authori
 | Looker Studio refresh (GA4 1/4/12 h, Search Console 12 h fixed) | Looker Studio Help | https://docs.cloud.google.com/looker/docs/studio/manage-data-freshness |
 
 Rejected or corrected from pasted articles (2026-10-16): "organic conversion rate per query" from linking GA4 and Search Console (only landing-page level); "users = distinct humans"; "time on page" in GA4; average position "across all tracked keywords"; Looker Studio "real time" (12 h); 精読率 as the label for engagement rate; fixed thresholds (CTR < 2 %, engagement < 40 % / > 65 %) as rules; "AI Overviews filter window-shoppers, normal" as a fact; "mobile 75 % / PC 90 % of conversions = broken mobile" as a conclusion; emoji traffic lights; Kaushik's rule as "data vs insight" (it is tools vs people).
+
+## Monthly check 2026-10-17
+
+| Topic | Source | URL |
+|---|---|---|
+| Documentation changelog (llms.txt note 2026-06-15; review guideline 2026-07-24; favicon formats 2026-08-28) | Google Search Central | https://developers.google.com/search/updates |
+| Search Generative AI report | Google Search Central blog 2026-06; Search Console Help | https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports · https://support.google.com/webmasters/answer/16908024 |
+| Multimodal filter | Google Search Central blog 2026-09 | https://developers.google.com/search/blog/2026/09/web-multimodal-in-sc |
+| Review snippet: fake / incentivised reviews | Google Search Central | https://developers.google.com/search/docs/appearance/structured-data/review-snippet |
+| Ranking updates 2026 | Google Search Status Dashboard | https://status.search.google.com/summary |
+| GA4 hostname Include filters | Analytics release notes | https://support.google.com/analytics/answer/9164320 |
+| Yahoo! JAPAN contract to March 2027 | Web担当者Forum 2024-05-17 citing Nikkei (secondary) | https://webtan.impress.co.jp/e/2024/05/17/47019 |
+
+Seen, not applicable to our clients: preferred sources in Top Stories, the Search profile badge (US creators), the UGC Fresh Data Program, Google-Agent user agent and Web Bot Auth docs. Unchanged: AI features page, generative-AI content guidance (2026-10-05), title and snippet docs, Quality Rater Guidelines (2025-09-11), Core Web Vitals thresholds, GA4 metric names.
+
+## Clarity (`clarity.md`), read 2026-10-17
+
+| Topic | Source | URL |
+|---|---|---|
+| FAQ (free, limits, sampling, minors, data location) | Microsoft Learn | https://learn.microsoft.com/en-us/clarity/faq |
+| Terms (independent controller, sensitive sectors, privacy-notice duty) | Clarity terms of use | https://clarity.microsoft.com/terms |
+| Setup, verification, iframes | Microsoft Learn | https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-setup |
+| Data retention | Microsoft Learn | https://learn.microsoft.com/en-us/clarity/setup-and-installation/data-retention |
+| Masking | Microsoft Learn | https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-masking |
+| Cookies; consent mode; Consent API v2; Google Consent Mode | Microsoft Learn | https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies · https://learn.microsoft.com/en-us/clarity/setup-and-installation/consent-mode · https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-consent-api-v2 · https://learn.microsoft.com/en-us/clarity/setup-and-installation/cookie-gcm |
+| Cookie lifetimes | clarity-js source | https://github.com/microsoft/clarity/blob/master/packages/clarity-js/types/data.d.ts |
+| Heatmaps, semantic metrics, smart events, filters, Copilot | Microsoft Learn | https://learn.microsoft.com/en-us/clarity/heatmaps/heatmaps-overview · https://learn.microsoft.com/en-us/clarity/insights/semantic-metrics · https://learn.microsoft.com/en-us/clarity/setup-and-installation/smart-events · https://learn.microsoft.com/en-us/clarity/filters/clarity-filters · https://learn.microsoft.com/en-us/clarity/copilot/overview |
+| Data Export API limits | Microsoft Learn | https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-data-export-api |
+| GA4 integration (pulls GA into Clarity) | Microsoft Learn | https://learn.microsoft.com/en-us/clarity/ga-integration/ga4-integration |
+| WordPress plugin; GTM | wordpress.org; Microsoft Learn | https://wordpress.org/plugins/microsoft-clarity/ · https://learn.microsoft.com/en-us/clarity/third-party-integrations/google-tag-manager |
+| Performance test (2021); GA vs Clarity numbers (2021) | Clarity blog | https://clarity.microsoft.com/blog/does-clarity-affect-website-performance/ · https://clarity.microsoft.com/blog/why-do-i-see-different-numbers-in-google-analytics-clarity/ |
+| Cookie ID = 個人関連情報; third-party tags | 個人情報保護委員会 Q&A 8-1, 8-3, 8-10 | https://www.ppc.go.jp/personalinfo/faq/APPI_QA/ |
+| WP Rocket Delay JS | WP Rocket docs | https://docs.wp-rocket.me/article/1349-delay-javascript-execution-compatibility-exclusions |
+
+Not documented by Microsoft (do not state as fact): Copilot output in Japanese, raw IP retention, data region, single-page-app handling.

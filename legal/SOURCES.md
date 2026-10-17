@@ -29,3 +29,15 @@
 | 二重価格 rule of thumb | Monolith Law (secondary) | https://monolith.law/corporate/display-double-law-point |
 | Medical advertising, 事例解説書 6th ed. | 厚生労働省 | https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/kokokukisei/index.html · https://www.mhlw.go.jp/content/001683116.pdf |
 | Cosmetics 56 効能 | 京都府 PDF | https://www.pref.kyoto.jp/yakumu/documents/1201507857850.pdf |
+
+## Monthly check 2026-10-17
+
+| Topic | Source | URL |
+|---|---|---|
+| ステマ: reposting gifted posts (高光製薬, 2026-06-29) | 消費者庁 order PDF; 公正取引委員会 release | https://www.caa.go.jp/notice/assets/representation_cms210_260629_01.pdf · https://www.jftc.go.jp/houdou/pressrelease/2026/jun/260629_kinki_keihyo.html |
+| ステマ: SNOW (2026-08-06) and 2025年度 運用状況 | press reports (secondary) | — |
+| 個人情報保護法 令和8年改正 | 個人情報保護委員会 | https://www.ppc.go.jp/personalinfo/legal/r8kaiseihogohou |
+| 医療広告等ガイドライン (revised 2026-03-30) | 厚生労働省 | https://www.mhlw.go.jp/content/001683594.pdf |
+| 外部送信規律: WG second report draft (comments to 2026-09-18), final not yet out | 総務省 | https://www.soumu.go.jp/menu_news/s-news/01kiban18_01000293.html |
+
+Unchanged as of 2026-10-17: 特定商取引法 (no 2026 amendment), 景品表示法 guidelines, 薬機法 advertising rules, 障害者差別解消法 guidance.

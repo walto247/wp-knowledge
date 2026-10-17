@@ -17,13 +17,13 @@ Status: **景品表示法 sections verified 2026-10-11** (stealth-marketing desi
 
 ## ステルスマーケティング規制 (in force 2023-10-01)
 
-Designated as 不当表示 under 景品表示法 5条3号 (内閣府告示第19号, 2023-03-28). Two conditions make a post a violation: it is **the business's own representation** (the business was involved in the content: payment, product supplied with expectations, instructions, an ongoing relationship) **and** ordinary consumers cannot tell that it is (要件①②). Accepted labels per the 運用基準: 「広告」「プロモーション」「PR」 or a plain sentence such as 「A社から商品の提供を受けて投稿しています」, placed where it is seen, not hidden in tags or small print. The **advertiser** is liable (措置命令), not the influencer. Applies to posts started before the date that remain visible. Never write reviews or testimonials "as a customer"; testimonials must be real and labelled when rewarded.
+Designated as 不当表示 under 景品表示法 5条3号 (内閣府告示第19号, 2023-03-28). Two conditions make a post a violation: it is **the business's own representation** (the business was involved in the content: payment, product supplied with expectations, instructions, an ongoing relationship) **and** ordinary consumers cannot tell that it is (要件①②). Accepted labels per the 運用基準: 「広告」「プロモーション」「PR」 or a plain sentence such as 「A社から商品の提供を受けて投稿しています」, placed where it is seen, not hidden in tags or small print. The **advertiser** is liable (措置命令), not the influencer. Applies to posts started before the date that remain visible. Never write reviews or testimonials "as a customer"; testimonials must be real and labelled when rewarded. **Reposting** a solicited customer or influencer post on your own site or shop page without the disclosure is itself ステマ (消費者庁 措置命令, 高光製薬, 2026-06-29: 「SNSで大人気!」 excerpts from gifted posts). Paid influencer posts on X without 「PR」 drew a 措置命令 in 2026-08 (SNOW; secondary report). 2025年度: 4 of 8 確約 cases were ステマ.
 
 ## 薬機法 / 健康増進法 (health, beauty, supplements, cosmetics)
 
 - Cosmetics and health foods must not claim to treat, cure or prevent illness: 「治る」「改善」「アトピーに効く」「痩せる」「免疫力アップ」 → flag.
 - Only approved claims for the product category; no before/after promises. Plain cosmetics have 56 approved 効能 (薬食発0721第1号, 2011); 「治す」「修復」 and similar are 医薬品的効能. 「永久」 claims are guarantees and not allowed.
-- Clinics have their own strict rules (医療広告ガイドライン): no patient testimonials about treatment or results, no before/after photos without the treatment content, cost, risks and side effects next to them (事例解説書, 6th edition 2026-03-30). Flag all clinic content for a human check.
+- Clinics have their own strict rules (医療広告等ガイドライン: current name; last revised 2026-03-30): no patient testimonials about treatment or results, no before/after photos without the treatment content, cost, risks and side effects next to them (事例解説書, 6th edition 2026-03-30). Flag all clinic content for a human check.
 
 ## 特定商取引法 (online sales)
 
@@ -37,6 +37,7 @@ Checked 2026-10-15 against the 消費者庁 特定商取引法ガイド (通信�
 
 ## 個人情報保護法, cookies, email
 
+- **令和8年改正** (passed 2026-07-10, promulgated 2026-07-17): takes effect in stages on dates set by 政令, at the latest two years after promulgation (2028-07); the dates are not yet set. 個人情報保護委員会 is drafting the 政令, 規則 and guidelines (autumn 2026); 課徴金 for serious violations is the main new item (details from secondary summaries until the guidelines are out). Nothing changes for sites yet; watch the guidelines.
 - Every form that collects personal data needs a privacy policy link (利用目的) and, in practice, a consent checkbox.
 - Do not add tracking tags, chat widgets or third-party scripts on your own: they send visitor data to others and may have to be listed in the 外部送信 policy. A person decides.
 - **外部送信規律** (電気通信事業法, since 2023-06-16; checked 2026-10-15 on the 総務省 page) covers 電気通信事業者 and 第三号事業 operators: SNS, search, news or curation media, online malls, apps and similar services. A site that only presents its own company (and in practice a shop selling only its own goods) is outside it; for those, listing the tools is good practice. Sites in scope must publish what is sent, to whom and for what purpose (a table in the privacy policy: tool, data, recipient, purpose) or get consent / offer opt-out. It is a **notice duty, not a consent duty**.

@@ -44,13 +44,16 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 | `seo-geo/reporting.md` | Client SEO / analytics reports (English and Japanese): structure, key numbers, bad news, writing for non-technical readers, talk script, cadence, how to check; diagnosis table, monthly client PDF page by page, Japanese seasonality and metric labels, cover message templates, frameworks | **researched 2026-10-14, extended 2026-10-16** (Google + government sources; agency parts are practice) |
 | `seo-geo/measurement.md` | Search Console and GA4 measurement (key events, cross-domain, referrals, hostname filter, UTM rule), moving part of a site to another domain, CWV in reports; GA4 metric definitions and names, Search Console inside GA4, Looker Studio refresh, AI Overviews evidence | **researched 2026-10-14, extended 2026-10-16** (Google help and Search Central, Pew) |
 | `marketing/japan.md` | Japanese CTAs and conversion conventions, trust, seasonal calendar, claims, what Dentsu and Hakuhodo publish | merged; agency section checked 2026-10-11 |
+| `marketing/youtube.md` | YouTube: what the system optimises, myths, packaging, retention, Shorts, captions, policies, Japan law and music, embeds and video indexing, report KPIs | **researched 2026-10-17** (YouTube Help, Search Central, 総務省, 消費者庁, JASRAC) |
+| `marketing/sns.md` | Instagram, TikTok, X, LINE, Facebook: Japan usage by age, discovery per platform, myths, LINE pricing, UTM and GA4, embeds, SNS law, report KPIs | **researched 2026-10-17** (platform docs, 総務省, 消費者庁, 厚労省) |
+| `seo-geo/clarity.md` | Microsoft Clarity: when it may be used (Microsoft: not for sites aimed at minors; terms: no health, finance or government content), limits, WordPress install, masking and consent, Japan law, monthly routine, reporting | **researched 2026-10-17** (Microsoft Learn, Clarity terms, PPC, 総務省) |
 | `marketing/landing-pages.md` | Landing pages, global and Japanese: one goal, first view, phone-first, 新PASONA and AIDA, ten-block wireframe, CTA and form, law and ad platforms | **checked 2026-10-16** (NN/g, Unbounce, Baymard, Google/Meta/LINE ad policies, 消費者庁, 厚労省); layouts are practice |
 | `flatsome/` | UX Builder, CSS and child theme, WooCommerce, posts | **verified 2026-10-11** (theme 3.20.11 files, official hooks and docs, live sites) |
-| `swell/` | Block editor rules, SWELL blocks, Customizer map | **verified 2026-10-11** (swell-theme.com: 2.19, blocks, plugins; live site: CSS variables); Customizer paths not re-checked |
-| `block-themes/README.md` | theme.json-based themes (for `wp-master-theme`) | stub |
-| `wp-plugins/` | One file per plugin: Yoast, WP Rocket, WPForms, Wordfence, UpdraftPlus, WP Mail SMTP, WPML, ACF | **checked 2026-10-11** where vendors document it; Wordfence and ACF are practice |
+| `swell/` | Block editor rules, SWELL blocks, Customizer map | **verified 2026-10-11** (swell-theme.com: 2.19, blocks, plugins; live site: CSS variables); Customizer paths checked against the manual 2026-10-17 |
+| `block-themes/README.md` | theme.json-based themes: files, theme.json v3 keys, presets, layout, variations, WP 7.1 responsive styles, default themes | **generic parts checked 2026-10-17** (schema, Theme Handbook); master-theme decisions stay in `wp-master-theme/docs/` |
+| `wp-plugins/` | One file per plugin: Yoast, WP Rocket, WPForms, Wordfence, UpdraftPlus, WP Mail SMTP, WPML, ACF; minimum safe versions | **checked 2026-10-11** where vendors document it; versions and advisories checked 2026-10-17 |
 | `CHANGELOG.md` | Dated entries: what changed in the guidance + a checklist for existing sites. **Every project reads the top entry at session start.** | started 2026-10-11 |
-| `wp-maintenance.md`, `wp-security.md`, `wp-performance.md` | Health check, security review with the hardening baseline and PHP/WordPress versions, Core Web Vitals | **verified 2026-10-11** (hardening guide, php.net, web.dev); routines are practice |
+| `wp-maintenance.md`, `wp-security.md`, `wp-performance.md` | Health check, security review with the hardening baseline and PHP/WordPress versions, Core Web Vitals | **verified 2026-10-11**, versions re-checked 2026-10-17 (hardening guide, php.net, wordpress.org, web.dev); routines are practice |
 
 ## Pass 2 plan (one session per topic, in this order)
 
@@ -60,7 +63,7 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 4. ~~`seo-geo/`~~ done 2026-10-11; `legal/japan.md` 景表法 parts done, the rest (薬機法, 特商法, 個人情報) still to verify; 消費者庁 site was unreachable.
 5. ~~`wp-plugins/`, `wp-security.md`, `wp-performance.md`~~ done 2026-10-11.
 
-Pass 2 is complete except: `legal/japan.md` 薬機法 / 定期購入 details / 個人情報 sections (特商法 表記 and 外部送信 checked 2026-10-15), `block-themes/` (stub), `swell/customizer.md` panel paths, and one retry of the two unreachable pages (digital.go.jp policy page, caa.go.jp stealth-marketing page). Next: pass 3 when a topic changes (new theme version, new law, new Google guidance); re-check version tables every quarter.
+Pass 2 is complete except: `legal/japan.md` 薬機法 / 定期購入 details / 個人情報 sections (特商法 表記 and 外部送信 checked 2026-10-15; the 令和8年 個人情報 amendment noted 2026-10-17) and one retry of the digital.go.jp design-system policy page. Done 2026-10-17: `block-themes/` generic parts, `swell/customizer.md` panel paths, the caa.go.jp stealth-marketing page (read). Next: pass 3 when a topic changes (new theme version, new law, new Google guidance); re-check version tables every quarter.
 
 Each verified file gets `Status: verified YYYY-MM-DD against <pages>` and keeps a short
 "what changed" note at the bottom.

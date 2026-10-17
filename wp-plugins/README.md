@@ -19,3 +19,19 @@ Status: merged 2026-10-11; **checked 2026-10-11** where the vendor documents it 
 - Never install, update, activate, deactivate or delete plugins as part of a content task. Report available updates; a person applies them on staging first, then production, after a backup (`../wp-maintenance.md`).
 - Never read or repeat settings that hold passwords, API keys, licence keys or tokens.
 - A plugin that seems broken: collect facts (versions, the PHP error log) and report; no fixes inside plugin files.
+
+## Versions and advisories (checked 2026-10-17)
+
+Keep at least these versions (security fixes in Aug–Oct 2026; check Patchstack or Wordfence Intelligence before quoting a CVE to a client):
+
+| Plugin | Keep at least | Note |
+|---|---|---|
+| Yoast SEO | 28.7 (2026-10-13) | 28.6–28.7 add WordPress Abilities so AI agents can read and update titles and descriptions |
+| WP Rocket | 3.23.5.1 (2026-10-02) | fixes for exposed config backups, stored XSS and access control |
+| WPForms | 2.0.2.2 (2026-10-06) | several unauthenticated issues fixed in Sep 2026 (shortcode execution, Stripe refund, XSS) |
+| Wordfence | 9.0.2 (2026-09-30) | passkey login since 9.0.0 |
+| UpdraftPlus | 1.26.11 (2026-10-16) | three security releases in three days |
+| WP Mail SMTP | 4.10.2 (2026-10-08) | new Email Detective tool next to Email Test and Email Log |
+| WPML | 5.0.x (2026-09-13) | admin redesign; see `wpml.md` |
+| ACF / Secure Custom Fields | 6.8.10 / 6.9.6 | two different plugins; see `acf.md` |
+| WooCommerce | 11.2.1 (2026-10-09) | security releases 11.1.1, 11.1.2; Flatsome needs 3.20.10+ for 11.1 |

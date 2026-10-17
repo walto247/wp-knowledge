@@ -1,6 +1,6 @@
 # Flatsome theme
 
-Status: **verified 2026-10-11.** Element names, attributes and option values read from the theme's own files (Flatsome **3.20.11** on a staging server, read-only; `ux-builder.md`); hooks from docs.uxthemes.com/article/385-hooks; custom CSS location from article 235; breakpoints 549 / 849 px, the `custom-css` block, helper classes and the `[accordion-item]` form from live sites and the theme CSS; version history from the ThemeForest listing (public release 3.20.8, 2026-07-10; Flatsome 4 planned as a hybrid classic + block theme). Sources: `SOURCES.md`.
+Status: **verified 2026-10-11.** Element names, attributes and option values read from the theme's own files (Flatsome **3.20.11** on a staging server, read-only; `ux-builder.md`); hooks from docs.uxthemes.com/article/385-hooks; custom CSS location from article 235; breakpoints 549 / 849 px, the `custom-css` block, helper classes and the `[accordion-item]` form from live sites and the theme CSS; version history from the ThemeForest listing (public release **3.20.11, 2026-09-22**, checked 2026-10-17; Flatsome 4 planned as a hybrid classic + block theme). Sources: `SOURCES.md`.
 
 | Need | Read |
 |---|---|
@@ -36,6 +36,8 @@ Pages are built with **UX Builder**, which stores the layout as shortcodes in th
 Phone: `max-width: 549px` (desktop/tablet from 550 px). Tablet: `max-width: 849px` (desktop from 850 px). The three Custom CSS boxes (all / tablet / mobile) wrap tablet and mobile rules in those queries. `span__sm` = up to 549 px, `span__md` = 550–849 px.
 
 ## Versions
+
+3.20.9–3.20.11 (2026-08-05 to 2026-09-22): WooCommerce 11 / 11.1 compatibility and **security fixes** (UX Block title AJAX endpoint, reflected XSS, stored XSS in countdown, scroll-to, lightbox and tooltip attributes): update every site to 3.20.11 on staging, then live. No hook or shortcode changes.
 
 3.20.8 (2026-07-10): accessibility markup updates, `Flatsome.cookie` deprecated for `Flatsome.Cookies`, scripts moved under `assets/js/extensions/`, new `flatsome-header-unsticky` event. Flatsome 4 is planned as a hybrid classic + block theme; migration will not be mandatory. The theme is pinned per site; update on staging first.
 

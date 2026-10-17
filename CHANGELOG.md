@@ -3,6 +3,32 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-17 — Monthly check; new topics Microsoft Clarity, YouTube, SNS; block themes; plugin versions
+
+Files changed: new `seo-geo/clarity.md`, `marketing/youtube.md`, `marketing/sns.md`, `block-themes/SOURCES.md`; rewritten `block-themes/README.md`; updated `seo-geo/README.md`, `seo-geo/measurement.md`, `seo-geo/reporting.md`, `legal/japan.md`, `design/accessibility.md`, `design/japan.md`, `marketing/landing-pages.md`, `wp-security.md`, `flatsome/README.md`, `flatsome/ux-builder.md`, `swell/customizer.md`, `wp-plugins/` (README, acf, wpml, updraftplus, wordfence), all affected `SOURCES.md`, `README.md`.
+Monthly check of every topic against its primary sources (changes since 2026-10-11), plus three new researched topics.
+
+What changed in the guidance:
+- **Google:** Search Console has a **Search Generative AI** report (impressions only, since 2026-08-31) and a setting to exclude a site from AI Overviews / AI Mode; a multimodal search filter (2026-09-24); fake or undisclosed incentivised reviews barred (2026-07); `llms.txt` has no effect on Search; 2026 update list (spam update 24 Sep–8 Oct). Yahoo! JAPAN stays on Google to at least March 2027.
+- **Law:** reposting gifted SNS posts without 「PR」 is ステマ (措置命令 2026-06-29); 個人情報保護法 令和8年改正 promulgated 2026-07-17 (in force by 2028-07); 医療広告**等**ガイドライン revised 2026-03-30. JIS X 8341-3 revision now expected 2027–2028.
+- **WordPress:** 7.1.3 (2026-10-06) after three security releases; 7.2 on 2026-12-08 with a new default theme (proposal: Ipsum); PHP 8.6 on 2026-11-19. **Flatsome 3.20.11** public with XSS fixes. Minimum safe plugin versions table (`wp-plugins/README.md`); WPML 5.0 changed its admin and publishes AI translations without review by default.
+- **New:** Microsoft Clarity (Microsoft's docs: not on sites aimed at under-18s; its terms: no health, finance or government content), YouTube (what YouTube says vs myths, embeds and video indexing), SNS (Japan usage by age, platform discovery, LINE ¥3 per extra message from 2026-10-01, VOOM ended 2026-09-30, SNS law).
+- SWELL Customizer paths corrected to the manual; block-themes generic facts written.
+
+### Checklist for existing sites (run at the next session of each site project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| WordPress below 7.1.3, Flatsome below 3.20.11 | security releases Sep–Oct 2026 | site, versions |
+| Plugins below the minimum versions in `wp-plugins/README.md` (UpdraftPlus 1.26.11, WPForms 2.0.2.2, WP Rocket 3.23.5.1, …) | security fixes | plugin, version |
+| WPML 5.0 sites: automatic translations set to publish without review | our rule: a person reviews translations | setting |
+| Microsoft Clarity installed on a site for under-18s, a clinic, finance or public body | not allowed by Clarity's terms | site, decision needed |
+| Clarity installed but not named in the privacy policy, or forms and confirmation pages not masked | Clarity terms; personal data in recordings | policy section, pages |
+| Solicited customer or influencer posts reposted on the site or shop pages without 「PR」 | ステマ (2026 order) | page |
+| LINE公式アカウント sending more than the plan's free messages | ¥3 per extra message since 2026-10-01 | plan, monthly sends |
+| YouTube embeds as raw iframes in the hero or above the fold; videos with no watch page where video results matter | speed; Google video indexing | page |
+| SNS links in bios, rich menus and LINE messages without UTM | visits show as direct or referral in GA4 | profile, link |
+
 ## 2026-10-16 — Landing pages (new topic) and advertising-claim rules
 
 Files changed: new `marketing/landing-pages.md` and `marketing/SOURCES.md`; `legal/japan.md` (No.1 notes, limited offers, 打消し表示, 比較広告, 不実証広告規制, cosmetics and clinic rules), `legal/SOURCES.md`, `design/general.md` and `marketing/japan.md` (pointers), `README.md`.

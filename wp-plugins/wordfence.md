@@ -1,6 +1,6 @@
 # Wordfence
 
-Status: merged 2026-10-11. Unverified (pass 2).
+Status: version checked 2026-10-17 (9.0.2, 2026-09-30; 9.0.0 added **passkey login** for free and premium, an option for the 2FA baseline in `../wp-security.md`). The rules below are practice.
 
 Wordfence is the firewall and malware scanner. **Never change it.** Security decisions belong to the admin.
 
