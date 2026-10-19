@@ -7,6 +7,20 @@ Repository: github.com/walto247/wp-knowledge (branch `main`).
 `CHANGELOG.md` is the only notification channel to other projects: they read its top entry
 at the start of each session.
 
+## Workspace house rules (owner, 2026-10-19; full text in the root `CC-projects/CLAUDE.md`)
+
+- **Communication:** lead with deliverables and results; no preambles or step-by-step narration; don't print trial-and-error
+  attempts, routine command output or internal scans unless blocked by an unrecoverable error. Answers to the owner have two
+  sections: **Completed** (changes and verification checks) and **Waiting for You** (decisions or approvals needed, or "Ready for
+  next instruction"). Reports to the Orchestrator still include the full outputs and diffs the worker protocol asks for.
+- **Safety:** never stage, commit or log credentials, API tokens, private keys (`*.pem`, `id_*`) or `.env` files. Never run
+  destructive commands (`rm -rf`, `git push --force`, `git reset --hard`, `DROP TABLE`) without the owner's explicit instruction.
+  **Commit locally only; never push automatically** (this replaces any "push after each commit" line in this file).
+- **Code quality:** minimal diffs; edit existing code precisely, don't rewrite untouched functions or reformat surrounding files;
+  keep existing comments, types and logic unless told to remove them.
+- **Multibyte:** always keep UTF-8; never strip or alter Japanese (kanji/kana) characters or keigo phrasing.
+- **Hygiene:** leave no temporary test files, debug logs or scratch scripts in the repository; clean up before reporting completion.
+
 ## What this chat does
 
 1. **News in, verified update out.** When the owner pastes news (Google Search Central post,
