@@ -3,6 +3,12 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-19: Universal Client File Intake SOP
+- Added `agency-sop/file-intake.md` defining protocols for intake of spreadsheets, Word docs, slide presentations, PDFs, image assets, archives, and audio/video memos.
+- Requires token-efficient parsing via Python in untracked `tmp/` folders.
+- Mandates visual HTML review dashboards (`tmp/review.html`) with automatic host browser launch for any image or layout approvals.
+- Checklist for workers: When processing client files in `tmp/intake/`, read and follow `agency-sop/file-intake.md`.
+
 ## 2026-10-19 — New topics: shared hosting, VPS hardening, database upkeep, Japanese checkout, selling abroad
 
 Files changed: new `infrastructure/shared-hosting.md`, `infrastructure/vps-hardening.md`, `database/wp-database.md`, `ecommerce/japan-checkout.md`, `ecommerce/cross-border.md` and their `SOURCES.md`; pointer in `wp-maintenance.md`; `README.md`.
