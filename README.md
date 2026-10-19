@@ -12,7 +12,7 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 ## Rules
 
 1. **This is the only copy.** When a fact changes, change it here. Do not paste these files into
-   a project; a project's `CLAUDE.md` says "read `../wp-knowledge/<topic>`" and the reader opens
+   a project; a project's `CLAUDE.md` points to `CC-projects/1_GLOBAL_ASSETS/wp-knowledge/<topic>` and the reader opens
    the topic it needs.
 2. **Client-specific facts never go here.** They belong to that client's project (its `CLAUDE.md`,
    `DESIGN.md`) or, for the site assistant, its site pack. Example: which accordion tag one site
