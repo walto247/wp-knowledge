@@ -54,6 +54,11 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 | `wp-plugins/` | One file per plugin: Yoast, WP Rocket, WPForms, Wordfence, UpdraftPlus, WP Mail SMTP, WPML, ACF; minimum safe versions | **checked 2026-10-11** where vendors document it; versions and advisories checked 2026-10-17 |
 | `CHANGELOG.md` | Dated entries: what changed in the guidance + a checklist for existing sites. **Every project reads the top entry at session start.** | started 2026-10-11 |
 | `wp-maintenance.md`, `wp-security.md`, `wp-performance.md` | Health check, security review with the hardening baseline and PHP/WordPress versions, Core Web Vitals | **verified 2026-10-11**, versions re-checked 2026-10-17 (hardening guide, php.net, wordpress.org, web.dev); routines are practice |
+| `infrastructure/shared-hosting.md` | Hostinger (hPanel) and cPanel for WordPress: SSH, document roots, WP-CLI, three caches, PHP, SSL fixes, cron, backups, staging | **verified 2026-10-19** (Hostinger, cPanel, LiteSpeed, WP-CLI docs) |
+| `infrastructure/vps-hardening.md` | Generic VPS hardening (Ubuntu/Debian): SSH drop-ins, UFW and Docker, fail2ban, updates, time, backups, batch WP-CLI updates | **verified 2026-10-19** (Ubuntu, Debian, Docker, fail2ban, WP-CLI); n8n VPS specifics stay in `n8n-server-ops` |
+| `database/wp-database.md` | Database upkeep: export first, prefix, autoloaded options (6.6), transients, revisions, optimize/repair, WooCommerce HPOS | **verified 2026-10-19** (WP-CLI, WordPress, WooCommerce docs) |
+| `ecommerce/japan-checkout.md` | Japanese shops: 消費税 and 総額表示, インボイス, payment methods and 3-D Secure, Shopify/WooCommerce options, checkout fields, Yamato/Sagawa slots, 置き配 | **verified 2026-10-19** (国税庁, METI, platforms, carriers) |
+| `ecommerce/cross-border.md` | Selling abroad: DAP/DDP, EU €3 duty and IOSS, UK £135, US de minimis suspension, Australia GST, Japan Post services and US rules, 輸出免税, currencies | **verified 2026-10-19** (EU, HMRC, CBP, ATO, Japan Post, 国税庁) |
 
 ## Pass 2 plan (one session per topic, in this order)
 

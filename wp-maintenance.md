@@ -37,4 +37,6 @@ Backup (UpdraftPlus or the host's snapshot) → update on staging → clear cach
 
 ## Monthly
 
+Database upkeep (export first, autoloaded options, transients, revisions, WooCommerce HPOS): `database/wp-database.md`. Host-specific steps (caches, cron, backups, staging on Hostinger and cPanel): `infrastructure/shared-hosting.md`.
+
 Health check as above, plus: backups exist and are recent, SSL valid, forms deliver, Search Console has no new errors, database clean-up that keeps revisions and trash (never a blind "optimise everything"), a short report to the client.

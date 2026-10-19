@@ -3,6 +3,30 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-19 — New topics: shared hosting, VPS hardening, database upkeep, Japanese checkout, selling abroad
+
+Files changed: new `infrastructure/shared-hosting.md`, `infrastructure/vps-hardening.md`, `database/wp-database.md`, `ecommerce/japan-checkout.md`, `ecommerce/cross-border.md` and their `SOURCES.md`; pointer in `wp-maintenance.md`; `README.md`.
+Requested by the root chat (owner decision 2026-10-19). Unsourced drafts found in the repo were checked line by line and replaced; copies in `CC-projects/delete/wp-knowledge/drafts-2026-10-19/`.
+
+What changed in the guidance:
+- Hosting: never `--allow-root`; purge the three Hostinger caches; SSL failures are DNS problems (one A record, no blocking CAA, Cloudflare proxy off), not WP-CLI; real cron instead of WP-Cron; Hostinger "push to live" overwrites live orders and entries.
+- VPS: SSH settings in a drop-in file (first value wins), service name `ssh`, Docker bypasses UFW, fail2ban reads the journal (no auth.log on Debian 12).
+- Database: export outside the web root first; WordPress 6.6 autoload values and the 800 KB Site Health limit; WooCommerce 10.7 turned HPOS "sync on read" off.
+- Shops: 3-D Secure 2 expected of every EC shop since March 2025; Shopify Payments has no コンビニ, PayPay or bank transfer (apps needed); Stripe コンビニ has no 7-Eleven; Yamato and Sagawa time slots differ.
+- Abroad: EU €3 duty per item type since 2026-07-01; US $800 de minimis suspended, Japan Post US parcels need advance registration and prepaid duty since 2026-10-15; "DDU" is DAP.
+
+### Checklist for existing sites (run at the next session of each site project, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| Site Health "autoloaded options" warning (over 800 KB) | slows every page | size, largest options |
+| WooCommerce shops: `wp wc hpos status`, plugins that still write orders to posts | WooCommerce 10.7 sync-on-read change | status, plugins |
+| Shops: card payments without 3-D Secure 2 | credit-card security guideline (since 2025-03) | provider, setting |
+| Shops with delivery slots that do not match the carrier's list | orders with impossible slots | carrier, slots shown |
+| Shops shipping to the US by post, or quoting "DDU" / no duty notice | US rules since 2026-10-15; buyer surprise fees | method, checkout text |
+| Hostinger sites: WP-Cron instead of a real cron job; daily backups off; PHP below 8.3 | missed schedules; backups; PHP support | setting per site |
+| VPS: `sshd -T` shows password login on; Docker ports published on all interfaces | hardening baseline | server, finding |
+
 ## 2026-10-17 — Monthly check; new topics Microsoft Clarity, YouTube, SNS; block themes; plugin versions
 
 Files changed: new `seo-geo/clarity.md`, `marketing/youtube.md`, `marketing/sns.md`, `block-themes/SOURCES.md`; rewritten `block-themes/README.md`; updated `seo-geo/README.md`, `seo-geo/measurement.md`, `seo-geo/reporting.md`, `legal/japan.md`, `design/accessibility.md`, `design/japan.md`, `marketing/landing-pages.md`, `wp-security.md`, `flatsome/README.md`, `flatsome/ux-builder.md`, `swell/customizer.md`, `wp-plugins/` (README, acf, wpml, updraftplus, wordfence), all affected `SOURCES.md`, `README.md`.
