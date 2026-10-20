@@ -23,6 +23,10 @@ at the start of each session.
   keep existing comments, types and logic unless told to remove them.
 - **Multibyte:** always keep UTF-8; never strip or alter Japanese (kanji/kana) characters or keigo phrasing.
 - **Hygiene:** leave no temporary test files, debug logs or scratch scripts in the repository; clean up before reporting completion.
+- **Scratchpad (rule 7, owner 2026-10-20):** owner-requested reports, audits, summaries and exports go automatically into
+  `tmp/01_reports/` as `YYYY-MM-DD_<project>_<description>.<ext>`, never loose in `tmp/` or the project root. Other subfolders:
+  `tmp/intake/raw/` (original client files), `tmp/intake/extracted/` (processed media, WebP, exports), `tmp/scratch/`
+  (throwaway scripts, test dumps, logs), `tmp/review.html` (visual review, rule 6). All of `tmp/` stays untracked by git.
 
 ## What this chat does
 
