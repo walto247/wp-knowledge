@@ -69,3 +69,16 @@ All read 2026-10-20.
 ## Checked and corrected from a pasted article (2026-10-20)
 
 Corrected: rich black C30M30Y30K100 (vendors: C50M40Y40K100 or C60M40Y40K100); minimum "8Q" (vendor floor 6 pt ≈ 8.5Q); "2 mm white border" round a QR (4 modules); body "8–9.5 pt, over 11 pt looks amateurish" (vendor guide 10.5–11 pt; seniors 12–14 pt per UD guidelines); "Google Maps screenshots never" (allowed up to 5,000 copies as a small supplementary map); "QR 15 mm minimum" kept as practice; Chromium-generated PDFs cannot be CMYK or PDF/X (the article implied they could). No source found for: whitespace percentages, "+2–6 %" letter spacing, the 70/25/5 ratio as a rule, brand examples (Hoshino Resorts, MUJI vertical catch).
+
+## Tri-fold (`tri-fold.md`), read 2026-10-20
+
+| Topic | Source | URL |
+|---|---|---|
+| Panel widths 左開き / 右開き | ラクスル 折り幅一覧; グラフィック 巻き三つ折り; ホクトSP; 厚生労働省 template | https://raksul.com/guide/knowledge-of-printing/folding-pitch/ · https://www.graphic.jp/options/folding/inner_triple · https://hokutosp-blog.com/?p=5596 · https://www.mhlw.go.jp/content/12501000/000584109.pdf |
+| Other step sizes (1.5 mm+) | プリントネット; WAVE; US templates | https://www.odahara.jp/technical/knowledge/knowledge_ori.php · https://www.wave-inc.co.jp/products/option/ori/3oriC.html · https://www.stocklayouts.com/?p=3689 |
+| 左開き = horizontal, 右開き = vertical text | プリントモール; 印刷研究所 | https://www.printmall.jp/leaflet/pamph_maki3 · https://www.towaprintinglab.com/post/vol11 |
+| Reading order, panel names | 印刷研究所; JBF; パンフ専科 | https://www.towaprintinglab.com/post/vol11 · https://www.print-jbf.jp/print/pj59-oripamphlet.html · https://www.print-solution.com/blog/440/ |
+| Text distance from folds (3–5 mm) | プリントモール blog; ヤマガ印刷; アイリィデザイン | https://www.printmall.jp/blog/archives/20221025/6901/ · https://www.yamaga-p.jp/news/yamaga-column0134/ · https://www.irie-design.com/blog/pamphlet-mitsuori-guide.html |
+| Cracking on folds, paper weights, scoring | Accea; WAVE; グラフィック | https://www.accea.co.jp/copy_print/pamph.html · https://www.wave-inc.co.jp/products/paper/paper-pamphlet.html · https://www.graphic.jp/options/folding |
+
+Corrected from a pasted blueprint (2026-10-20): "90 % use 左開き" (no data; vendors only say horizontal text usually uses 左開き); "8–10 mm from folds" (vendors publish 3–5 mm; 8 mm kept as our default); "a Before → After teaser" (not allowed on clinic leaflets). Practice without source: colouring the flap, baseline lines at 35/105/165 mm.

@@ -28,12 +28,12 @@ Status: **verified 2026-10-20** (`SOURCES.md`). Vendor numbers are from ラク�
 
 | Fold | A4 panels (mm) | Notes |
 |---|---|---|
-| 二つ折り | 2 × 148.5 (A4) · A3 → A4: 2 × 210 | keep text off the crease (practice: ≥ 7–10 mm) |
-| **巻き三つ折り** (roll fold) | **97 / 100 / 100** | the panel that folds inside is 2–3 mm narrower so it lies flat; A3: 138/141/141, A5: 68/71/71 |
+| 二つ折り | 2 × 148.5 (A4) · A3 → A4: 2 × 210 | text ≥ 3–5 mm from the fold (vendors); our default 8 mm |
+| **巻き三つ折り** (roll fold) | **97 / 100 / 100** | the panel that folds inside is 2–3 mm narrower so it lies flat; A3: 138/141/141, A5: 68/71/71; full blueprint: `tri-fold.md` |
 | 外三つ折り / Z折り | 99 / 99 / 99 | equal panels |
 | DM折り, 観音折り | per vendor (プリントパック B5–A2) | use the vendor's template |
 
-- Build at the open (展開) size on the vendor's template; which folds are allowed depends on paper weight. Ask for **スジ入れ** (scoring) on heavy paper (practice: 135 kg and up).
+- Build at the open (展開) size on the vendor's template; which folds are allowed depends on paper weight. Folds crack from about 110 kg; グラフィック scores before folding (紙割れ防止) for 135–180 kg; WAVE does not fold 180 kg and up.
 
 ## Booklets (中綴じ)
 

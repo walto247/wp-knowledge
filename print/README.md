@@ -9,6 +9,7 @@ Status: **verified 2026-10-20** against JIS/ISO paper sizes, the data guides of 
 | `production.md` | Sizes, bleed and safe zones, folds and panel widths, booklets, colour (CMYK, ink limit, black), resolution, fonts, PDF/X, paper, QR codes, proofs |
 | `design.md` | Type sizes and spacing, grids and whitespace, the two styles (retail vs premium), eye flow, front/back blueprint, maps, accessibility, copy, measuring response |
 | `html-to-pdf.md` | How a code agent builds print files from HTML/CSS: what Chromium can and cannot do, the CMYK/PDF/X routes, crop marks, Japanese typography |
+| `tri-fold.md` | A4 巻き三つ折り blueprint: 97/100/100 panel order for 左開き and 右開き, reading order, panel-by-panel content, fold rules, paper |
 | `law.md` | Law for printed ads: 総額表示, 景表法, 医療広告, 不動産 rules, 特商法, personal data on reply forms, maps, photos, posting |
 
 ## Words (fact, industry usage)

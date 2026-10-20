@@ -13,6 +13,17 @@ An entry has two parts: what changed in the files, and a **checklist for existin
 - Mandates visual HTML review dashboards (`tmp/review.html`) with automatic host browser launch for any image or layout approvals.
 - Checklist for workers: When processing client files in `tmp/intake/`, read and follow `agency-sop/file-intake.md`.
 
+## 2026-10-20 (2) — Print: A4 roll-fold leaflet blueprint
+
+Files changed: new `print/tri-fold.md`; `print/production.md` (fold distance, paper cracking), `print/README.md`, `print/SOURCES.md`.
+
+What changed in the guidance:
+- 巻き三つ折り panel order verified for 左開き (horizontal text) and 右開き (vertical text): outside 97 | 100 | 100, inside 100 | 100 | 97 (mirrored for 右開き); always the vendor's template.
+- Reading order: cover → cover's inside + flap → full inside spread → back cover; panel-by-panel content plan.
+- Text 3–5 mm from folds is the vendors' minimum (our default 8 mm); colour and photos on folds crack from about 110 kg paper.
+
+No new checklist for existing sites.
+
 ## 2026-10-20 — New topic folder: print (flyers, leaflets, pamphlets)
 
 Files changed: new `print/README.md`, `print/production.md`, `print/design.md`, `print/html-to-pdf.md`, `print/law.md`, `print/SOURCES.md`; `README.md`.
