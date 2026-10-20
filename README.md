@@ -59,6 +59,7 @@ older WSL skills in September 2026), de-duplicated and stripped of tool- and cli
 | `database/wp-database.md` | Database upkeep: export first, prefix, autoloaded options (6.6), transients, revisions, optimize/repair, WooCommerce HPOS | **verified 2026-10-19** (WP-CLI, WordPress, WooCommerce docs) |
 | `ecommerce/japan-checkout.md` | Japanese shops: 消費税 and 総額表示, インボイス, payment methods and 3-D Secure, Shopify/WooCommerce options, checkout fields, Yamato/Sagawa slots, 置き配 | **verified 2026-10-19** (国税庁, METI, platforms, carriers) |
 | `ecommerce/cross-border.md` | Selling abroad: DAP/DDP, EU €3 duty and IOSS, UK £135, US de minimis suspension, Australia GST, Japan Post services and US rules, 輸出免税, currencies | **verified 2026-10-19** (EU, HMRC, CBP, ATO, Japan Post, 国税庁) |
+| `print/` (README, production, design, html-to-pdf, law) | Flyers (チラシ), leaflets and pamphlets: JIS sizes, bleed, fold panels, CMYK and black, PDF/X, paper, QR; type sizes and layout; front/back blueprint; HTML/CSS to PDF routes; print law (総額表示, clinics, real estate, maps, posting) | **verified 2026-10-20** (vendor data guides, Japan Color, W3C, Vivliostyle, Prince, 国税庁, 消費者庁, 厚労省, 不動産公取協) |
 
 ## Pass 2 plan (one session per topic, in this order)
 

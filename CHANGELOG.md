@@ -13,6 +13,28 @@ An entry has two parts: what changed in the files, and a **checklist for existin
 - Mandates visual HTML review dashboards (`tmp/review.html`) with automatic host browser launch for any image or layout approvals.
 - Checklist for workers: When processing client files in `tmp/intake/`, read and follow `agency-sop/file-intake.md`.
 
+## 2026-10-20 — New topic folder: print (flyers, leaflets, pamphlets)
+
+Files changed: new `print/README.md`, `print/production.md`, `print/design.md`, `print/html-to-pdf.md`, `print/law.md`, `print/SOURCES.md`; `README.md`.
+A pasted guide to flyers and pamphlets was checked against Japanese print vendors' data guides, Japan Color, W3C, Vivliostyle/Prince, Denso Wave and Japanese law; corrections listed in `print/SOURCES.md`.
+
+What changed in the guidance:
+- Production: trim + 3 mm bleed, text ≥ 3 mm inside the trim (house default 10 mm), A4 巻き三つ折り 97/100/100, ink ≤ 300 %, rich black C50M40Y40K100, small text K100, 350 dpi, lines ≥ 0.3 pt, text ≥ 6 pt, PDF/X-1a.
+- HTML/CSS: Chromium/Puppeteer/Playwright make RGB PDFs only; CMYK and PDF/X need Vivliostyle or Prince, or the vendor's RGB conversion.
+- Design: flyer body 10.5–11 pt (seniors 12–14 pt), front = hook, back = prices, proof, map, action; simplified drawn maps.
+- Law: tax-inclusive prices on flyers; no testimonials or before/after on clinic flyers; real-estate required items, 7 pt minimum and 80 m = 1 minute; Google Maps in print only up to 5,000 copies; purpose of use on reply cards; posting into apartment shared areas can be trespass.
+
+### Checklist for existing print work (run when a project next makes or reprints a flyer or pamphlet, report findings, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| Prices without tax shown on flyers | 総額表示 | item, page |
+| Clinic flyers with testimonials or before/after photos | 医療広告ガイドライン | flyer, element |
+| Real-estate flyers missing 取引態様 / licence number, or walking times not by 80 m/min | 不動産 表示規約 | flyer, missing items |
+| Google Maps screenshots on runs over 5,000 copies | Google Geo Guidelines | flyer, run size |
+| Small text in 4-colour black, text under 6 pt, lines under 0.3 pt | blurred or missing in print | file, element |
+| Reply cards or QR forms without a stated purpose of use | 個人情報保護法 | form |
+
 ## 2026-10-19 — New topics: shared hosting, VPS hardening, database upkeep, Japanese checkout, selling abroad
 
 Files changed: new `infrastructure/shared-hosting.md`, `infrastructure/vps-hardening.md`, `database/wp-database.md`, `ecommerce/japan-checkout.md`, `ecommerce/cross-border.md` and their `SOURCES.md`; pointer in `wp-maintenance.md`; `README.md`.
