@@ -9,10 +9,12 @@ at the start of each session.
 
 ## Workspace house rules (owner, 2026-10-19; full text in the root `CC-projects/CLAUDE.md`)
 
-- **Communication:** lead with deliverables and results; no preambles or step-by-step narration; don't print trial-and-error
-  attempts, routine command output or internal scans unless blocked by an unrecoverable error. Answers to the owner have two
-  sections: **Completed** (changes and verification checks) and **Waiting for You** (decisions or approvals needed, or "Ready for
-  next instruction"). Reports to the Orchestrator still include the full outputs and diffs the worker protocol asks for.
+- **Communication (hardened 2026-10-20):** zero intermediate commentary: no thoughts, preambles or status narration
+  between tool calls (never "I am now running…", "Next I will check…", "Let me inspect…"); run all commands and tool calls
+  silently. Lead with deliverables and final results; suppress internal exploration, routine command output and
+  trial-and-error logs unless blocked by a fatal error. Respond only when all tool runs are finished, in two sections:
+  **Completed** (changes and verification checks) and **Waiting for You** (decisions or approvals needed, or "Ready for next
+  instruction"). Reports to the Orchestrator still include the full outputs and diffs the worker protocol asks for.
 - **Safety:** never stage, commit or log credentials, API tokens, private keys (`*.pem`, `id_*`) or `.env` files. Never run
   destructive commands (`rm -rf`, `git push --force`, `git reset --hard`, `DROP TABLE`) without the owner's explicit instruction.
   **Commit locally only; never push automatically** (this replaces any "push after each commit" line in this file).
