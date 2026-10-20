@@ -3,6 +3,10 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-20: File intake SOP aligned with house rule 7
+- `agency-sop/file-intake.md`: incoming originals go to `tmp/intake/raw/`; everything extracted or converted (images, WebP, PDF pages, slide text, transcripts, unpacked archives) goes to `tmp/intake/extracted/`. Replaces `tmp/intake/extracted-images/` and the loose `tmp/*.txt` outputs.
+- Checklist for workers: none for existing sites; use the new paths from the next intake on.
+
 ## 2026-10-19: Universal Client File Intake SOP
 - Added `agency-sop/file-intake.md` defining protocols for intake of spreadsheets, Word docs, slide presentations, PDFs, image assets, archives, and audio/video memos.
 - Requires token-efficient parsing via Python in untracked `tmp/` folders.
