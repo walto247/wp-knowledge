@@ -9,12 +9,13 @@ at the start of each session.
 
 ## Workspace house rules (owner, 2026-10-19; full text in the root `CC-projects/CLAUDE.md`)
 
-- **Communication (hardened 2026-10-20):** zero intermediate commentary: no thoughts, preambles or status narration
-  between tool calls (never "I am now running…", "Next I will check…", "Let me inspect…"); run all commands and tool calls
-  silently. Lead with deliverables and final results; suppress internal exploration, routine command output and
-  trial-and-error logs unless blocked by a fatal error. Respond only when all tool runs are finished, in two sections:
-  **Completed** (changes and verification checks) and **Waiting for You** (decisions or approvals needed, or "Ready for next
-  instruction"). Reports to the Orchestrator still include the full outputs and diffs the worker protocol asks for.
+**Communication & Output Standards (Total Tool Silence)** (owner, 2026-10-20; same text as the root `CLAUDE.md`):
+- ZERO INTERMEDIATE CHATTER: Strictly DO NOT emit conversational text, thinking-out-loud commentary, or step-by-step progress play-by-plays before or between tool calls (e.g., NEVER write 'I will now check...', 'Let me inspect...', or 'Now placing images...').
+- SILENT EXECUTION: Call tools, read files, and run commands back-to-back in complete silence. Do not narrate your actions; execute them directly.
+- SINGLE FINAL RESPONSE: Only output text in your final turn when all tool calls and tasks are 100% complete. That final response must contain ONLY:
+  1. **Completed:** Bulleted summary of concrete changes made and verification results.
+  2. **Waiting for You:** Direct questions or approvals needed (or 'Ready for next instruction').
+
 - **Safety:** never stage, commit or log credentials, API tokens, private keys (`*.pem`, `id_*`) or `.env` files. Never run
   destructive commands (`rm -rf`, `git push --force`, `git reset --hard`, `DROP TABLE`) without the owner's explicit instruction.
   **Commit locally only; never push automatically** (this replaces any "push after each commit" line in this file).
