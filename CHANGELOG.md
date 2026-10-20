@@ -7,6 +7,8 @@ An entry has two parts: what changed in the files, and a **checklist for existin
 
 Files changed: removed the "What changed in pass 2" history sections (8 files); harmonised values (Flatsome line height 1.75, English reading column 34em, B2B LP container 1120 px, consent checkbox = practice); `wpforms.md`, `flatsome/ux-builder.md`, `design/general.md` and `design/japan.md` now point to the single source for forms, landing-page order, home-page order, cookie rules and the campaign calendar; older CHANGELOG entries moved to `CHANGELOG-archive.md`; README regrouped with open items; stale notes removed.
 
+Follow-up (owner decisions): short reference code snippets are allowed (no site-specific code); project-specific lines in README, `wp-performance.md` and `wp-security.md` shortened to neutral wording; the dated Google-update list in `seo-geo/reporting.md` cut (check the Search Status Dashboard instead); the monthly scheduled check stays pending.
+
 No checklist for existing sites.
 
 ## 2026-10-20: File intake SOP aligned with house rule 7

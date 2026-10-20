@@ -44,7 +44,7 @@ at the start of each session.
 
 ## Rules
 
-- Markdown only. No code, no client facts, no secrets.
+- Markdown only. No site-specific code (short reference snippets allowed; owner 2026-10-21), no client facts, no secrets.
 - Edit here first. Account skills (`flatsome-wp`, `swell-wp`, `seo-expert`) are updated
   *from* this folder, never the reverse.
 - Client-specific knowledge stays in the client's project.

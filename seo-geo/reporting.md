@@ -48,7 +48,7 @@ Organise by business result, not by tool (no "Search Console section" and "GA4 s
 - Report it early, never hide a drop, give the cause and the fix together (報連相; practice).
 - Separate **確定した事実 / 可能性のある原因 / 要確認事項** (confirmed fact / possible cause / still to check). A drop at the
   time of a Google update does not prove the update caused it (practice).
-- Before naming a Google update, check the **Search Status Dashboard** (status.search.google.com). 2026 so far: core updates in March and May; spam updates in March, June, August and September (24 Sep–8 Oct); none since. Wait about a week after an update ends before reading the data (fact as of 2026-10-17).
+- Before naming a Google update, check the **Search Status Dashboard** (status.search.google.com). Wait about a week after an update ends before reading the data.
 - Google's own list of causes for traffic drops gives neutral, no-blame wording: algorithm updates, technical issues,
   security, spam or manual actions, seasonality and changing interest, site moves (a few weeks to settle), reporting glitches (fact).
 - Never promise rankings: "No one can guarantee a #1 ranking on Google" (fact). Do not quote "4 months to a year" as Google's

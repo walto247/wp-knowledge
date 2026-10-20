@@ -12,7 +12,7 @@ Security **settings** are never part of a content task: Wordfence, users and rol
 4. **Content:** links, scripts, iframes or redirects nobody recognises (spam links, hidden iframes). Report the page and the suspicious part.
 5. **Information exposure:** `readme.html` and `license.txt` reveal little; a web-readable `error_log` leaks paths; mention if large and recent.
 6. **Accounts:** admin users that nobody recognises, generic usernames (`admin`), accounts without 2FA where the site supports it.
-7. **Plugin integrity (later, owner toolkit):** compare installed plugin files with the official checksums per version; flag plugins not from the official source or differing from it, and known-vulnerable versions.
+7. **Plugin integrity:** installed plugin files match the official checksums for their version (`wp plugin verify-checksums`); flag plugins not from the official source and known-vulnerable versions.
 
 ## Baseline a site should meet (WordPress hardening guide)
 

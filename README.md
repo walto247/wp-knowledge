@@ -3,7 +3,7 @@
 One folder of plain Markdown that every project in `CC-projects/` reads when it needs it:
 theme know-how (Flatsome, SWELL, block themes), design rules (general and Japanese),
 writing, Japanese law for websites, SEO/GEO, plugins, maintenance, security, performance.
-No code, no secrets, nothing specific to one client.
+No site-specific code (short reference snippets are allowed), no secrets, nothing specific to one client.
 
 Repository: github.com/walto247/wp-knowledge (private). Created 2026-10-11 from the skills of the
 archived `wp-agent-dashboard` project. Each folder has a `SOURCES.md` with the pages read and the dates.
@@ -25,9 +25,7 @@ archived `wp-agent-dashboard` project. Each folder has a `SOURCES.md` with the p
    this folder, never the other way round. Edit here first.
 6. `seo-audit-kit/` stays a separate project: it is a method with tools and templates.
    `seo-geo/` here holds the knowledge and points to the kit for the procedure.
-7. The site-assistant service runs in a container on the VPS and cannot read this PC. For it,
-   this folder is a build input: the deploy copies the topics it needs (or checks this repo out
-   next to the service). Decided 2026-10-11; not built yet.
+7. Tools that cannot read this PC (for example a service on a server) get the topics they need copied at deploy time.
 
 ## Topics
 
@@ -67,4 +65,4 @@ archived `wp-agent-dashboard` project. Each folder has a `SOURCES.md` with the p
 - One retry of the digital.go.jp design-system policy page.
 - `flatsome/posts.md`, `flatsome/woocommerce.md`, `design/general.md` (older parts), `writing/`: not yet verified.
 - `marketing/japan.md`: palettes and type by industry.
-- Re-check version tables every quarter; a full source check each month on request.
+- Re-check version tables every quarter. Monthly scheduled source check (CLAUDE.md job 3): pending the owner's decision (2026-10-21); until then on request.
