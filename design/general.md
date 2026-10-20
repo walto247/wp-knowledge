@@ -47,7 +47,7 @@ Japanese rules are in `japan.md` (Japanese and English need opposite treatment).
 - **Body:** 16 px or more, line height **1.5–1.6** (WCAG 1.4.12: the layout must survive 1.5 set by the user). Left-aligned, never justified (WCAG 1.4.8, AAA: justified text makes uneven gaps).
 - **Headings:** line height **1.1–1.25** (Material: display 57/64, headline 32/40). Large display sizes may take slight negative tracking: Material uses −0.25 px at 57 px (≈ −0.005 em); up to about −0.02 em on very large lines is common practice. Headings at normal sizes and body text stay at 0. Google Fonts: negative tracking only at very large sizes.
 - **All-caps labels** (eyebrows, tags, small buttons): add positive tracking, about +0.05 em; never set running text in capitals.
-- **Line length:** about 45–75 characters (typographic convention); WCAG 1.4.8 (AAA) caps it at 80. On the web ≈ `max-width: 36em` at 16 px.
+- **Line length:** about 45–75 characters (typographic convention), aim for about 65; WCAG 1.4.8 (AAA) caps it at 80. On the web ≈ `max-width: 34em` at 16 px (practice).
 - **Italics** are fine in English for emphasis and titles; never on Japanese text.
 - Weights: 400 body, 600–700 headings; 800–900 only for large display lines.
 
@@ -69,7 +69,7 @@ Two different widths: the **design width** (the artboard in Figma) and the **con
 | Breakpoint | **one, at 768**: phone below, desktop from `@media (min-width: 768px)`. Add 1024 only where a 3–4 column grid needs it | DADS: one breakpoint at 768 by default, more when needed |
 | Content container | **1120** content + side padding; never more than 1200 | leaves 80 px each side on a 1280 screen (Bootstrap's comparable container is its 1140 xl; its 1320 applies only from 1400) |
 | Side padding | **16** on phones (20 also fine), **32** from 768 | our choice, taken from the DADS gutter (twice the body text = 32 at 16 px); DADS sets no margin value |
-| Reading column (articles) | Japanese: `max-width: 41em` (≈ 40 characters, ≈ 656 at 16 px); see `japan.md`. English: about 65–75 characters (practice) | JLReq: horizontal lines at most about 40 characters |
+| Reading column (articles) | Japanese: `max-width: 41em` (≈ 40 characters, ≈ 656 at 16 px); see `japan.md`. English: about 65 characters, `max-width: 34em` (practice) | JLReq: horizontal lines at most about 40 characters |
 | Photos and banners | file width = **2 × the slot** (a 390 slot → 780 file, a 1120 slot → 2240); 3× is not worth the bytes | most iPhones are 3× (XR, 11 and SE are 2×), Android 2.6–3.5×; above 2× the visible gain is small (Jake Archibald 2021); web.dev examples use 1×/2×. WordPress `srcset` does this when the image sizes exist (`../wp-performance.md`) |
 
 Theme and framework breakpoints (use the theme's own, do not fight it):
@@ -128,7 +128,7 @@ Checked against NN/g, WCAG 2.2 and Baymard (`SOURCES.md`, section "Page structur
 
 ## Wireframe patterns
 
-Home (full order and the zigzag limit: "Content blocks and page order" above): sticky header (logo, 5–7 items, one CTA) → hero (H1 + one line + CTA + visual) → trust bar (logos, numbers, certifications) → three benefits → feature sections alternating image/text → voices → full-width CTA → footer (nav, contact, legal).
+Home: the order in "Content blocks and page order" above; sticky header with logo, 5–7 items and one CTA; footer with navigation, contact and legal links.
 
 Service page: short hero with H1 and breadcrumb → definition block in the first 150 characters/words → benefits → detail sections → proof → FAQ (5+) → CTA.
 
@@ -148,5 +148,5 @@ Design values (colours, fonts, radii) always come from the project's design toke
 
 ## International visitors
 
-- Sites aimed at EU/UK visitors (pages, prices or shipping for them) or tracking them: tracking scripts and non-essential cookies need consent (GDPR; `../legal/japan.md`). Never add tracking, chat widgets or embeds on your own; a person decides and updates the privacy policy.
+- Cookie consent and tracking rules: `../legal/japan.md`. Never add tracking, chat widgets or embeds on your own; a person decides and updates the privacy policy.
 - Dates, prices and phone numbers in international format for a foreign audience: "September 26, 2026", "¥11,000 (tax incl.)", "+81-3-1234-5678".

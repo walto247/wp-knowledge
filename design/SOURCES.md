@@ -15,10 +15,6 @@ Shortened links; resolve and record the final URL and the date checked when used
 | JIS revision status | gihyo.jp 2026-01 outlook; issoh.co.jp column | https://gihyo.jp/article/2026/01/web-accessibility-prospect · https://www.issoh.co.jp/column/details/3022/ | 2026-10-11 (revision to WCAG 2.2 in committee since 2025-10, expected 2026, not yet published) |
 | Conformance claims | WAIC JIS X 8341-3:2016 対応度表記ガイドライン | https://waic.jp/ | not read; cited by the articles above |
 
-Ideas noted from third-party skills (read as material, nothing installed): Anthropic's open
-front-end design skill (commit to one deliberate design direction, avoid the generic AI look);
-"Claude SEO" (split SEO work into named tasks, GEO as its own task); niche-based palette and type
-choices (write our own for Japanese business niches).
 
 ## Screen sizes (read 2026-10-15, for `general.md` and `japan.md` "Screen sizes")
 

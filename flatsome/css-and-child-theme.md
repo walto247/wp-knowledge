@@ -17,7 +17,7 @@ Never inline CSS in page content except a one-off that cannot be done otherwise.
 - Low specificity; `!important` only to beat an inline style Flatsome prints.
 - Phone first: everything you add works at 360 and 390 px (Japan: also 375 and 414). Write phone styles, then `@media (min-width: 768px)` upward for your own layouts; when overriding Flatsome's own rules, use its 549 / 849 breakpoints.
 - Variables, never raw hex: `:root { --color-primary: … }` from `DESIGN.md`; rules use `var(--color-primary)`.
-- Japanese text: body 16 px, line height 1.7–2.0, `line-break: strict`, no italics (`../design/japan.md`).
+- Japanese text: body 16 px, line height 1.7–1.75 (up to 2.0 on dense pages), `line-break: strict`, no italics (`../design/japan.md`).
 
 ## Child theme skeleton
 
@@ -30,7 +30,7 @@ Version:     1.0.0
 Text Domain: flatsome-child
 */
 :root { /* tokens from DESIGN.md */ }
-body { font-size: 16px; line-height: 1.8; }
+body { font-size: 16px; line-height: 1.75; }
 /* components, sections, utilities, then media queries at the end */
 ```
 

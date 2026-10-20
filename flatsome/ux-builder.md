@@ -81,7 +81,7 @@ Flatsome has its own lazy-load options (`lazy_load_images`, `lazy_load_backgroun
 
 ## Landing page order
 
-Hero (headline + one CTA) → trust (logos, numbers, awards) → problem → solution (image + text) → features (3 columns) → voices or case studies → price or offer → FAQ → final CTA banner. One purpose per section.
+Use the ten-block order in `../marketing/landing-pages.md`; one purpose per section.
 
 ## Before saving
 

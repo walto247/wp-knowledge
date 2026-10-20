@@ -13,7 +13,7 @@ Fields, labels, validation, notifications (who gets the email), confirmations (t
 
 ## Japanese form checklist to suggest
 
-お名前 + フリガナ · 郵便番号 → 住所 auto-fill · 電話番号 (digits normalised) · メールアドレス + confirmation · 必須 / 任意 labels · privacy consent checkbox before submit · Japanese error text next to the field · clear thank-you with next step.
+Use the form rules in `../design/japan.md` (Forms): fields, ※必須 / ※任意, `autocomplete`, postal-code fill, no email re-type field, privacy link before submit, Japanese error text, a thank-you with the next step.
 
 ## Staging
 

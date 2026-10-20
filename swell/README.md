@@ -62,10 +62,3 @@ Read the page → change only the needed blocks, keep the rest byte for byte →
 ## Deliverables for a SWELL change
 
 Two blocks: **Customizer settings** (listed as `カスタマイズ → パネル → セクション → 項目: 値`, done by a person) and **child code / block markup** (to paste or upload).
-
-## What changed in pass 2 (2026-10-11)
-
-- Block list replaced by the official 14; `swell/…` slugs dropped (wrong); `loos/…` kept with the copy-from-site rule.
-- CSS variable list verified on a live 2.19 site; `--color_accent` removed.
-- Plugin guidance replaced by the official recommended / not-recommended list; Contact Form 7 and WP Rocket claims corrected.
-- Current version and changelog added. Child theme: the official `swell_child`.

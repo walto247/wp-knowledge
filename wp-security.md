@@ -49,8 +49,3 @@ Stop and say clearly what was found and where. The admin runs a Wordfence scan a
 
 - Suggest weakening security to make something work (disabling the firewall, 777 permissions, turning off updates).
 - Read or repeat passwords, keys or tokens, even if visible in a file. Say that a secret is exposed and where, not what it is.
-
-## What changed in pass 2 (2026-10-11)
-
-- Baseline table from the WordPress hardening guide (permissions, wp-config, prefix, DB privileges, 2FA, SFTP, logs, backups).
-- PHP and WordPress version table; PHP 8.2 reaches end of security support on 2026-12-31.

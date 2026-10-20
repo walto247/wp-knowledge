@@ -1,6 +1,6 @@
 # Marketing conventions for Japanese websites
 
-Status: created 2026-10-11 from the CTA, trust and seasonal notes in the dashboard skills. Thin on purpose; grows in pass 2 (Consumer Affairs Agency rules, niche palettes and type by industry). Claims and ads law: `../legal/japan.md`. Landing pages: `landing-pages.md`. Copy: `../writing/japanese.md`. Design: `../design/japan.md`.
+Status: created 2026-10-11 from the CTA, trust and seasonal notes in the dashboard skills. Industry palettes and type are still open (end of file). Claims and ads law: `../legal/japan.md`. Landing pages: `landing-pages.md`. Copy: `../writing/japanese.md`. Design: `../design/japan.md`.
 
 ## Conversion path Japanese visitors accept
 
@@ -45,8 +45,6 @@ The owner asked for Dentsu's and Hakuhodo's way of designing. Neither publishes 
 
 Sources: Hakuhodo philosophy and vision pages (hakuhodo.co.jp/about/dna/), The H Magazine 「生活者発想」 series, Hakuhodo Global "Creating UX-centered services with sei-katsu-sha insight", dentsu.com/dentsu-lab, dentsulab.com.
 
-## To add in pass 2
+## Open
 
-- Palette and type conventions by industry (school, clinic, B2B service, shop, restaurant, real estate) with Japanese examples.
-- LINE Official Account practices (rich menu, step messages) as they relate to site CTAs.
-- Review and testimonial rules (Google Business Profile, 口コミ) under the 2023 stealth-marketing regulation.
+- Palette and type conventions by industry (school, clinic, B2B service, shop, restaurant, real estate) with Japanese examples. LINE practices: `sns.md`; review rules: `../legal/japan.md`.

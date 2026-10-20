@@ -19,7 +19,7 @@ Flatsome shortcodes work in post content (Classic editor or a Shortcode block): 
 ## Article typography (child theme)
 
 ```css
-.single-post .entry-content { max-width: 41em; margin: 0 auto; }   /* Japanese: ≈ 40 characters at 16 px (../design/japan.md); English sites: 36em */
+.single-post .entry-content { max-width: 41em; margin: 0 auto; }   /* Japanese: ≈ 40 characters at 16 px (../design/japan.md); English sites: 34em */
 .entry-content h2 { margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--color-surface); }
 .entry-content h3 { margin: 32px 0 12px; }
 .entry-content p  { margin-bottom: 20px; line-height: 1.75; }   /* DADS body 1.7–1.75 (../design/japan.md) */

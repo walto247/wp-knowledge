@@ -54,10 +54,3 @@ Status: **verified 2026-10-11** against WCAG 2.2 "What's new" (W3C), the JIS X 8
 ## What a machine cannot judge
 
 Screen-reader flow and real keyboard use need a person. Say what was checked and what still needs a human test. Contrast checker: WebAIM (https://webaim.org/resources/contrastchecker/).
-
-## What changed in pass 2 (2026-10-11)
-
-- Large-text threshold corrected for Japanese (22 pt / 18 pt bold, from JIS); the old "24 px / bold 18.5 px" was the Latin rule only.
-- Six WCAG 2.2 criteria added (target size with its exceptions, focus not obscured, dragging, redundant entry, consistent help, accessible authentication); 4.1.1 noted as removed.
-- JIS X 8341-3 status and the WAIC conformance-claim rule added; "build to 2.2" guidance.
-- Links underlined and 14 px floor added from DADS. The Digital Agency policy page (digital.go.jp) could not be fetched (connection reset twice); DADS itself was read instead.

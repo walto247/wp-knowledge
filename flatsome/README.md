@@ -44,8 +44,3 @@ Phone: `max-width: 549px` (desktop/tablet from 550 px). Tablet: `max-width: 849p
 ## Before saving (checklist)
 
 Tags balanced · every column has `span__sm` · nothing wider than a phone screen · links relative · media by ID · cache cleared after · checked at 360 and 390 px (Japan: also 375 and 414; `../design/general.md`).
-
-## What changed in pass 2 (2026-10-11)
-
-- Version, breakpoints, custom CSS location, accordion tag and hook names verified (see `css-and-child-theme.md` for the hook corrections).
-- Element attributes verified from the 3.20.11 theme files; the main corrections: button colour is `color=`, not `style=`; `[testimonial image= company=]`; no `.m-8` utility scale; visibility values are the four `hide/show-for-small/medium`.

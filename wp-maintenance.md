@@ -25,10 +25,10 @@ Status: merged 2026-10-11 from the dashboard `wp-maintenance` skill; version fac
 
 ```
 サイト点検（staging / 2026-09-26）
-✅ 正常: WordPress 7.1.2 / PHP 8.3 / 有効プラグイン 7件
-⚠️ 要対応: 〇〇 に更新あり（2.0.1 → 2.0.2）
-⚠️ 要確認: error_log に Fatal error 3件（wp-content/plugins/xxx/…、9/25）
-💡 提案: 無効のプラグイン「worker」は不要なら削除を検討
+正常: WordPress 7.1.3 / PHP 8.3 / 有効プラグイン 7件
+要対応: 〇〇 に更新あり（2.0.1 → 2.0.2）
+要確認: error_log に Fatal error 3件（wp-content/plugins/xxx/…、9/25）
+提案: 無効のプラグイン「worker」は不要なら削除を検討
 ```
 
 ## Update procedure (a person, or an approved automation)

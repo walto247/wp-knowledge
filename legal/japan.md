@@ -51,10 +51,3 @@ Since April 2024 private businesses must provide reasonable accommodation to peo
 ## Copyright and portrait rights
 
 Do not copy text or images from other sites. Photos of people need consent (肖像権), above all students and children; use images the site already has or the client provides.
-
-## What changed in pass 2 (2026-10-11)
-
-- ステマ規制: legal basis, the two conditions, accepted labels, who is liable.
-- No.1表示: the 2024 report's four conditions.
-- 2024-10-01 amendment (direct fines) added.
-- Not yet verified: 薬機法, 定期購入 details, 個人情報保護法 (利用目的, 第三者提供), 障害者差別解消法 wording. 2026-10-15: 特商法 表記 items, omissions and the 最終確認画面 checked on the 消費者庁 特商法ガイド; 外部送信規律 checked on the 総務省 page. 2026-10-16: No.1 notes, 打消し表示, 比較広告, 二重価格, limited-offer orders, 不実証広告規制 and the clinic before/after rule checked (消費者庁 pages and law-firm summaries; the report PDFs themselves could not be opened).

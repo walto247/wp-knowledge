@@ -81,7 +81,7 @@ Checked against DADS, JLReq, WCAG 2.2, MDN and caniuse (`SOURCES.md`, section "T
 - `autocomplete` on every personal field (WCAG 1.3.5): `name` / `family-name` / `given-name`, `email`, `tel`, `postal-code`, `address-level1` (都道府県), `address-level2`, `address-line1`, `organization`. 郵便番号: hint 「半角数字7桁」, accept full-width and convert on submit (DADS).
 - Mark **※必須 / ※任意** on every field in text (DADS), not colour alone. Show examples (「例：山田 太郎」).
 - Accept full-width digits (「０９０」) and normalise; never reject them.
-- Privacy policy link and consent checkbox before submit (legally expected). Steps 入力 → 確認 → 完了 with a step indicator are the convention for inquiry forms, not a legal duty. The law requires a 最終確認画面 only for online sales contracts (特定商取引法 第12条の6, since 2022-06-01, for every online sales contract, not only subscriptions: quantity, price and shipping, payment timing and method, delivery timing, application deadline if any, cancellation terms; details in `../legal/japan.md`). A clear thank-you with what happens next (「2営業日以内にご連絡します」).
+- Privacy policy link before submit (the purpose of use must be stated: `../legal/japan.md`); a consent checkbox is common practice. Steps 入力 → 確認 → 完了 with a step indicator are the convention for inquiry forms, not a legal duty. The law requires a 最終確認画面 only for online sales contracts (特定商取引法 第12条の6, since 2022-06-01, for every online sales contract, not only subscriptions: quantity, price and shipping, payment timing and method, delivery timing, application deadline if any, cancellation terms; details in `../legal/japan.md`). A clear thank-you with what happens next (「2営業日以内にご連絡します」).
 - Error text in Japanese, next to the field. Short forms convert; every extra field loses people.
 
 ## Mobile
@@ -126,11 +126,4 @@ Blue = trust (companies, schools, finance); green = safety, health, nature; red 
 
 ## Seasons that move traffic
 
-1–3月 受験・進学・新生活 (3月 graduation) · 4月 new school and business year, peak for schools and B2B · 7–8月 summer campaigns, open campuses · 9月 transfers · 12月 year-end notices. Holidays: Golden Week (late April–early May), お盆 (mid-August), 年末年始. Post business-hours notices before each.
-
-## What changed in pass 2 (2026-10-11)
-
-- Typography table rebuilt on DADS values: 16 px floor (14 px exceptional, below 14 not allowed), line height 1.7–1.75 body / 1.4 headings, letter spacing 0.02 em → 0, size scale 16–45 px, display 48–64 px, ruby 50 %, no italics, underlined links. Old ranges (12 px floor, 0.08 em, line height 2.0 as normal) dropped.
-- 禁則処理 spelled out from JLReq (what may not start or end a line, strict vs normal), Latin-in-Japanese rules, line length ≈ 40 characters, line gap ½–1 em.
-- Tap target minimum tied to WCAG 2.2 (24 px) with our 44–48 px practice kept as practice.
-- Not verified by a standard (kept as practice): information density, trust blocks, colour meanings, audiences, seasons. Navigation and forms were checked against DADS components and WCAG 2.2 on 2026-10-15.
+The Japanese campaign calendar (受験, new school and business year, GW, お盆, 年末年始) is in `../marketing/japan.md`; post business-hours notices before each holiday.

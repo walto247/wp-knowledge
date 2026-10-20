@@ -72,13 +72,6 @@ Staging is `noindex` on purpose (Yoast warns; correct). On production avoid two 
 
 Keyphrase and intent defined · title and description written to the table above · one H1 with the keyphrase · definition block · question headings · at least one internal link in and out · a source for facts · images sized with alt · author and date visible · schema needs checked · Rich Results Test by a person.
 
-## What changed in pass 2 (2026-10-11)
-
-- Google states no length limits for title or description; Japanese lengths kept as practice and the ⚠ conflict closed (first 50字 matter, under ~120字).
-- AI Overviews / AI Mode guidance added from Google: no special markup or files; text content and normal SEO.
-- FAQ rich results removed (May 2026) and the June 2025 removals listed; HowTo confirmed gone.
-- Helpful-content self-assessment, E-E-A-T with "trust is most important", Who/How/Why and the AI-content rule added.
-- Structured data policies quoted from Google.
 
 ## GEO beyond Google (checked 2026-10-15)
 

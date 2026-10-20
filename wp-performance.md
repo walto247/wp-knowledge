@@ -39,8 +39,3 @@ Long pages with many sliders, videos or embedded maps are slow: static image lin
 ## A person decides
 
 WP Rocket settings (delay JS, remove unused CSS, preload), image optimisation plugins, server, PHP and database changes, CDN. Name the setting and why.
-
-## What changed in pass 2 (2026-10-11)
-
-- Thresholds confirmed (good values from web.dev; poor boundaries from the Chromium definitions); 75th-percentile rule and FID retirement added.
-- WP Rocket exclusion field named exactly; `skip-lazy` kept (WP Rocket support wording, Flatsome code).
