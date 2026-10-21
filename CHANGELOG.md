@@ -3,6 +3,26 @@
 Newest first. Every project reads the **top entry** at the start of a session (rule in `CC-projects/CLAUDE.md`).
 An entry has two parts: what changed in the files, and a **checklist for existing sites** (check and report; change only with the owner's OK and each project's own rules).
 
+## 2026-10-21 — New topic: WHM and cPanel server settings
+
+Files changed: new `infrastructure/whm-cpanel.md`; `infrastructure/shared-hosting.md` (AutoSSL provider, cron PHP path, pointer), `infrastructure/SOURCES.md`, `README.md`.
+A pasted WHM/cPanel guide was checked against cPanel docs and KB, Apache, PHP, MySQL and MariaDB; corrections listed in `infrastructure/SOURCES.md`.
+
+What changed in the guidance:
+- EasyApache 4 installs prefork by default: switch to event + PHP-FPM + HTTP/2; DSO does not work with PHP 8+.
+- WHM PHP-FPM defaults (Max Children 5, Max Requests 20) are too low for busy sites; size by measured worker memory.
+- AutoSSL uses Let's Encrypt only; ModSecurity via cPanel's OWASP CRS package; CSF is now maintained by cPanel; the open_basedir tweak is gone.
+
+### Checklist for servers we manage (run at the next session of the project that runs the server, report, owner decides)
+
+| Check | Why | Report |
+|---|---|---|
+| Apache still on prefork, HTTP/2 off | slower, more memory | MPM, modules |
+| PHP-FPM pools at Max Children 5 / Max Requests 20 on busy sites; "reached max_children" in logs | 503 errors under load | domain, values, log lines |
+| PHP below 8.3, display_errors On, max_input_vars 1000 on builder sites | security and broken saves | site, values |
+| No ModSecurity rules, cPHulk off, no firewall | attacks reach PHP | what is missing |
+| "Max hourly emails per domain" unlimited | one hacked form can blacklist the server IP | value |
+
 ## 2026-10-21 — House cleaning (no guidance changes)
 
 Files changed: removed the "What changed in pass 2" history sections (8 files); harmonised values (Flatsome line height 1.75, English reading column 34em, B2B LP container 1120 px, consent checkbox = practice); `wpforms.md`, `flatsome/ux-builder.md`, `design/general.md` and `design/japan.md` now point to the single source for forms, landing-page order, home-page order, cookie rules and the campaign calendar; older CHANGELOG entries moved to `CHANGELOG-archive.md`; README regrouped with open items; stale notes removed.

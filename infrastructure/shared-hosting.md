@@ -1,6 +1,6 @@
 # Shared hosting for WordPress: Hostinger (hPanel) and cPanel
 
-Status: **verified 2026-10-19** against Hostinger support and docs, docs.cpanel.net, LiteSpeed docs and the WP-CLI handbook (`SOURCES.md`). Procedures are practice. VPS servers: `vps-hardening.md`; the n8n VPS itself: the `n8n-server-ops` project. Update procedure: `../wp-maintenance.md`.
+Status: **verified 2026-10-19** against Hostinger support and docs, docs.cpanel.net, LiteSpeed docs and the WP-CLI handbook (`SOURCES.md`). Procedures are practice. WHM server settings: `whm-cpanel.md`. VPS servers: `vps-hardening.md`; the n8n VPS itself: the `n8n-server-ops` project. Update procedure: `../wp-maintenance.md`.
 
 ## Hostinger web hosting (hPanel)
 
@@ -24,7 +24,7 @@ Status: **verified 2026-10-19** against Hostinger support and docs, docs.cpanel.
 - **WP-CLI** is not guaranteed: check `wp --info`; where the host runs WP Toolkit, it can run WP-CLI commands for you.
 - **Caches:** whatever the site uses (LiteSpeed Cache on LiteSpeed servers: same command as above); an object cache only if the host provides Redis or Memcached.
 - **PHP:** Software → MultiPHP Manager (version per domain) and MultiPHP INI Editor (values).
-- **SSL:** AutoSSL (default provider Let's Encrypt), checked nightly. Status and the last error per domain: Security → SSL/TLS Status. Validation fails when the domain does not point to the server, when `/.well-known/acme-challenge/` or `/.well-known/pki-validation/` is blocked (redirects, `.htaccess` rules, Cloudflare WAF), or when a CAA record excludes the issuer. Practice: exempt `/.well-known/` from redirects, fix DNS, re-run once; do not loop (rate limits).
-- **Cron:** Advanced → Cron Jobs; absolute paths; add `>/dev/null 2>&1` to avoid a mail per run. Same `DISABLE_WP_CRON` pattern.
+- **SSL:** AutoSSL (Let's Encrypt is the only provider since v120), checked nightly. Status and the last error per domain: Security → SSL/TLS Status. Validation fails when the domain does not point to the server, when `/.well-known/acme-challenge/` or `/.well-known/pki-validation/` is blocked (redirects, `.htaccess` rules, Cloudflare WAF), or when a CAA record excludes the issuer. Practice: exempt `/.well-known/` from redirects, fix DNS, re-run once; do not loop (rate limits).
+- **Cron:** Advanced → Cron Jobs; absolute paths (PHP: `/usr/bin/ea-php83` or `/usr/local/bin/php`); add `>/dev/null 2>&1` to avoid a mail per run. Same `DISABLE_WP_CRON` pattern.
 - **Backups:** Files → Backup Wizard: a full backup can only be restored by the host; partial backups (home folder, database, mail) can be restored by you. Host-level backups (JetBackup and similar) vary: ask the host.
 - **Staging:** WP Toolkit Clone and "Copy Data" back to production (with a restore point), inside the same account; otherwise a subdomain and a manual copy.
